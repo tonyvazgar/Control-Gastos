@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC124733DF600177691 /* UIButtonExtension.swift */; };
 		EF259D5F2472427F006F094A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF259D5E2472427F006F094A /* AppDelegate.swift */; };
 		EF259D612472427F006F094A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF259D602472427F006F094A /* SceneDelegate.swift */; };
 		EF259D632472427F006F094A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF259D622472427F006F094A /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF126CC124733DF600177691 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		EF259D5B2472427F006F094A /* ControlDinero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlDinero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF259D5E2472427F006F094A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF259D602472427F006F094A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +58,14 @@
 		EF259D5D2472427F006F094A /* ControlDinero */ = {
 			isa = PBXGroup;
 			children = (
-				EF259D722472430B006F094A /* Supporting Files */,
 				EF259D5E2472427F006F094A /* AppDelegate.swift */,
+				EF314561247336FA0043B00D /* View */,
+				EF3145622473370E0043B00D /* Controller */,
+				EF314563247337240043B00D /* Model */,
+				EF3145642473372B0043B00D /* Util */,
+				EF259D722472430B006F094A /* Supporting Files */,
 				EF259D602472427F006F094A /* SceneDelegate.swift */,
-				EF259D622472427F006F094A /* ViewController.swift */,
-				EF259D642472427F006F094A /* Main.storyboard */,
 				EF259D6724724280006F094A /* Assets.xcassets */,
-				EF259D6924724280006F094A /* LaunchScreen.storyboard */,
 			);
 			path = ControlDinero;
 			sourceTree = "<group>";
@@ -73,6 +76,62 @@
 				EF259D6C24724280006F094A /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF314561247336FA0043B00D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EF314565247337AB0043B00D /* Launch */,
+				EF314566247337B50043B00D /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EF3145622473370E0043B00D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EF314567247338240043B00D /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		EF314563247337240043B00D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF3145642473372B0043B00D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EF126CC124733DF600177691 /* UIButtonExtension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		EF314565247337AB0043B00D /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				EF259D6924724280006F094A /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		EF314566247337B50043B00D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF259D642472427F006F094A /* Main.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EF314567247338240043B00D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EF259D622472427F006F094A /* ViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
+				EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */,
 				EF259D5F2472427F006F094A /* AppDelegate.swift in Sources */,
 				EF259D612472427F006F094A /* SceneDelegate.swift in Sources */,
 			);
@@ -293,6 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,6 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
