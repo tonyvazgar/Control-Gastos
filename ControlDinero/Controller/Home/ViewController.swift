@@ -26,17 +26,17 @@ class ViewController: UIViewController {
     
     @IBAction func buttonGastos(_ sender: UIButton) {
         sender.shine()
+        sender.jump()
     }
     
     // MARK: Funciones
     private func getCurrentDate() -> String {
-        let now = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "LLLL"
-        let nameOfMonth = dateFormatter.string(from: now)
-        dateFormatter.dateFormat = "yyyy"
-        let yearString = dateFormatter.string(from: now)
-        return "\(nameOfMonth) \(yearString)"
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .long
+        formatter.dateFormat = "MMMM yyyy"
+        let result = formatter.string(from: date)
+        return result
     }
     
     private func getGanancias() -> String {

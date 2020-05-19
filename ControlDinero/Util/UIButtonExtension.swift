@@ -42,10 +42,10 @@ extension UIButton {
     
     // MARK:  Salta
     func jump() {
-        UIView.animate(withDuration: 0.1, animations: {
+        UIView.animate(withDuration: 1, animations: {
             self.transform = CGAffineTransform(translationX: 0, y: -10)
         }) { (completion) in
-            UIView.animate(withDuration: 0.1, animations: {
+            UIView.animate(withDuration: 1, animations: {
                 self.transform = .identity
             })
         }
