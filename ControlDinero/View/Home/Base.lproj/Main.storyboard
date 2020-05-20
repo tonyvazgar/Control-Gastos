@@ -44,7 +44,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonQuincenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tmT-mf-Yro"/>
-                                            <segue destination="iq4-MT-DzV" kind="show" id="wMb-I0-Oe6"/>
+                                            <segue destination="ufK-CB-HG4" kind="show" id="wMb-I0-Oe6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axZ-4M-Kze">
@@ -56,7 +56,7 @@
                                         </state>
                                         <connections>
                                             <action selector="buttonGastos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIZ-Z4-BF5"/>
-                                            <segue destination="ZEx-Wl-3N3" kind="show" id="rid-oJ-tst"/>
+                                            <segue destination="mCc-YC-dUb" kind="show" id="rid-oJ-tst"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -161,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="110"/>
+            <point key="canvasLocation" x="-243" y="97"/>
         </scene>
         <!--Gastos View Controller-->
         <scene sceneID="B9D-MW-34W">
@@ -195,12 +195,13 @@
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Nueva gasto">
+                                        <state key="normal" title="Nuevo gasto">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="buttonQuincenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rq5-6r-SBT"/>
-                                            <segue destination="Nxb-1Z-MWe" kind="show" id="XV6-bc-nm9"/>
+                                            <action selector="nuevoGastoAction:" destination="ZEx-Wl-3N3" eventType="touchUpInside" id="Wbr-dc-fFz"/>
+                                            <segue destination="Nxb-1Z-MWe" kind="showDetail" id="XV6-bc-nm9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -211,6 +212,16 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z2c-jk-1L3">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="522"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gastos" id="HbP-EC-6Ze">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HbP-EC-6Ze" id="054-WS-nMi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -232,15 +243,19 @@
                         <viewLayoutGuide key="safeArea" id="nqk-YR-hI4"/>
                     </view>
                     <navigationItem key="navigationItem" id="2hX-vb-UGd"/>
+                    <connections>
+                        <outlet property="nuevoGastoButton" destination="Iqp-3c-aAO" id="WKS-ET-jSl"/>
+                        <outlet property="tableView" destination="z2c-jk-1L3" id="X0I-9U-Qkp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NmZ-IN-raQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1222" y="338"/>
+            <point key="canvasLocation" x="2719" y="530"/>
         </scene>
-        <!--View Controller-->
+        <!--Nuevo Gasto View Controller-->
         <scene sceneID="tRQ-C8-Up5">
             <objects>
-                <viewController id="Nxb-1Z-MWe" sceneMemberID="viewController">
+                <viewController id="Nxb-1Z-MWe" customClass="NuevoGastoViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XB-aC-Uht">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,7 +263,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gAh-oB-lnV">
                                 <rect key="frame" x="20" y="20" width="374" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuevo gasto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oZ8-vc-zFw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nuevo gasto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="oZ8-vc-zFw">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                         <nil key="textColor"/>
@@ -259,11 +274,22 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="QdA-31-KEy">
                                 <rect key="frame" x="20" y="180" width="374" height="548"/>
                                 <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Za9-jB-c6L">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="216"/>
-                                    </pickerView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fTv-mr-qzx">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="240"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecciona el día:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxo-hL-hoj">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="FJO-Th-hXF">
+                                                <rect key="frame" x="0.0" y="24" width="374" height="216"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="u2O-Pt-0La">
-                                        <rect key="frame" x="0.0" y="292" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="308" width="374" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOMBRE: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fou-Xo-6RT">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
@@ -279,7 +305,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ygv-vx-vGc">
-                                        <rect key="frame" x="0.0" y="402" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="410" width="374" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MONTO: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07y-g8-TiN">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="34"/>
@@ -298,9 +324,12 @@
                                         <rect key="frame" x="0.0" y="512" width="374" height="36"/>
                                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Agregar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="agregarAction:" destination="Nxb-1Z-MWe" eventType="touchUpInside" id="TiB-0a-KXQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -319,10 +348,49 @@
                         <viewLayoutGuide key="safeArea" id="jPA-9D-Nuj"/>
                     </view>
                     <navigationItem key="navigationItem" id="W64-2e-F1C"/>
+                    <connections>
+                        <outlet property="agregarButton" destination="o1M-nf-kSJ" id="iFx-km-fhc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gy7-ol-KMg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="338"/>
+            <point key="canvasLocation" x="4423" y="530"/>
+        </scene>
+        <!--Detalle Gasto View Controller-->
+        <scene sceneID="jln-h2-lFf">
+            <objects>
+                <viewController storyboardIdentifier="DetalleGastoViewController" id="Idf-nU-LY0" customClass="DetalleGastoViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="szC-zz-jbG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ymC-uo-WxR">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="NvM-hV-xzX">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="myI-kG-L9D" firstAttribute="trailing" secondItem="ymC-uo-WxR" secondAttribute="trailing" constant="20" id="A9h-Yi-wj0"/>
+                            <constraint firstItem="ymC-uo-WxR" firstAttribute="top" secondItem="myI-kG-L9D" secondAttribute="top" constant="20" id="ORX-FJ-iQ7"/>
+                            <constraint firstItem="ymC-uo-WxR" firstAttribute="leading" secondItem="myI-kG-L9D" secondAttribute="leading" constant="20" id="ipb-bc-yJd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="myI-kG-L9D"/>
+                    </view>
+                    <connections>
+                        <outlet property="nombreGastoLabel" destination="NvM-hV-xzX" id="s54-TV-PDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOs-qD-JPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3557" y="1396"/>
         </scene>
         <!--Quincenas View Controller-->
         <scene sceneID="RPu-wu-FW0">
@@ -362,7 +430,7 @@
                                         <connections>
                                             <action selector="buttonQuincenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXm-0H-aeG"/>
                                             <action selector="nuevaQuincenaAction:" destination="iq4-MT-DzV" eventType="touchUpInside" id="T4I-yT-iUk"/>
-                                            <segue destination="d2l-vm-8Sf" kind="show" id="KZe-31-Cai"/>
+                                            <segue destination="d2l-vm-8Sf" kind="showDetail" id="KZe-31-Cai"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -373,6 +441,16 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fj1-yd-r2g">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="522"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quincenas" id="KtA-WB-FmD">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KtA-WB-FmD" id="dp7-HO-TvD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -396,16 +474,53 @@
                     <navigationItem key="navigationItem" id="PjP-A4-onP"/>
                     <connections>
                         <outlet property="nuevaQuincenaButton" destination="CTA-Zo-4xE" id="a38-jC-G6G"/>
+                        <outlet property="tableView" destination="Fj1-yd-r2g" id="cSA-TY-vOb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ldi-un-RLj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1223" y="-360"/>
+            <point key="canvasLocation" x="2720" y="-360"/>
         </scene>
-        <!--View Controller-->
+        <!--Detalle Quincena View Controller-->
+        <scene sceneID="BXP-90-TpS">
+            <objects>
+                <viewController storyboardIdentifier="DetalleQuincenaViewController" id="VR8-OT-UFz" customClass="DetalleQuincenaViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VC9-8Z-6Ll">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="XZB-Xe-evr">
+                                <rect key="frame" x="20" y="64" width="374" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Sab-om-Edc">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="60"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jcY-zr-Aif" firstAttribute="trailing" secondItem="XZB-Xe-evr" secondAttribute="trailing" constant="20" id="44N-QY-7by"/>
+                            <constraint firstItem="XZB-Xe-evr" firstAttribute="top" secondItem="jcY-zr-Aif" secondAttribute="top" constant="20" id="QPa-RT-3UP"/>
+                            <constraint firstItem="XZB-Xe-evr" firstAttribute="leading" secondItem="jcY-zr-Aif" secondAttribute="leading" constant="20" id="eGF-bh-Ez0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jcY-zr-Aif"/>
+                    </view>
+                    <connections>
+                        <outlet property="mesLabel" destination="Sab-om-Edc" id="6DZ-ZE-LxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pkx-Aa-7kf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3557" y="-1126"/>
+        </scene>
+        <!--Nueva Quincena View Controller-->
         <scene sceneID="vuh-gQ-4CR">
             <objects>
-                <viewController id="d2l-vm-8Sf" sceneMemberID="viewController">
+                <viewController id="d2l-vm-8Sf" customClass="NuevaQuincenaViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Tx-Vj-Z97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -450,6 +565,9 @@
                                         <state key="normal" title="Agregar">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="agregarButton:" destination="d2l-vm-8Sf" eventType="touchUpInside" id="Sol-hH-hWW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -468,10 +586,53 @@
                         <viewLayoutGuide key="safeArea" id="jU1-tb-7YH"/>
                     </view>
                     <navigationItem key="navigationItem" id="AIp-NF-bsa"/>
+                    <connections>
+                        <outlet property="agregarButton" destination="RAd-3g-D0t" id="t8Y-60-BxR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQd-1n-d7p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="-362"/>
+            <point key="canvasLocation" x="4423.188405797102" y="-360.26785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XzI-8j-mA3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="ufK-CB-HG4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hNN-js-1nP"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="PGX-kN-7dD">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iq4-MT-DzV" kind="relationship" relationship="rootViewController" id="qce-Ec-j5j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ZA-D6-k2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1221.7391304347827" y="-360.26785714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yvx-Lx-K4y">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="mCc-YC-dUb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0FU-1s-RUU"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cKD-xL-0cl">
+                        <rect key="frame" x="0.0" y="-54" width="0.0" height="0.0"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZEx-Wl-3N3" kind="relationship" relationship="rootViewController" id="Vbh-Et-zia"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAW-7w-NNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1222" y="530"/>
         </scene>
     </scenes>
 </document>

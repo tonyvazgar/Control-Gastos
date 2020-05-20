@@ -16,6 +16,10 @@
 		EF259D662472427F006F094A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D642472427F006F094A /* Main.storyboard */; };
 		EF259D6824724280006F094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6724724280006F094A /* Assets.xcassets */; };
 		EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6924724280006F094A /* LaunchScreen.storyboard */; };
+		EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */; };
+		EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */; };
+		EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */; };
+		EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		EF259D6724724280006F094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF259D6A24724280006F094A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF259D6C24724280006F094A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
+		EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaQuincenaViewController.swift; sourceTree = "<group>"; };
+		EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleQuincenaViewController.swift; sourceTree = "<group>"; };
+		EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGastoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,10 @@
 				EF259D622472427F006F094A /* ViewController.swift */,
 				EF126CC32473700C00177691 /* QuincenasViewController.swift */,
 				EF126CC52473701B00177691 /* GastosViewController.swift */,
+				EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */,
+				EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */,
+				EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */,
+				EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -211,7 +223,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */,
+				EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */,
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
+				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
+				EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */,
 				EF126CC62473701B00177691 /* GastosViewController.swift in Sources */,
 				EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */,
 				EF259D5F2472427F006F094A /* AppDelegate.swift in Sources */,

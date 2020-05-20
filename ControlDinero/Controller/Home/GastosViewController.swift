@@ -8,23 +8,55 @@
 
 import UIKit
 
-class GastosViewController: UIViewController {
+class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var nuevoGastoButton: UIButton!
+    
+    let gastos = [
+        "Spotify",
+        "Netflix",
+        "Comida",
+        "GYM",
+        "iPhone",
+        "PS5",
+        "Colegiatura",
+        "Brazzers",
+        "Veterinaria",
+        "iCloud",
+        "Ejemplo",
+        "Ejemplo",
+        
+    ]
+    @IBAction func nuevoGastoAction(_ sender: UIButton) {
+        sender.shine()
+        sender.jump()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.delegate = self
+        tableView.dataSource = self
+        nuevoGastoButton.round()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: Funciones de las implementaciones
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return gastos.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gastos", for: indexPath)
+        cell.textLabel?.text = gastos[indexPath.row]
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(gastos[indexPath.row])
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "DetalleGastoViewController") as? DetalleGastoViewController
+        viewController?.nombre = gastos[indexPath.row]
+        viewController?.modalPresentationStyle = .pageSheet
+        self.navigationController?.present(viewController!, animated: true, completion: nil)
+        
+    }
 
 }
