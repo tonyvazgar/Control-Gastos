@@ -10,6 +10,8 @@ import UIKit
 
 class NuevoGastoViewController: UIViewController {
 
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
     @IBOutlet weak var agregarButton: UIButton!
     @IBAction func agregarAction(_ sender: UIButton) {
         sender.shine()
