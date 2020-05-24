@@ -18,6 +18,7 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBAction func agregarAction(_ sender: UIButton) {
         sender.shine()
         sender.jump()
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -41,16 +41,27 @@ class ViewController: UIViewController {
     
     private func getGanancias() -> String {
         var ganancias = "$33,204.33"
+        /*
+         *Code
+         */
         return ganancias
     }
     
     private func getGastos() -> String {
         var gastos = "$10,000.33"
+        /*
+         *Code
+         */
+
         return gastos
     }
     
     private func getTotal() -> String {
         var total = "$23,204.00"
+        /*
+         *Code
+         */
+
         return total
     }
     
