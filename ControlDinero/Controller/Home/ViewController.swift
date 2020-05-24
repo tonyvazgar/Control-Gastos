@@ -40,11 +40,13 @@ class ViewController: UIViewController {
     }
     
     private func getGanancias() -> String {
-        var ganancias = "$33,204.33"
-        /*
-         *Code
-         */
-        return ganancias
+        var texto: String
+        Model.selectAllIngresos()
+        texto = ""
+        for ingreso in Model.ingresosList{
+            texto += " ID: \(ingreso.monto)"
+        }
+        return texto
     }
     
     private func getGastos() -> String {
@@ -68,6 +70,7 @@ class ViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        createDB()
         // Do any additional setup after loading the view.
         quincenasButton.round()
         quincenasButton.bounce()
@@ -83,6 +86,15 @@ class ViewController: UIViewController {
         labelTotal.text = getTotal()
     }
 
+    //MARK: Funciones DB
+    private func createDB(){
+        Model.createDB("develop")
+        Model.openDB()
+        Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena INTEGER NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto REAL NOT NULL)")
+        Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, monto REAL NOT NULL)")
+        Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos REAL NOT NULL, egresos REAL NOT NULL, num_de_quincenas INTEGER NOT NULL, num_de_gastos INTEGER NOT NULL, total REAL NOT NULL)")
+        
+    }
 
 }
 

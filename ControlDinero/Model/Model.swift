@@ -12,12 +12,12 @@ import UIKit
 public class Model{
     
     // MARK: Atributos estaticos
-    static var dbPointer : OpaquePointer? = nil
+    static var dbPointer : OpaquePointer?       = nil
     static var statementPointer: OpaquePointer? = nil
-    static var ingresosList = Array<Ingreso>()
-    static var egresosList = Array<Egreso>()
-    static var totalList = Array<Total>()
-    static var dbURL: URL? = nil
+    static var ingresosList                     = Array<Ingreso>()
+    static var egresosList                      = Array<Egreso>()
+    static var totalList                        = Array<Total>()
+    static var dbURL: URL?                      = nil
     
     // MARK: Funciones públicas
     public static func createDB(_ nombre: String){
@@ -49,10 +49,11 @@ public class Model{
     
     //MARK: Funciones privadas
     private static func queryIsPrepared(query: String) -> Bool {
-        var queryIsPrepared: Bool
-        var errorMessage: String
+        var queryIsPrepared     : Bool
+        var errorMessage        : String
         
-        queryIsPrepared = false
+        queryIsPrepared         = false
+        
         if sqlite3_prepare(dbPointer, query, -1, &statementPointer, nil) != SQLITE_OK{
             errorMessage = String(cString: sqlite3_errmsg(dbPointer)!)
             print("Error preparing query: " + query)
@@ -64,12 +65,105 @@ public class Model{
     }
     
     //MARK: CRUD Ingresos Class
-    public static func ingresosSelectAll(){
-        let selectAllQuery = "SELECT * FROM Quincenas"
+    
+    /*
+    CREATE TABLE "QUINCENA" (
+        "id_quincena"    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        "mes"    TEXT NOT NULL,
+        "num_quincena"    INTEGER NOT NULL,
+        "fecha"    TEXT NOT NULL,
+        "detalles"    TEXT NOT NULL,
+        "monto"    REAL NOT NULL
+    );
+    */
+    public static func selectAllIngresos(){
+        let selectAllQuery = "SELECT * FROM Quincena"
         if queryIsPrepared(query: selectAllQuery){
             ingresosList = getResultSetIngresos()
         }
     }
+    
+    public static func selectFromIngresoWhere(mes: String){
+        let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + mes + "'"
+        if queryIsPrepared(query: query){
+            ingresosList = getResultSetIngresos()
+        }
+    }
+    
+    public static func selectFromIngresoWhere(fecha: String){
+        let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + fecha + "'"
+        if queryIsPrepared(query: query){
+            ingresosList = getResultSetIngresos()
+        }
+    }
+    
+    public static func insertIntoIngreso(mes: String, num_quincena: String, fecha: String, detalles: String, monto: String){
+        let query       = "INSERT INTO Quincena (mes, num_quincena, fecha, detalles, monto) VALUES (?,?,?,?,?)"
+        var errMessage  :  String
+        
+        if queryIsPrepared(query: query){
+            if sqlite3_bind_text(statementPointer, 1, mes, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding mes: \(errMessage)")
+                return
+            }else{
+                print("Binding mes value.... OK...")
+            }
+            if sqlite3_bind_int(statementPointer, 2, (num_quincena as NSString).intValue) != SQLITE_OK {
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure binding num_quincena: \(errMessage)")
+                return
+            }else{
+                print("Binding num_quincena OK")
+            }
+            if sqlite3_bind_text(statementPointer, 3, fecha, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding fecha: \(errMessage)")
+                return
+            }else{
+                print("Binding fecha value.... OK...")
+            }
+            if sqlite3_bind_text(statementPointer, 4, detalles, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding detalles: \(errMessage)")
+                return
+            }else{
+                print("Binding detalles value.... OK...")
+            }
+            if sqlite3_bind_double(statementPointer, 2, (monto as NSString).doubleValue) != SQLITE_OK {
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure binding monto: \(errMessage)")
+                return
+            }else{
+                print("Binding monto OK")
+            }
+            if sqlite3_step(statementPointer) != SQLITE_DONE{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure inserting record: \(errMessage)")
+                return
+            }else{
+                print("Record inserted :)")
+            }
+        }
+    }
+    
+    //MARK: CRUD Egresos Class
+    public static func selectAllEgresos(){
+        let selectAllQuery = "SELECT * FROM Gasto"
+        if queryIsPrepared(query: selectAllQuery){
+            egresosList = getResultSetEgresos()
+        }
+    }
+    
+    //MARK: CRUD Total Class
+    public static func selectAllTotal(){
+        let selectAllQuery = "SELECT * FROM Total"
+        if queryIsPrepared(query: selectAllQuery){
+            totalList = getResultSetTotal()
+        }
+    }
+    
+    //MARK: Results Set Clases
     static func getResultSetIngresos() -> Array<Ingreso>{
         
         var resultSet       : Array<Ingreso>
@@ -84,19 +178,68 @@ public class Model{
         resultSet = []
         
         while(sqlite3_step(statementPointer) == SQLITE_ROW){
-            id_quincena = sqlite3_column_int(statementPointer, 0)
-            mes = String(cString: sqlite3_column_text(statementPointer, 1))
-            num_quincena = sqlite3_column_int(statementPointer, 2)
-            fecha = String(cString: sqlite3_column_text(statementPointer, 3))
-            detalles = String(cString: sqlite3_column_text(statementPointer, 4))
-            monto = sqlite3_column_double(statementPointer, 5)
+            id_quincena     = sqlite3_column_int(statementPointer, 0)
+            mes             = String(cString: sqlite3_column_text(statementPointer, 1))
+            num_quincena    = sqlite3_column_int(statementPointer, 2)
+            fecha           = String(cString: sqlite3_column_text(statementPointer, 3))
+            detalles        = String(cString: sqlite3_column_text(statementPointer, 4))
+            monto           = sqlite3_column_double(statementPointer, 5)
             
+            //init(_ id_quincena: Int, _ mes: String, _ num_quincena: Int, _ fecha: String, _ detalles: String, _ monto: Double)
             resultSet.append(Ingreso(Int(id_quincena), String(describing: mes), Int(num_quincena), String(describing: fecha), String(describing: detalles), Double(monto)))
         }//end while
         return resultSet
     }
     
-    //MARK: CRUD Egresos Class
+    static func getResultSetEgresos() -> Array<Egreso>{
+        
+        var resultSet       : Array<Egreso>
+        
+        var id_gasto        : Int32
+        var nombre          : String
+        var detalles        : String
+        var fecha           : String
+        var monto           : Double
+        
+        resultSet = []
+        
+        while(sqlite3_step(statementPointer) == SQLITE_ROW){
+            id_gasto    = sqlite3_column_int(statementPointer, 0)
+            nombre      = String(cString: sqlite3_column_text(statementPointer, 1))
+            detalles    = String(cString: sqlite3_column_text(statementPointer, 2))
+            fecha       = String(cString: sqlite3_column_text(statementPointer, 3))
+            monto       = sqlite3_column_double(statementPointer, 4)
+            
+            //(_ id_gasto: Int, _ nombre: String, _ detalles: String, _ fecha: String, _ monto: Double)
+            resultSet.append(Egreso(Int(id_gasto), String(describing: nombre), String(describing: detalles), String(describing: fecha), Double(monto)))
+        }//end while
+        return resultSet
+    }
     
-    //MARK: CRUD Total Class
+    static func getResultSetTotal() -> Array<Total>{
+        
+        var resultSet       : Array<Total>
+        
+        var mes             : String
+        var ingresos        : Double
+        var egresos         : Double
+        var num_de_quincenas: Int32
+        var num_de_gastos   : Int32
+        var total           : Double
+        
+        resultSet = []
+        
+        while(sqlite3_step(statementPointer) == SQLITE_ROW){
+            mes                 = String(cString: sqlite3_column_text(statementPointer, 0))
+            ingresos            = sqlite3_column_double(statementPointer, 1)
+            egresos             = sqlite3_column_double(statementPointer, 2)
+            num_de_quincenas    = sqlite3_column_int(statementPointer, 3)
+            num_de_gastos       = sqlite3_column_int(statementPointer, 4)
+            total               = sqlite3_column_double(statementPointer, 4)
+            
+            //init(_ mes: String, _ ingresos: Double, _ egresos: Double, _ num_de_quincenas: Int, _ num_de_gastos: Int, _ total: Double)
+            resultSet.append(Total(String(describing: mes), Double(ingresos), Double(egresos), Int(num_de_quincenas), Int(num_de_gastos), Double(total)))
+        }//end while
+        return resultSet
+    }
 }

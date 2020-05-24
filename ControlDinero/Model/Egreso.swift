@@ -25,12 +25,12 @@ class Egreso {
     var id_gasto: Int
     var nombre: String
     var detalles: String
-    var fecha: Date
+    var fecha: String
     var monto: Double
     
     // MARK: Constructor
     
-    init(_ id_gasto: Int, _ nombre: String, _ detalles: String, _ fecha: Date, _ monto: Double) {
+    init(_ id_gasto: Int, _ nombre: String, _ detalles: String, _ fecha: String, _ monto: Double) {
         self.id_gasto = id_gasto
         self.nombre = nombre
         self.detalles = detalles

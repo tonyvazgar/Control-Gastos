@@ -13,7 +13,7 @@ class Ingreso {
     // MARK: Atributos de clase
     
     /*
-     CREATE TABLE "QUINCENAS" (
+     CREATE TABLE "QUINCENA" (
          "id_quincena"    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
          "mes"    TEXT NOT NULL,
          "num_quincena"    INTEGER NOT NULL,
