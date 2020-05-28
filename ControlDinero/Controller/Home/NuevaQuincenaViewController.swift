@@ -15,17 +15,28 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     @IBOutlet weak var montoTextField: UITextField!
     @IBOutlet weak var detallesTextField: UITextField!
     
-    let pickerData = ["","1", "2", "3", "4"]
+    let pickerDataNumQuincenas = ["","1", "2", "3", "4"]
     var numero_quincena = ""
     
     @IBAction func agregarAction(_ sender: UIButton) {
-        print(numero_quincena)
-        print(montoTextField.text!)
-        print(detallesTextField.text!)
+//        print(numero_quincena)
+//        print(montoTextField.text!)
+//        print(detallesTextField.text!)
+        insetar()
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
     
+    private func insetar(){
+        let un_mes = getCurrentDate()
+        let una_num_quincena = self.numero_quincena
+        let una_fecha = getTodayDate()
+        let unos_detalles = detallesTextField.text!
+        let un_monto = montoTextField.text!
+        Model.insertIntoIngreso(mes: un_mes, num_quincena: una_num_quincena, fecha: una_fecha, detalles: unos_detalles, monto: un_monto)
+    }
+    
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Connect data:
@@ -35,21 +46,23 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         agregarButton.round()
     }
     
-    
+    // MARK: Implementaciones
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerData.count
+        return pickerDataNumQuincenas.count
     }
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return (pickerData[row])
+        return (pickerDataNumQuincenas[row])
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        numero_quincena = pickerData[row]
+        numero_quincena = pickerDataNumQuincenas[row]
     }
 }
+
+// MARK: Extensions
 extension UIViewController {
     func dismissKey() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer( target: self, action: #selector(UIViewController.dismissKeyboard))

@@ -15,22 +15,28 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var nuevaQuincenaButton: UIButton!
     
     // MARK: Variables para datos
-    let quincenas = [
-        "Enero 2020",
-        "Febrero 2020",
-        "Marzo 2020",
-        "Abril 2020",
-        "Mayo 2020"
-    ]
+    var quincenas = Array<String>()
     
-    let numerosQuincenas = [
-        "2",
-        "2",
-        "2",
-        "2",
-        "1"
-    ]
+    var numerosQuincenas = Array<String>()
     
+    //MARK: Obtener datos BDD
+    
+    func getData(){
+        
+        let quincenas = Array<String>();
+        let numQuincenas = Array<String>();
+        
+        Model.selectAllIngresos()
+        for ingreso in Model.ingresosList{
+            let quincena = String(ingreso.mes)
+            let num_quincena = String(ingreso.num_quincena)
+            print(quincena + num_quincena)
+        }
+        
+        self.quincenas = quincenas
+        self.numerosQuincenas = numQuincenas
+        
+    }
     
     //MARK: Actions
     
@@ -42,16 +48,23 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        Model.selectAllIngresos()
         tableView.delegate = self
         tableView.dataSource = self
         nuevaQuincenaButton.round()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+        Model.selectAllIngresos()
     }
     
     // MARK: Funciones de las extenciones
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Regresa el numero de rows en el Table View
-        return quincenas.count
+        return Model.ingresosList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,19 +73,26 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "quincenas", for: indexPath)
         
         //Asignación de labels de la celda con datos recuperados de la BDD
-        cell.textLabel?.text = quincenas[indexPath.row]
-        cell.detailTextLabel?.text = numerosQuincenas[indexPath.row]
+        let item = Model.ingresosList[indexPath.row]
+            
+        cell.textLabel?.text = item.mes
+        cell.detailTextLabel?.text = String(item.num_quincena)
         
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(quincenas[indexPath.row])
         
         //Instancia del ViewController con idenficador DetalleQuincenaViewController ya elaborado en el StoryBoard
         let viewController = storyboard?.instantiateViewController(withIdentifier: "DetalleQuincenaViewController") as? DetalleQuincenaViewController
         
         //Envio de datos para las variables del ViewController
-        viewController?.mes = quincenas[indexPath.row]
+        let item = Model.ingresosList[indexPath.row]
+            
+        viewController?.mes = item.mes
+        viewController?.num_quincena = "Quincena #" + String(item.num_quincena)
+        viewController?.amount = String(item.monto)
+        viewController?.fecha = item.fecha
+        viewController?.detalles = item.detalles
         
         //Tipo de presentación (tarjeta)
         viewController?.modalPresentationStyle = .pageSheet

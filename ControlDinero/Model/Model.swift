@@ -26,7 +26,6 @@ public class Model{
             FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         Model.dbURL = Model.dbURL?.appendingPathComponent(nombre + ".sqlite")
         print("Database created at: ", Model.dbURL!)
-        print(Model.dbURL!)
     }
     
     public static func openDB(){
@@ -49,10 +48,12 @@ public class Model{
     
     //MARK: Funciones privadas
     private static func queryIsPrepared(query: String) -> Bool {
+        print("LA query es -->: " + query)
         var queryIsPrepared     : Bool
         var errorMessage        : String
         
         queryIsPrepared         = false
+        
         
         if sqlite3_prepare(dbPointer, query, -1, &statementPointer, nil) != SQLITE_OK{
             errorMessage = String(cString: sqlite3_errmsg(dbPointer)!)
@@ -101,36 +102,42 @@ public class Model{
         let query       = "INSERT INTO Quincena (mes, num_quincena, fecha, detalles, monto) VALUES (?,?,?,?,?)"
         var errMessage  :  String
         
+        let mes = mes as NSString
+        let num_quincena = num_quincena as NSString
+        let fecha = fecha as NSString
+        let detalles = detalles as NSString
+        let monto = monto as NSString
+        
         if queryIsPrepared(query: query){
-            if sqlite3_bind_text(statementPointer, 1, mes, -1, nil) != SQLITE_OK{
+            if sqlite3_bind_text(statementPointer, 1, mes.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding mes: \(errMessage)")
                 return
             }else{
                 print("Binding mes value.... OK...")
             }
-            if sqlite3_bind_int(statementPointer, 2, (num_quincena as NSString).intValue) != SQLITE_OK {
+            if sqlite3_bind_text(statementPointer, 2, num_quincena.utf8String, -1, nil) != SQLITE_OK {
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Failure binding num_quincena: \(errMessage)")
                 return
             }else{
                 print("Binding num_quincena OK")
             }
-            if sqlite3_bind_text(statementPointer, 3, fecha, -1, nil) != SQLITE_OK{
+            if sqlite3_bind_text(statementPointer, 3, fecha.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding fecha: \(errMessage)")
                 return
             }else{
                 print("Binding fecha value.... OK...")
             }
-            if sqlite3_bind_text(statementPointer, 4, detalles, -1, nil) != SQLITE_OK{
+            if sqlite3_bind_text(statementPointer, 4, detalles.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding detalles: \(errMessage)")
                 return
             }else{
                 print("Binding detalles value.... OK...")
             }
-            if sqlite3_bind_double(statementPointer, 2, (monto as NSString).doubleValue) != SQLITE_OK {
+            if sqlite3_bind_text(statementPointer, 5, monto.utf8String, -1, nil) != SQLITE_OK {
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Failure binding monto: \(errMessage)")
                 return

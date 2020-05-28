@@ -30,23 +30,18 @@ class ViewController: UIViewController {
     }
     
     // MARK: Funciones
-    private func getCurrentDate() -> String {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.dateFormat = "MMMM yyyy"
-        let result = formatter.string(from: date)
-        return result
-    }
     
     private func getGanancias() -> String {
-        var texto: String
+        var ganancias: Double
         Model.selectAllIngresos()
-        texto = ""
+        ganancias = 0.0
         for ingreso in Model.ingresosList{
-            texto += " ID: \(ingreso.monto)"
+            let quincena = Double(ingreso.monto)
+            print(ingreso.description)
+            ganancias += quincena
         }
-        return texto
+        let total = "$\(String(describing: ganancias))"
+        return total
     }
     
     private func getGastos() -> String {
@@ -79,6 +74,9 @@ class ViewController: UIViewController {
         gastosButton.jump()
         gastosButton.bounce()
         
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         //Obtener datos para poner en labels
         labelMes.text = getCurrentDate()
         labelGastos.text = getGastos()
@@ -90,9 +88,9 @@ class ViewController: UIViewController {
     private func createDB(){
         Model.createDB("develop")
         Model.openDB()
-        Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena INTEGER NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto REAL NOT NULL)")
-        Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, monto REAL NOT NULL)")
-        Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos REAL NOT NULL, egresos REAL NOT NULL, num_de_quincenas INTEGER NOT NULL, num_de_gastos INTEGER NOT NULL, total REAL NOT NULL)")
+        Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
+        Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, monto TEXT NOT NULL)")
+        Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos TEXT NOT NULL, egresos TEXT NOT NULL, num_de_quincenas TEXT NOT NULL, num_de_gastos TEXT NOT NULL, total TEXT NOT NULL)")
         
     }
 

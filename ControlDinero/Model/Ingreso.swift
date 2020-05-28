@@ -40,4 +40,9 @@ class Ingreso {
         self.detalles = detalles
         self.monto = monto
     }
+    
+    
+    var description: String {
+        return "\(self.id_quincena)(Mes: \(self.mes), num_quincena: \(self.num_quincena), fecha: \(self.fecha), detalles: \(self.detalles), monto: \(self.monto))"
+    }
 }

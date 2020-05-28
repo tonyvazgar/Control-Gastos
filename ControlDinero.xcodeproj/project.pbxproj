@@ -16,6 +16,7 @@
 		EF259D662472427F006F094A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D642472427F006F094A /* Main.storyboard */; };
 		EF259D6824724280006F094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6724724280006F094A /* Assets.xcassets */; };
 		EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6924724280006F094A /* LaunchScreen.storyboard */; };
+		EF438367247B2D5E0035AF11 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF438366247B2D5E0035AF11 /* Functions.swift */; };
 		EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF6247A3186004E293A /* Ingreso.swift */; };
 		EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF8247A3190004E293A /* Egreso.swift */; };
 		EF5C6BFB247A31A5004E293A /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFA247A31A5004E293A /* Total.swift */; };
@@ -38,6 +39,7 @@
 		EF259D6724724280006F094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF259D6A24724280006F094A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF259D6C24724280006F094A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		EF438366247B2D5E0035AF11 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EF5C6BF6247A3186004E293A /* Ingreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingreso.swift; sourceTree = "<group>"; };
 		EF5C6BF8247A3190004E293A /* Egreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egreso.swift; sourceTree = "<group>"; };
 		EF5C6BFA247A31A5004E293A /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				EF126CC124733DF600177691 /* UIButtonExtension.swift */,
+				EF438366247B2D5E0035AF11 /* Functions.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
+				EF438367247B2D5E0035AF11 /* Functions.swift in Sources */,
 				EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */,
 				EF126CC62473701B00177691 /* GastosViewController.swift in Sources */,
 				EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */,
