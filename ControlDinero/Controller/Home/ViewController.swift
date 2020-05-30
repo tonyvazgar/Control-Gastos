@@ -73,15 +73,21 @@ class ViewController: UIViewController {
         gastosButton.round()
         gastosButton.jump()
         gastosButton.bounce()
+        Model.selectAllIngresos()
+        labelGanancias.reloadInputViews()
+        print("HOla amikoooosssssss****")
         
     }
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        labelGanancias.reloadInputViews()
+        Model.selectAllIngresos()
         //Obtener datos para poner en labels
         labelMes.text = getCurrentDate()
         labelGastos.text = getGastos()
         labelGanancias.text = getGanancias()
         labelTotal.text = getTotal()
+        print("Hola desde viewWillAppear de VIEWCONTROLLER")
     }
 
     //MARK: Funciones DB

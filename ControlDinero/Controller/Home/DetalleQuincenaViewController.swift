@@ -29,6 +29,7 @@ class DetalleQuincenaViewController: UIViewController {
         monto_label.text = amount
         fecha_label.text = fecha
         detalles_label.text = detalles
+        
     }
     
 

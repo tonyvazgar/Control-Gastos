@@ -21,6 +21,11 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK: Obtener datos BDD
     
+    @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+
+        dismiss(animated: true, completion: nil)
+    }
     func getData(){
         
         let quincenas = Array<String>();
@@ -52,12 +57,19 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         nuevaQuincenaButton.round()
+        print("Hola en viewdidload")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
         Model.selectAllIngresos()
+        print("Hola en viewWillAppear")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        print("Hola en viewWillDisappear")
     }
     
     // MARK: Funciones de las extenciones
@@ -97,6 +109,8 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         //Tipo de presentación (tarjeta)
         viewController?.modalPresentationStyle = .pageSheet
         
+        
+        
         //Presentarlo en el navigation controler actual
         self.navigationController?.present(viewController!, animated: true, completion: nil)
         
@@ -105,5 +119,3 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
 }
-
-

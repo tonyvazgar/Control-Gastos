@@ -45,6 +45,9 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         self.dismissKey()
         agregarButton.round()
     }
+    override func viewWillDisappear(_ animated: Bool) {
+        Model.selectAllIngresos()
+    }
     
     // MARK: Implementaciones
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
