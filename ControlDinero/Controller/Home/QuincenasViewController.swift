@@ -59,6 +59,11 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         nuevaQuincenaButton.round()
         print("Hola en viewdidload")
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Mis quincenas"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)

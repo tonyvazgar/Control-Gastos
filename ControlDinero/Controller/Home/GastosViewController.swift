@@ -51,6 +51,10 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sender.shine()
         sender.jump()
     }
+    @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -58,6 +62,12 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         nuevoGastoButton.round()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Mis gastos"
+        navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
     // MARK: Funciones de las extenciones

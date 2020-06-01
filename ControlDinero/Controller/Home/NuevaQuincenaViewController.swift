@@ -19,20 +19,24 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     var numero_quincena = ""
     
     @IBAction func agregarAction(_ sender: UIButton) {
-//        print(numero_quincena)
-//        print(montoTextField.text!)
-//        print(detallesTextField.text!)
-        insetar()
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        if montoTextField.text != "" && detallesTextField.text != "" {
+            if self.numero_quincena != "0" && self.numero_quincena != "" {
+                insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: montoTextField.text!)
+                navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
+            } else {
+                let alertController = UIAlertController(title: "Falta el número de quincena", message: "Debes seleccionar el número de quincena para agregarla", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .default))
+                self.present(alertController, animated: true, completion: nil)
+            }
+        } else {
+            let alertController = UIAlertController(title: "Campos vacios", message: "Debes llenar campos de descripción y el monto", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
     
-    private func insetar(){
-        let un_mes = getCurrentDate()
-        let una_num_quincena = self.numero_quincena
-        let una_fecha = getTodayDate()
-        let unos_detalles = detallesTextField.text!
-        let un_monto = montoTextField.text!
+    private func insetar(un_mes: String, una_num_quincena: String, una_fecha: String, unos_detalles: String, un_monto: String){
         Model.insertIntoIngreso(mes: un_mes, num_quincena: una_num_quincena, fecha: una_fecha, detalles: unos_detalles, monto: un_monto)
     }
     
@@ -44,6 +48,10 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         self.picker.dataSource = self
         self.dismissKey()
         agregarButton.round()
+        
+        //Para notificar que tiene que empujar vista cuando aparece el teclado
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     override func viewWillDisappear(_ animated: Bool) {
         Model.selectAllIngresos()
@@ -62,6 +70,18 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         numero_quincena = pickerDataNumQuincenas[row]
+    }
+    
+    // MARK: Funciones de ObjectiveC para mostrar o ocultar keyboard cuando se escribe en labels
+    @objc func keyboardWillShow(notification: NSNotification){
+        self.view.frame.origin.y = 0
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification){
+        self.view.frame.origin.y = 0
     }
 }
 

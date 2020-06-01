@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */; };
 		EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC124733DF600177691 /* UIButtonExtension.swift */; };
 		EF126CC42473700C00177691 /* QuincenasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC32473700C00177691 /* QuincenasViewController.swift */; };
 		EF126CC62473701B00177691 /* GastosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC52473701B00177691 /* GastosViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLabelWhileKeyboard.swift; sourceTree = "<group>"; };
 		EF126CC124733DF600177691 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		EF126CC32473700C00177691 /* QuincenasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuincenasViewController.swift; sourceTree = "<group>"; };
 		EF126CC52473701B00177691 /* GastosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				EF126CC124733DF600177691 /* UIButtonExtension.swift */,
 				EF438366247B2D5E0035AF11 /* Functions.swift */,
+				EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			files = (
 				EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */,
 				EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */,
+				EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */,
 				EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */,
 				EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */,
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
