@@ -68,8 +68,10 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.egresosList[indexPath.row]
+        
         cell.textLabel?.text = item.nombre
-        cell.detailTextLabel?.text = item.detalles
+        cell.detailTextLabel?.text = "\(item.detalles)      $\(item.monto)"
+        
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
