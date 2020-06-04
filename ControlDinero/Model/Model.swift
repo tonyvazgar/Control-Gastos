@@ -169,6 +169,63 @@ public class Model{
         }
     }
     
+    public static func insertIntoGasto(nombre: String, detalles: String, fecha: String, monto: String){
+        /*
+        CREATE TABLE "GASTO" (
+            "id_gasto"    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+            "nombre"      TEXT NOT NULL,
+            "detalles"    TEXT NOT NULL,
+            "fecha"       TEXT NOT NULL,
+            "monto"       REAL NOT NULL
+        );
+        */
+        let query       = "INSERT INTO Gasto (nombre, detalles, fecha, monto) VALUES (?,?,?,?)"
+        var errMessage  :  String
+        
+        let nombre      = nombre    as NSString
+        let fecha       = fecha     as NSString
+        let detalles    = detalles  as NSString
+        let monto       = monto     as NSString
+        
+        if queryIsPrepared(query: query){
+            if sqlite3_bind_text(statementPointer, 1, nombre.utf8String, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding nombre: \(errMessage)")
+                return
+            }else{
+                print("Binding nombre value.... OK...")
+            }
+            if sqlite3_bind_text(statementPointer, 2, fecha.utf8String, -1, nil) != SQLITE_OK {
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure binding fecha: \(errMessage)")
+                return
+            }else{
+                print("Binding fecha OK")
+            }
+            if sqlite3_bind_text(statementPointer, 3, detalles.utf8String, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding detalles: \(errMessage)")
+                return
+            }else{
+                print("Binding detalles value.... OK...")
+            }
+            if sqlite3_bind_text(statementPointer, 4, monto.utf8String, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding monto: \(errMessage)")
+                return
+            }else{
+                print("Binding monto value.... OK...")
+            }
+            if sqlite3_step(statementPointer) != SQLITE_DONE{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure inserting record: \(errMessage)")
+                return
+            }else{
+                print("Record inserted :)")
+            }
+        }
+    }
+    
     //MARK: CRUD Total Class
     public static func selectAllTotal(){
         let selectAllQuery = "SELECT * FROM Total"

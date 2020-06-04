@@ -29,23 +29,6 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         dismiss(animated: true, completion: nil)
     }
     
-//    func getData(){
-//
-//        let quincenas = Array<String>();
-//        let numQuincenas = Array<String>();
-//
-//        Model.selectAllIngresosReverse()
-//        for ingreso in Model.ingresosList{
-//            let quincena = String(ingreso.mes)
-//            let num_quincena = String(ingreso.num_quincena)
-//            print(quincena + num_quincena)
-//        }
-//
-//        self.quincenas = quincenas
-//        self.numerosQuincenas = numQuincenas
-//
-//    }
-    
     //MARK: Actions
     
     @IBAction func nuevaQuincenaAction(_ sender: UIButton) {

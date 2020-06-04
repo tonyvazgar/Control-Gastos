@@ -22,7 +22,7 @@ class NuevoGastoViewController: UIViewController {
         sender.jump()
         
         if montoTextField.text != "" && detallesTextField.text != "" && nombreTextField.text != ""{
-//            insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: montoTextField.text!)
+            insetar(nombre: nombreTextField.text!, detalles: detallesTextField.text!, fecha: dateToMyString(date: datePicker.date), monto: montoTextField.text!)
                 navigationController?.popViewController(animated: true)
                 dismiss(animated: true, completion: nil)
         } else {
@@ -33,6 +33,7 @@ class NuevoGastoViewController: UIViewController {
     }
     
     func insetar(nombre: String, detalles: String, fecha: String, monto: String){
+        Model.insertIntoGasto(nombre: nombre, detalles: detalles, fecha: fecha, monto: monto)
     }
     
     override func viewDidLoad() {
@@ -45,7 +46,9 @@ class NuevoGastoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    override func viewWillDisappear(_ animated: Bool) {
+        Model.selectAllEgresos()
+    }
     
     // MARK: Funciones de ObjectiveC para mostrar o ocultar keyboard cuando se escribe en labels
     

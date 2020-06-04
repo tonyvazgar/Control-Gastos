@@ -17,34 +17,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: Variables para datos
     var gastos = Array<String>()
     var fechasGastos = Array<String>()
-//     = [
-//        "Spotify",
-//        "Netflix",
-//        "Comida",
-//        "GYM",
-//        "iPhone",
-//        "PS5",
-//        "Colegiatura",
-//        "MercadoLibre",
-//        "Veterinaria",
-//        "iCloud",
-//        "Ejemplo",
-//        "Ejemplo"
-//    ]
-//    let fechasGastos = [
-//        "2020-05-20",
-//        "2020-05-19",
-//        "2020-05-15",
-//        "2020-05-15",
-//        "2020-05-15",
-//        "2020-05-10",
-//        "2020-05-09",
-//        "2020-05-02",
-//        "2020-05-01",
-//        "2020-04-28",
-//        "2020-04-20",
-//        "2020-04-15"
-//    ]
+    
     
     //MARK: Actions
     
@@ -63,6 +36,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        Model.selectAllEgresos()
         tableView.delegate = self
         tableView.dataSource = self
         nuevoGastoButton.round()
