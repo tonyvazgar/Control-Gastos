@@ -11,15 +11,33 @@ import UIKit
 class NuevoGastoViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    
+    @IBOutlet weak var montoTextField: UITextField!
+    @IBOutlet weak var detallesTextField: UITextField!
+    @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var agregarButton: UIButton!
+    
+    
     @IBAction func agregarAction(_ sender: UIButton) {
         sender.shine()
         sender.jump()
+        
+        if montoTextField.text != "" && detallesTextField.text != "" && nombreTextField.text != ""{
+//            insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: montoTextField.text!)
+                navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
+        } else {
+            let alertController = UIAlertController(title: "Campos vacios", message: "Debes llenar campos de nombre, detalles y el monto.", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
+    func insetar(nombre: String, detalles: String, fecha: String, monto: String){
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         agregarButton.round()
         self.dismissKey()
         

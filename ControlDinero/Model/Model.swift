@@ -84,6 +84,13 @@ public class Model{
         }
     }
     
+    public static func selectAllIngresosReverse(){
+        let selectAllQuery = "SELECT * FROM Quincena ORDER BY id_quincena DESC"
+        if queryIsPrepared(query: selectAllQuery){
+            ingresosList = getResultSetIngresos()
+        }
+    }
+    
     public static func selectFromIngresoWhere(mes: String){
         let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + mes + "'"
         if queryIsPrepared(query: query){

@@ -21,27 +21,30 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     
     //MARK: Obtener datos BDD
     
+    
+    // Boton para regresar a ViewController pincipal
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
 
         dismiss(animated: true, completion: nil)
     }
-    func getData(){
-        
-        let quincenas = Array<String>();
-        let numQuincenas = Array<String>();
-        
-        Model.selectAllIngresos()
-        for ingreso in Model.ingresosList{
-            let quincena = String(ingreso.mes)
-            let num_quincena = String(ingreso.num_quincena)
-            print(quincena + num_quincena)
-        }
-        
-        self.quincenas = quincenas
-        self.numerosQuincenas = numQuincenas
-        
-    }
+    
+//    func getData(){
+//
+//        let quincenas = Array<String>();
+//        let numQuincenas = Array<String>();
+//
+//        Model.selectAllIngresosReverse()
+//        for ingreso in Model.ingresosList{
+//            let quincena = String(ingreso.mes)
+//            let num_quincena = String(ingreso.num_quincena)
+//            print(quincena + num_quincena)
+//        }
+//
+//        self.quincenas = quincenas
+//        self.numerosQuincenas = numQuincenas
+//
+//    }
     
     //MARK: Actions
     
@@ -53,11 +56,10 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        Model.selectAllIngresos()
+        Model.selectAllIngresosReverse()
         tableView.delegate = self
         tableView.dataSource = self
         nuevaQuincenaButton.round()
-        print("Hola en viewdidload")
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
@@ -68,14 +70,9 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        Model.selectAllIngresos()
-        print("Hola en viewWillAppear")
+        Model.selectAllIngresosReverse()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        print("Hola en viewWillDisappear")
-    }
     
     // MARK: Funciones de las extenciones
     

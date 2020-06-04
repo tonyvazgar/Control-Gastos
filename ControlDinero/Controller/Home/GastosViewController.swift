@@ -15,35 +15,36 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     @IBOutlet weak var nuevoGastoButton: UIButton!
     
     // MARK: Variables para datos
-    
-    let gastos = [
-        "Spotify",
-        "Netflix",
-        "Comida",
-        "GYM",
-        "iPhone",
-        "PS5",
-        "Colegiatura",
-        "MercadoLibre",
-        "Veterinaria",
-        "iCloud",
-        "Ejemplo",
-        "Ejemplo"
-    ]
-    let fechasGastos = [
-        "2020-05-20",
-        "2020-05-19",
-        "2020-05-15",
-        "2020-05-15",
-        "2020-05-15",
-        "2020-05-10",
-        "2020-05-09",
-        "2020-05-02",
-        "2020-05-01",
-        "2020-04-28",
-        "2020-04-20",
-        "2020-04-15"
-    ]
+    var gastos = Array<String>()
+    var fechasGastos = Array<String>()
+//     = [
+//        "Spotify",
+//        "Netflix",
+//        "Comida",
+//        "GYM",
+//        "iPhone",
+//        "PS5",
+//        "Colegiatura",
+//        "MercadoLibre",
+//        "Veterinaria",
+//        "iCloud",
+//        "Ejemplo",
+//        "Ejemplo"
+//    ]
+//    let fechasGastos = [
+//        "2020-05-20",
+//        "2020-05-19",
+//        "2020-05-15",
+//        "2020-05-15",
+//        "2020-05-15",
+//        "2020-05-10",
+//        "2020-05-09",
+//        "2020-05-02",
+//        "2020-05-01",
+//        "2020-04-28",
+//        "2020-04-20",
+//        "2020-04-15"
+//    ]
     
     //MARK: Actions
     
@@ -51,10 +52,13 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sender.shine()
         sender.jump()
     }
+    
+    // Boton para regresar a ViewController pincipal
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
+    
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -62,6 +66,12 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         tableView.delegate = self
         tableView.dataSource = self
         nuevoGastoButton.round()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        tableView.reloadData()
+        Model.selectAllEgresos()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -74,7 +84,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //Regresa el numero de rows en el Table View
-        return gastos.count
+        return Model.egresosList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,18 +93,20 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let cell = tableView.dequeueReusableCell(withIdentifier: "gastos", for: indexPath)
         
         //Asignación de labels de la celda con datos recuperados de la BDD
-        cell.textLabel?.text = gastos[indexPath.row]
-        cell.detailTextLabel?.text = fechasGastos[indexPath.row]
+        let item = Model.egresosList[indexPath.row]
+        cell.textLabel?.text = item.nombre
+        cell.detailTextLabel?.text = item.detalles
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(gastos[indexPath.row])
         
         //Instancia del ViewController con idenficador DetalleQuincenaViewController ya elaborado en el StoryBoard
         let viewController = storyboard?.instantiateViewController(withIdentifier: "DetalleGastoViewController") as? DetalleGastoViewController
         
         //Envio de datos para las variables del ViewController
-        viewController?.nombre = gastos[indexPath.row]
+        let item = Model.egresosList[indexPath.row]
+        
+        viewController?.nombre = item.nombre
         
         //Tipo de presentación (tarjeta)
         viewController?.modalPresentationStyle = .pageSheet

@@ -18,6 +18,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var quincenasButton: UIButton!
     @IBOutlet weak var gastosButton: UIButton!
     
+
+    
+    
     // MARK: Actions
     @IBAction func buttonQuincenas(_ sender: UIButton) {
         sender.shine()
@@ -32,9 +35,8 @@ class ViewController: UIViewController {
     // MARK: Funciones
     
     private func getGanancias() -> String {
-        var ganancias: Double
+        var ganancias = 0.0
         Model.selectAllIngresos()
-        ganancias = 0.0
         for ingreso in Model.ingresosList{
             let quincena = Double(ingreso.monto)
             print(ingreso.description)
@@ -45,20 +47,27 @@ class ViewController: UIViewController {
     }
     
     private func getGastos() -> String {
-        var gastos = "$10,000.33"
-        /*
-         *Code
-         */
-
-        return gastos
+        var gastos = 0.0
+        Model.selectAllEgresos()
+        for egreso in Model.egresosList{
+            let gasto = Double(egreso.monto)
+            //print(egreso.description)
+            gastos += gasto
+        }
+        let total = "$\(String(describing: gastos))"
+        return total
     }
     
     private func getTotal() -> String {
-        var total = "$23,204.00"
-        /*
-         *Code
-         */
-
+        var tot = 0.0
+        Model.selectAllTotal()
+        for total in Model.totalList{
+            let ganancias = Double(total.ingresos)
+            let gastos = Double(total.egresos)
+            //print(egreso.description)
+            tot = ganancias - gastos
+        }
+        let total = "$\(String(describing: tot))"
         return total
     }
     
@@ -74,20 +83,24 @@ class ViewController: UIViewController {
         gastosButton.jump()
         gastosButton.bounce()
         Model.selectAllIngresos()
+        Model.selectAllEgresos()
         labelGanancias.reloadInputViews()
-        print("HOla amikoooosssssss****")
+        labelGastos.reloadInputViews()
+        labelTotal.reloadInputViews()
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         labelGanancias.reloadInputViews()
+        labelGastos.reloadInputViews()
+        labelTotal.reloadInputViews()
         Model.selectAllIngresos()
+        Model.selectAllEgresos()
         //Obtener datos para poner en labels
         labelMes.text = getCurrentDate()
         labelGastos.text = getGastos()
         labelGanancias.text = getGanancias()
         labelTotal.text = getTotal()
-        print("Hola desde viewWillAppear de VIEWCONTROLLER")
     }
 
     //MARK: Funciones DB
