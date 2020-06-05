@@ -11,12 +11,21 @@ import UIKit
 class DetalleGastoViewController: UIViewController {
 
     @IBOutlet weak var nombreGastoLabel: UILabel!
+    @IBOutlet weak var fechaLabel: UILabel!
+    @IBOutlet weak var detallesLabel: UILabel!
+    @IBOutlet weak var montoLabel: UILabel!
     
-    var nombre: String = ""
+    var nombre      : String = ""
+    var fecha       : String = ""
+    var detalles    : String = ""
+    var monto       : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nombreGastoLabel.text = nombre
+        nombreGastoLabel.text   = nombre
+        fechaLabel.text         = detalles
+        detallesLabel.text      = fecha
+        montoLabel.text         = monto
     }
     
 

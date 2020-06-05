@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             print(ingreso.description)
             ganancias += quincena
         }
-        let total = "$\(String(describing: ganancias))"
+        let total = String(describing: ganancias)
         return total
     }
     
@@ -54,20 +54,15 @@ class ViewController: UIViewController {
             //print(egreso.description)
             gastos += gasto
         }
-        let total = "$\(String(describing: gastos))"
+        let total = String(describing: gastos)
         return total
     }
     
     private func getTotal() -> String {
-        var tot = 0.0
-        Model.selectAllTotal()
-        for total in Model.totalList{
-            let ganancias = Double(total.ingresos)
-            let gastos = Double(total.egresos)
-            //print(egreso.description)
-            tot = ganancias - gastos
-        }
-        let total = "$\(String(describing: tot))"
+        let ganacias = Double(getGanancias())!
+        let gastos = Double(getGastos())!
+        let total1 = Double(round(1000*(ganacias-gastos))/1000)
+        let total = "$\(total1)"
         return total
     }
     

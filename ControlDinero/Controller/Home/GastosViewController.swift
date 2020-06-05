@@ -83,6 +83,9 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let item = Model.egresosList[indexPath.row]
         
         viewController?.nombre = item.nombre
+        viewController?.fecha = item.fecha
+        viewController?.detalles = item.detalles
+        viewController?.monto = String(item.monto)
         
         //Tipo de presentación (tarjeta)
         viewController?.modalPresentationStyle = .pageSheet
