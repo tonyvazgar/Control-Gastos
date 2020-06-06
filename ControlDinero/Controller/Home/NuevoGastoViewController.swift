@@ -22,7 +22,7 @@ class NuevoGastoViewController: UIViewController {
         sender.jump()
         
         if montoTextField.text != "" && detallesTextField.text != "" && nombreTextField.text != ""{
-            insetar(nombre: nombreTextField.text!, detalles: detallesTextField.text!, fecha: dateToMyString(date: datePicker.date), monto: montoTextField.text!)
+            insetar(nombre: nombreTextField.text!.capitalizingFirstLetter(), detalles: detallesTextField.text!, fecha: dateToMyString(date: datePicker.date), monto: montoTextField.text!)
                 navigationController?.popViewController(animated: true)
                 dismiss(animated: true, completion: nil)
         } else {

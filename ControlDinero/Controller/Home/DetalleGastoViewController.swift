@@ -25,7 +25,7 @@ class DetalleGastoViewController: UIViewController {
         nombreGastoLabel.text   = nombre
         fechaLabel.text         = detalles
         detallesLabel.text      = fecha
-        montoLabel.text         = monto
+        montoLabel.text         = numberFormated(number: Double(monto)!)
     }
     
 

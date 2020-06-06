@@ -26,7 +26,7 @@ class DetalleQuincenaViewController: UIViewController {
         super.viewDidLoad()
         mesLabel.text = mes
         num_quincena_label.text = num_quincena
-        monto_label.text = amount
+        monto_label.text = numberFormated(number: Double(amount)!)
         fecha_label.text = fecha
         detalles_label.text = detalles
         

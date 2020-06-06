@@ -69,8 +69,8 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.egresosList[indexPath.row]
         
-        cell.textLabel?.text = item.nombre
-        cell.detailTextLabel?.text = "\(item.detalles)      $\(item.monto)"
+        cell.textLabel?.text = item.nombre.capitalizingFirstLetter()
+        cell.detailTextLabel?.text = "\(item.detalles)          \(numberFormated(number: item.monto))"
         
         return cell
     }
@@ -82,7 +82,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         //Envio de datos para las variables del ViewController
         let item = Model.egresosList[indexPath.row]
         
-        viewController?.nombre = item.nombre
+        viewController?.nombre = item.nombre.capitalizingFirstLetter()
         viewController?.fecha = item.fecha
         viewController?.detalles = item.detalles
         viewController?.monto = String(item.monto)

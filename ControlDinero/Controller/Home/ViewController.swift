@@ -61,9 +61,7 @@ class ViewController: UIViewController {
     private func getTotal() -> String {
         let ganacias = Double(getGanancias())!
         let gastos = Double(getGastos())!
-        let total1 = Double(round(1000*(ganacias-gastos))/1000)
-        let total = "$\(total1)"
-        return total
+        return String(describing:Double(round(1000*(ganacias-gastos))/1000))
     }
     
     // MARK: Life Cycle
@@ -93,9 +91,9 @@ class ViewController: UIViewController {
         Model.selectAllEgresos()
         //Obtener datos para poner en labels
         labelMes.text = getCurrentDate()
-        labelGastos.text = getGastos()
-        labelGanancias.text = getGanancias()
-        labelTotal.text = getTotal()
+        labelGastos.text = numberFormated(number: Double(getGastos())!)
+        labelGanancias.text = numberFormated(number: Double(getGanancias())!)
+        labelTotal.text = numberFormated(number: Double(getTotal())!)
     }
 
     //MARK: Funciones DB

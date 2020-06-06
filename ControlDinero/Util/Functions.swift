@@ -31,3 +31,16 @@ func dateToMyString(date: Date) -> String{
     let result = formatter.string(from: date)
     return result
 }
+
+func numberFormated(number: Double) -> String{
+    let currencyFormatter = NumberFormatter()
+    currencyFormatter.usesGroupingSeparator = true
+    currencyFormatter.numberStyle = .currency
+    // localize to your grouping and decimal separator
+    currencyFormatter.locale = Locale.current
+
+    // We'll force unwrap with the !, if you've got defined data you may need more error checking
+    let priceString = currencyFormatter.string(from: NSNumber(value: number))!
+    print(priceString) // Displays $9,999.99 in the US locale
+    return priceString
+}
