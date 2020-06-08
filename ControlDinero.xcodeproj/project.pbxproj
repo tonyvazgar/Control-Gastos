@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		62F612FD16150CDACE27C56A /* Pods_ControlDinero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9427642CFC7D8742D306AFC4 /* Pods_ControlDinero.framework */; };
 		EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */; };
 		EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC124733DF600177691 /* UIButtonExtension.swift */; };
 		EF126CC42473700C00177691 /* QuincenasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC32473700C00177691 /* QuincenasViewController.swift */; };
@@ -29,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3CE9F6417491730115D721E3 /* Pods-ControlDinero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlDinero.debug.xcconfig"; path = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero.debug.xcconfig"; sourceTree = "<group>"; };
+		41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlDinero.release.xcconfig"; path = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero.release.xcconfig"; sourceTree = "<group>"; };
+		9427642CFC7D8742D306AFC4 /* Pods_ControlDinero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControlDinero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLabelWhileKeyboard.swift; sourceTree = "<group>"; };
 		EF126CC124733DF600177691 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		EF126CC32473700C00177691 /* QuincenasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuincenasViewController.swift; sourceTree = "<group>"; };
@@ -57,17 +61,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62F612FD16150CDACE27C56A /* Pods_ControlDinero.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF42C2087E75EF27D371FBFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CE9F6417491730115D721E3 /* Pods-ControlDinero.debug.xcconfig */,
+				41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D2BD9F722B61E61F02B07DD4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9427642CFC7D8742D306AFC4 /* Pods_ControlDinero.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF259D522472427F006F094A = {
 			isa = PBXGroup;
 			children = (
 				EF259D5D2472427F006F094A /* ControlDinero */,
 				EF259D5C2472427F006F094A /* Products */,
+				AF42C2087E75EF27D371FBFC /* Pods */,
+				D2BD9F722B61E61F02B07DD4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -177,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF259D6F24724280006F094A /* Build configuration list for PBXNativeTarget "ControlDinero" */;
 			buildPhases = (
+				6BAABD5DAFD18E703B0BEE67 /* [CP] Check Pods Manifest.lock */,
 				EF259D572472427F006F094A /* Sources */,
 				EF259D582472427F006F094A /* Frameworks */,
 				EF259D592472427F006F094A /* Resources */,
+				A6BAECA1E4AA5AF7169E4740 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +262,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6BAABD5DAFD18E703B0BEE67 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ControlDinero-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6BAECA1E4AA5AF7169E4740 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ControlDinero/Pods-ControlDinero-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ControlDinero/Pods-ControlDinero-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ControlDinero/Pods-ControlDinero-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EF259D572472427F006F094A /* Sources */ = {
@@ -398,6 +467,7 @@
 		};
 		EF259D7024724280006F094A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CE9F6417491730115D721E3 /* Pods-ControlDinero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -417,6 +487,7 @@
 		};
 		EF259D7124724280006F094A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

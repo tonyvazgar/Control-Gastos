@@ -28,8 +28,8 @@ class DetalleQuincenaViewController: UIViewController {
         num_quincena_label.text = num_quincena
         monto_label.text = numberFormated(number: Double(amount)!)
         fecha_label.text = fecha
-        detalles_label.text = detalles
-        
+        detalles_label.text = detalles.capitalizingFirstLetter()
+        detalles_label.numberOfLines = 4
     }
     
 

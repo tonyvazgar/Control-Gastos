@@ -1,0 +1,702 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0BE3E98C1CB0BCDD448F18CBA561B4E5 /* WhatsNewItemsViewController+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6828683C5F8EE9B35DF81616054294 /* WhatsNewItemsViewController+Cell.swift */; };
+		15343CB47FFBB0752355C2388481FE36 /* WhatsNewButtonViewController+DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26C5815C876C092CA58849B9F1EC6F4 /* WhatsNewButtonViewController+DetailButton.swift */; };
+		1D34744199255BB8C9950B8DC61B47B9 /* UIColor+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33794F7C124DBA68C4D6F28C979F4619 /* UIColor+Defaults.swift */; };
+		1EBF95B39A517FB60C32154A17A4E3EE /* WhatsNewVersionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4248925360DF6EF5311F805B0D40C2D7 /* WhatsNewVersionStore.swift */; };
+		2153E67600F1B493D658A13371FFFE73 /* Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69FCF3C85C1F1C92DC55050AD7CD32E /* Anchor.swift */; };
+		2729AF82673099FB4FAD7F68B86D0610 /* WhatsNew+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFFED01BCCCEA9F08EFA7F3268B149E /* WhatsNew+Version.swift */; };
+		2EE45E86A416F33B422FD18E8D14D06F /* InMemoryWhatsNewVersionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B98AC3E96197C6A860319B48FC1C114 /* InMemoryWhatsNewVersionStore.swift */; };
+		30455E0017F945465D91268E24CC93DB /* WhatsNewItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E227ACC4A5611234499D792FAAB6FBEB /* WhatsNewItemsViewController.swift */; };
+		30B583EDA3F98BD8D47BC4BFA5C80383 /* WhatsNewButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55DFF9389DD9BD492251EBA8E52E9CA /* WhatsNewButtonViewController.swift */; };
+		38908B6EA5AC50CC23758321FE5D4C50 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312B988EF117AE4DE76A268D970131FE /* UIKit.framework */; };
+		49C8993D1F51145FF20FC34B9695961E /* WhatsNewViewController+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D261C3B011F83B43FCEDCABC352A55E7 /* WhatsNewViewController+Theme.swift */; };
+		52892E5AD9C85CF79AB36703A2D2824F /* WhatsNewViewController+ItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBEA650F235C02FEF6BDC0A7B62C4E /* WhatsNewViewController+ItemsView.swift */; };
+		575CE7E6D9E87305D6A9CD367C7475C7 /* WhatsNewTitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CDF5997E373B39ECEA73D377B3DE912 /* WhatsNewTitleViewController.swift */; };
+		791A0EF7F55D8B27DF7263DCA0C737CD /* Pods-ControlDinero-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB848F5A83F39D505FC18306B2D0C441 /* Pods-ControlDinero-dummy.m */; };
+		7CB5E5115ACC97A044E3115376C8D2FA /* WhatsNewViewController+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AD8B1D21636683EB2874059FC25456 /* WhatsNewViewController+Animation.swift */; };
+		7D16802E323ECF2E5CD496E692813B50 /* WhatsNewKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DD6786F752AB2023AC3769CA7046C59D /* WhatsNewKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8D7DF75D8F09457EF4B3B56BCC797264 /* UIView+MakeConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178678E4387F473E00D0EA9A8D6EC86B /* UIView+MakeConstraints.swift */; };
+		95F27623EB740A15CFB04C1C8E6052AD /* WhatsNewKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A52FF04DB82FD37073CFFA0CEEB7B04F /* WhatsNewKit-dummy.m */; };
+		96B6AD640CD6C7EA382954F09F832D35 /* WhatsNew+Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A16D8CCF93B449A57C8D4EE78FF7E0 /* WhatsNew+Item.swift */; };
+		9CB41EC206D193644344058FD550703D /* WhatsNewViewController+TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A38D3084C4B433F446DD459191705C /* WhatsNewViewController+TitleView.swift */; };
+		A9C3F8449C359B062DD460A18B41B3FB /* WhatsNewViewController+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12999288741F697CD01090D2F93F6EAD /* WhatsNewViewController+Configuration.swift */; };
+		AC4AAE0600260145FC2ADCA9BF478AFC /* WhatsNewViewController+HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5998B5A4EA6888575B46212860E1A7D4 /* WhatsNewViewController+HapticFeedback.swift */; };
+		B71393D8EE8C272F9CCC352FE8C17D99 /* WhatsNewButtonViewController+CompletionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E88881F3E23328F6CA76C2C21A700C /* WhatsNewButtonViewController+CompletionButton.swift */; };
+		C3D1CECF1CC2AB92B141A417CD725870 /* KeyValueWhatsNewVersionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD0135C078BB6C3FC0CAE7DD879D5A2 /* KeyValueWhatsNewVersionStore.swift */; };
+		CA4B746E44E30E24E219B979305220B2 /* WhatsNewViewController+CompletionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A412C4148905E9A1EF03E2A51B77CD5C /* WhatsNewViewController+CompletionButton.swift */; };
+		CA8B9D564CC580804C8A8B707AD3B181 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+		CBE866312528EE18422DAEA6DC89BC26 /* Pods-ControlDinero-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C3F4146F3F8536AFAFF56139B51DCF7B /* Pods-ControlDinero-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF9CDE647C30949EDA7EB61106983A60 /* WhatsNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEFC7DC176F58B4F2B7E7424AAF146E /* WhatsNewViewController.swift */; };
+		E1E8500019AEE73013DBEA8956FDD41F /* WhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5953140167813ED85A137751797690 /* WhatsNew.swift */; };
+		E51B887B812715507ED5DF218CBACBF2 /* WhatsNewViewController+DetailButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FB5FC274FF85F05C4DDEFCAF6EAECD /* WhatsNewViewController+DetailButton.swift */; };
+		EC3AC7B1C8B77F7A060E673DE51E3F18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F1DDE49D325AE5D1CE3DBCFA89593F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9704B189A5639F0B7534EC8872960E23;
+			remoteInfo = WhatsNewKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AD8B1D21636683EB2874059FC25456 /* WhatsNewViewController+Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+Animation.swift"; path = "Sources/Configuration/WhatsNewViewController+Animation.swift"; sourceTree = "<group>"; };
+		0307AE83A04BE561BC493B4FDECF5857 /* Pods-ControlDinero-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ControlDinero-acknowledgements.markdown"; sourceTree = "<group>"; };
+		106108B1B7CB2A5C3B7FF18C6409BE74 /* Pods_ControlDinero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ControlDinero.framework; path = "Pods-ControlDinero.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		12999288741F697CD01090D2F93F6EAD /* WhatsNewViewController+Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+Configuration.swift"; path = "Sources/Configuration/WhatsNewViewController+Configuration.swift"; sourceTree = "<group>"; };
+		146FF58A3E9A6B002B45CF8E6299659D /* Pods-ControlDinero-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ControlDinero-acknowledgements.plist"; sourceTree = "<group>"; };
+		178678E4387F473E00D0EA9A8D6EC86B /* UIView+MakeConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+MakeConstraints.swift"; path = "Sources/Extensions/UIView+MakeConstraints.swift"; sourceTree = "<group>"; };
+		208284BD353746D010BAC20948845935 /* Pods-ControlDinero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ControlDinero.release.xcconfig"; sourceTree = "<group>"; };
+		2121E58116036271CD042ACCB3DC6187 /* WhatsNewKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WhatsNewKit-Info.plist"; sourceTree = "<group>"; };
+		312B988EF117AE4DE76A268D970131FE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		33794F7C124DBA68C4D6F28C979F4619 /* UIColor+Defaults.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Defaults.swift"; path = "Sources/Extensions/UIColor+Defaults.swift"; sourceTree = "<group>"; };
+		398FB8DD5DADEA57C060BEC04998FE0D /* WhatsNewKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WhatsNewKit.modulemap; sourceTree = "<group>"; };
+		3B98AC3E96197C6A860319B48FC1C114 /* InMemoryWhatsNewVersionStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InMemoryWhatsNewVersionStore.swift; path = Sources/Store/InMemoryWhatsNewVersionStore.swift; sourceTree = "<group>"; };
+		3C6828683C5F8EE9B35DF81616054294 /* WhatsNewItemsViewController+Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewItemsViewController+Cell.swift"; path = "Sources/Components/Items/WhatsNewItemsViewController+Cell.swift"; sourceTree = "<group>"; };
+		3CDF5997E373B39ECEA73D377B3DE912 /* WhatsNewTitleViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNewTitleViewController.swift; path = Sources/Components/Title/WhatsNewTitleViewController.swift; sourceTree = "<group>"; };
+		40FB5FC274FF85F05C4DDEFCAF6EAECD /* WhatsNewViewController+DetailButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+DetailButton.swift"; path = "Sources/Configuration/WhatsNewViewController+DetailButton.swift"; sourceTree = "<group>"; };
+		41F194BC935029C9250B61DF23DAE0E5 /* WhatsNewKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WhatsNewKit.debug.xcconfig; sourceTree = "<group>"; };
+		4248925360DF6EF5311F805B0D40C2D7 /* WhatsNewVersionStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNewVersionStore.swift; path = Sources/Store/WhatsNewVersionStore.swift; sourceTree = "<group>"; };
+		436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4438DB573D7F0F9432F06795B97305DF /* Pods-ControlDinero.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ControlDinero.modulemap"; sourceTree = "<group>"; };
+		49DBEA650F235C02FEF6BDC0A7B62C4E /* WhatsNewViewController+ItemsView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+ItemsView.swift"; path = "Sources/Configuration/WhatsNewViewController+ItemsView.swift"; sourceTree = "<group>"; };
+		5998B5A4EA6888575B46212860E1A7D4 /* WhatsNewViewController+HapticFeedback.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+HapticFeedback.swift"; path = "Sources/Configuration/WhatsNewViewController+HapticFeedback.swift"; sourceTree = "<group>"; };
+		59E88881F3E23328F6CA76C2C21A700C /* WhatsNewButtonViewController+CompletionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewButtonViewController+CompletionButton.swift"; path = "Sources/Components/Buttons/WhatsNewButtonViewController+CompletionButton.swift"; sourceTree = "<group>"; };
+		5AEFC7DC176F58B4F2B7E7424AAF146E /* WhatsNewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNewViewController.swift; path = Sources/WhatsNewViewController.swift; sourceTree = "<group>"; };
+		5EAF24043AD4DCEC76EE674A7BB4EB3B /* Pods-ControlDinero-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ControlDinero-frameworks.sh"; sourceTree = "<group>"; };
+		63869B6E9C149E3D60ECE9CE50BA1B91 /* Pods-ControlDinero-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ControlDinero-Info.plist"; sourceTree = "<group>"; };
+		7A9485D5005ACFF057A3BFFBD0387F65 /* WhatsNewKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WhatsNewKit.framework; path = WhatsNewKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84A16D8CCF93B449A57C8D4EE78FF7E0 /* WhatsNew+Item.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNew+Item.swift"; path = "Sources/Models/WhatsNew+Item.swift"; sourceTree = "<group>"; };
+		93A38D3084C4B433F446DD459191705C /* WhatsNewViewController+TitleView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+TitleView.swift"; path = "Sources/Configuration/WhatsNewViewController+TitleView.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A412C4148905E9A1EF03E2A51B77CD5C /* WhatsNewViewController+CompletionButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+CompletionButton.swift"; path = "Sources/Configuration/WhatsNewViewController+CompletionButton.swift"; sourceTree = "<group>"; };
+		A52FF04DB82FD37073CFFA0CEEB7B04F /* WhatsNewKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WhatsNewKit-dummy.m"; sourceTree = "<group>"; };
+		A708DFA6B5451390D2D58C6E6AE62654 /* Pods-ControlDinero.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ControlDinero.debug.xcconfig"; sourceTree = "<group>"; };
+		ACE005911B66A28AA711EE40FFB16016 /* WhatsNewKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WhatsNewKit-prefix.pch"; sourceTree = "<group>"; };
+		BA37EBDFE2D87121BF897A575FDC06C1 /* WhatsNewKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WhatsNewKit.release.xcconfig; sourceTree = "<group>"; };
+		C3F4146F3F8536AFAFF56139B51DCF7B /* Pods-ControlDinero-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ControlDinero-umbrella.h"; sourceTree = "<group>"; };
+		C55DFF9389DD9BD492251EBA8E52E9CA /* WhatsNewButtonViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNewButtonViewController.swift; path = Sources/Components/Buttons/WhatsNewButtonViewController.swift; sourceTree = "<group>"; };
+		CB848F5A83F39D505FC18306B2D0C441 /* Pods-ControlDinero-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ControlDinero-dummy.m"; sourceTree = "<group>"; };
+		CDD0135C078BB6C3FC0CAE7DD879D5A2 /* KeyValueWhatsNewVersionStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyValueWhatsNewVersionStore.swift; path = Sources/Store/KeyValueWhatsNewVersionStore.swift; sourceTree = "<group>"; };
+		D261C3B011F83B43FCEDCABC352A55E7 /* WhatsNewViewController+Theme.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewViewController+Theme.swift"; path = "Sources/Theme/WhatsNewViewController+Theme.swift"; sourceTree = "<group>"; };
+		DC5953140167813ED85A137751797690 /* WhatsNew.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNew.swift; path = Sources/Models/WhatsNew.swift; sourceTree = "<group>"; };
+		DD6786F752AB2023AC3769CA7046C59D /* WhatsNewKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WhatsNewKit-umbrella.h"; sourceTree = "<group>"; };
+		E227ACC4A5611234499D792FAAB6FBEB /* WhatsNewItemsViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WhatsNewItemsViewController.swift; path = Sources/Components/Items/WhatsNewItemsViewController.swift; sourceTree = "<group>"; };
+		E26C5815C876C092CA58849B9F1EC6F4 /* WhatsNewButtonViewController+DetailButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNewButtonViewController+DetailButton.swift"; path = "Sources/Components/Buttons/WhatsNewButtonViewController+DetailButton.swift"; sourceTree = "<group>"; };
+		EFFFED01BCCCEA9F08EFA7F3268B149E /* WhatsNew+Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WhatsNew+Version.swift"; path = "Sources/Models/WhatsNew+Version.swift"; sourceTree = "<group>"; };
+		F69FCF3C85C1F1C92DC55050AD7CD32E /* Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Anchor.swift; path = Sources/Extensions/Anchor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B640DC6E1D207042BD8216EC761F75F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC3AC7B1C8B77F7A060E673DE51E3F18 /* Foundation.framework in Frameworks */,
+				38908B6EA5AC50CC23758321FE5D4C50 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8E68283D8FA85A753BD2F7AFC706873 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA8B9D564CC580804C8A8B707AD3B181 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E2983683FD097A93297E2F5D4E382B36 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4215B265C0A5410FE2308CEFD2FBBC05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				106108B1B7CB2A5C3B7FF18C6409BE74 /* Pods_ControlDinero.framework */,
+				7A9485D5005ACFF057A3BFFBD0387F65 /* WhatsNewKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8DBB010503FEA43A1E47A94360E1C5C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA8071DE9AE9D1C0558B7C964B456FA6 /* WhatsNewKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9012C99C249EE247FD9718C954D53678 /* Pods-ControlDinero */ = {
+			isa = PBXGroup;
+			children = (
+				4438DB573D7F0F9432F06795B97305DF /* Pods-ControlDinero.modulemap */,
+				0307AE83A04BE561BC493B4FDECF5857 /* Pods-ControlDinero-acknowledgements.markdown */,
+				146FF58A3E9A6B002B45CF8E6299659D /* Pods-ControlDinero-acknowledgements.plist */,
+				CB848F5A83F39D505FC18306B2D0C441 /* Pods-ControlDinero-dummy.m */,
+				5EAF24043AD4DCEC76EE674A7BB4EB3B /* Pods-ControlDinero-frameworks.sh */,
+				63869B6E9C149E3D60ECE9CE50BA1B91 /* Pods-ControlDinero-Info.plist */,
+				C3F4146F3F8536AFAFF56139B51DCF7B /* Pods-ControlDinero-umbrella.h */,
+				A708DFA6B5451390D2D58C6E6AE62654 /* Pods-ControlDinero.debug.xcconfig */,
+				208284BD353746D010BAC20948845935 /* Pods-ControlDinero.release.xcconfig */,
+			);
+			name = "Pods-ControlDinero";
+			path = "Target Support Files/Pods-ControlDinero";
+			sourceTree = "<group>";
+		};
+		AA8071DE9AE9D1C0558B7C964B456FA6 /* WhatsNewKit */ = {
+			isa = PBXGroup;
+			children = (
+				F69FCF3C85C1F1C92DC55050AD7CD32E /* Anchor.swift */,
+				3B98AC3E96197C6A860319B48FC1C114 /* InMemoryWhatsNewVersionStore.swift */,
+				CDD0135C078BB6C3FC0CAE7DD879D5A2 /* KeyValueWhatsNewVersionStore.swift */,
+				33794F7C124DBA68C4D6F28C979F4619 /* UIColor+Defaults.swift */,
+				178678E4387F473E00D0EA9A8D6EC86B /* UIView+MakeConstraints.swift */,
+				DC5953140167813ED85A137751797690 /* WhatsNew.swift */,
+				84A16D8CCF93B449A57C8D4EE78FF7E0 /* WhatsNew+Item.swift */,
+				EFFFED01BCCCEA9F08EFA7F3268B149E /* WhatsNew+Version.swift */,
+				C55DFF9389DD9BD492251EBA8E52E9CA /* WhatsNewButtonViewController.swift */,
+				59E88881F3E23328F6CA76C2C21A700C /* WhatsNewButtonViewController+CompletionButton.swift */,
+				E26C5815C876C092CA58849B9F1EC6F4 /* WhatsNewButtonViewController+DetailButton.swift */,
+				E227ACC4A5611234499D792FAAB6FBEB /* WhatsNewItemsViewController.swift */,
+				3C6828683C5F8EE9B35DF81616054294 /* WhatsNewItemsViewController+Cell.swift */,
+				3CDF5997E373B39ECEA73D377B3DE912 /* WhatsNewTitleViewController.swift */,
+				4248925360DF6EF5311F805B0D40C2D7 /* WhatsNewVersionStore.swift */,
+				5AEFC7DC176F58B4F2B7E7424AAF146E /* WhatsNewViewController.swift */,
+				01AD8B1D21636683EB2874059FC25456 /* WhatsNewViewController+Animation.swift */,
+				A412C4148905E9A1EF03E2A51B77CD5C /* WhatsNewViewController+CompletionButton.swift */,
+				12999288741F697CD01090D2F93F6EAD /* WhatsNewViewController+Configuration.swift */,
+				40FB5FC274FF85F05C4DDEFCAF6EAECD /* WhatsNewViewController+DetailButton.swift */,
+				5998B5A4EA6888575B46212860E1A7D4 /* WhatsNewViewController+HapticFeedback.swift */,
+				49DBEA650F235C02FEF6BDC0A7B62C4E /* WhatsNewViewController+ItemsView.swift */,
+				D261C3B011F83B43FCEDCABC352A55E7 /* WhatsNewViewController+Theme.swift */,
+				93A38D3084C4B433F446DD459191705C /* WhatsNewViewController+TitleView.swift */,
+				E51A7F756E40CF46CF74E99811AA4B18 /* Support Files */,
+			);
+			name = WhatsNewKit;
+			path = WhatsNewKit;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				8DBB010503FEA43A1E47A94360E1C5C4 /* Pods */,
+				4215B265C0A5410FE2308CEFD2FBBC05 /* Products */,
+				EFB6DC86A21441F7A8BF0D50AE1AE0BD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		E2983683FD097A93297E2F5D4E382B36 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				436BAA54A31999B53B3CC7115C55FE50 /* Foundation.framework */,
+				312B988EF117AE4DE76A268D970131FE /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E51A7F756E40CF46CF74E99811AA4B18 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				398FB8DD5DADEA57C060BEC04998FE0D /* WhatsNewKit.modulemap */,
+				A52FF04DB82FD37073CFFA0CEEB7B04F /* WhatsNewKit-dummy.m */,
+				2121E58116036271CD042ACCB3DC6187 /* WhatsNewKit-Info.plist */,
+				ACE005911B66A28AA711EE40FFB16016 /* WhatsNewKit-prefix.pch */,
+				DD6786F752AB2023AC3769CA7046C59D /* WhatsNewKit-umbrella.h */,
+				41F194BC935029C9250B61DF23DAE0E5 /* WhatsNewKit.debug.xcconfig */,
+				BA37EBDFE2D87121BF897A575FDC06C1 /* WhatsNewKit.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WhatsNewKit";
+			sourceTree = "<group>";
+		};
+		EFB6DC86A21441F7A8BF0D50AE1AE0BD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9012C99C249EE247FD9718C954D53678 /* Pods-ControlDinero */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6C23DCEC5FEB248FE1903978BAB84D25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D16802E323ECF2E5CD496E692813B50 /* WhatsNewKit-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C178D61B7BE1C6F8E0A68CFCCBC0A2B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE866312528EE18422DAEA6DC89BC26 /* Pods-ControlDinero-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		9704B189A5639F0B7534EC8872960E23 /* WhatsNewKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A55C541CF902FFB1253F26F4EE9A5D7 /* Build configuration list for PBXNativeTarget "WhatsNewKit" */;
+			buildPhases = (
+				6C23DCEC5FEB248FE1903978BAB84D25 /* Headers */,
+				5D226502F46EB249CACBCE63D00E03D8 /* Sources */,
+				B640DC6E1D207042BD8216EC761F75F9 /* Frameworks */,
+				0D3669D43F6EB11F287473CC522FA53B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhatsNewKit;
+			productName = WhatsNewKit;
+			productReference = 7A9485D5005ACFF057A3BFFBD0387F65 /* WhatsNewKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E602BDCF4D8FD928DB2B50EEF8039FC7 /* Pods-ControlDinero */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62E4DA04BC6580E092C28C08A30F4400 /* Build configuration list for PBXNativeTarget "Pods-ControlDinero" */;
+			buildPhases = (
+				C178D61B7BE1C6F8E0A68CFCCBC0A2B9 /* Headers */,
+				CC500C04DCD753031FC7F571AE3D5FC6 /* Sources */,
+				F8E68283D8FA85A753BD2F7AFC706873 /* Frameworks */,
+				1319854704E0511482EB740EB9B9CC12 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3AD4C88C9850FBC3A2794B1CF715CE19 /* PBXTargetDependency */,
+			);
+			name = "Pods-ControlDinero";
+			productName = "Pods-ControlDinero";
+			productReference = 106108B1B7CB2A5C3B7FF18C6409BE74 /* Pods_ControlDinero.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 4215B265C0A5410FE2308CEFD2FBBC05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E602BDCF4D8FD928DB2B50EEF8039FC7 /* Pods-ControlDinero */,
+				9704B189A5639F0B7534EC8872960E23 /* WhatsNewKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D3669D43F6EB11F287473CC522FA53B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1319854704E0511482EB740EB9B9CC12 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D226502F46EB249CACBCE63D00E03D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2153E67600F1B493D658A13371FFFE73 /* Anchor.swift in Sources */,
+				2EE45E86A416F33B422FD18E8D14D06F /* InMemoryWhatsNewVersionStore.swift in Sources */,
+				C3D1CECF1CC2AB92B141A417CD725870 /* KeyValueWhatsNewVersionStore.swift in Sources */,
+				1D34744199255BB8C9950B8DC61B47B9 /* UIColor+Defaults.swift in Sources */,
+				8D7DF75D8F09457EF4B3B56BCC797264 /* UIView+MakeConstraints.swift in Sources */,
+				96B6AD640CD6C7EA382954F09F832D35 /* WhatsNew+Item.swift in Sources */,
+				2729AF82673099FB4FAD7F68B86D0610 /* WhatsNew+Version.swift in Sources */,
+				E1E8500019AEE73013DBEA8956FDD41F /* WhatsNew.swift in Sources */,
+				B71393D8EE8C272F9CCC352FE8C17D99 /* WhatsNewButtonViewController+CompletionButton.swift in Sources */,
+				15343CB47FFBB0752355C2388481FE36 /* WhatsNewButtonViewController+DetailButton.swift in Sources */,
+				30B583EDA3F98BD8D47BC4BFA5C80383 /* WhatsNewButtonViewController.swift in Sources */,
+				0BE3E98C1CB0BCDD448F18CBA561B4E5 /* WhatsNewItemsViewController+Cell.swift in Sources */,
+				30455E0017F945465D91268E24CC93DB /* WhatsNewItemsViewController.swift in Sources */,
+				95F27623EB740A15CFB04C1C8E6052AD /* WhatsNewKit-dummy.m in Sources */,
+				575CE7E6D9E87305D6A9CD367C7475C7 /* WhatsNewTitleViewController.swift in Sources */,
+				1EBF95B39A517FB60C32154A17A4E3EE /* WhatsNewVersionStore.swift in Sources */,
+				7CB5E5115ACC97A044E3115376C8D2FA /* WhatsNewViewController+Animation.swift in Sources */,
+				CA4B746E44E30E24E219B979305220B2 /* WhatsNewViewController+CompletionButton.swift in Sources */,
+				A9C3F8449C359B062DD460A18B41B3FB /* WhatsNewViewController+Configuration.swift in Sources */,
+				E51B887B812715507ED5DF218CBACBF2 /* WhatsNewViewController+DetailButton.swift in Sources */,
+				AC4AAE0600260145FC2ADCA9BF478AFC /* WhatsNewViewController+HapticFeedback.swift in Sources */,
+				52892E5AD9C85CF79AB36703A2D2824F /* WhatsNewViewController+ItemsView.swift in Sources */,
+				49C8993D1F51145FF20FC34B9695961E /* WhatsNewViewController+Theme.swift in Sources */,
+				9CB41EC206D193644344058FD550703D /* WhatsNewViewController+TitleView.swift in Sources */,
+				CF9CDE647C30949EDA7EB61106983A60 /* WhatsNewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC500C04DCD753031FC7F571AE3D5FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				791A0EF7F55D8B27DF7263DCA0C737CD /* Pods-ControlDinero-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3AD4C88C9850FBC3A2794B1CF715CE19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WhatsNewKit;
+			target = 9704B189A5639F0B7534EC8872960E23 /* WhatsNewKit */;
+			targetProxy = 1F1DDE49D325AE5D1CE3DBCFA89593F4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		3AE94441606B136502ED409A53CEB67D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 208284BD353746D010BAC20948845935 /* Pods-ControlDinero.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C87D7884FD30C8E9D0A1F0B2B0F2F3B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41F194BC935029C9250B61DF23DAE0E5 /* WhatsNewKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WhatsNewKit/WhatsNewKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WhatsNewKit/WhatsNewKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WhatsNewKit/WhatsNewKit.modulemap";
+				PRODUCT_MODULE_NAME = WhatsNewKit;
+				PRODUCT_NAME = WhatsNewKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CF01F49234FFAE4217A3C50E7C47555C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A708DFA6B5451390D2D58C6E6AE62654 /* Pods-ControlDinero.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		F7A7F079FC21C233B5EB56F812066666 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA37EBDFE2D87121BF897A575FDC06C1 /* WhatsNewKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/WhatsNewKit/WhatsNewKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/WhatsNewKit/WhatsNewKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/WhatsNewKit/WhatsNewKit.modulemap";
+				PRODUCT_MODULE_NAME = WhatsNewKit;
+				PRODUCT_NAME = WhatsNewKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A55C541CF902FFB1253F26F4EE9A5D7 /* Build configuration list for PBXNativeTarget "WhatsNewKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C87D7884FD30C8E9D0A1F0B2B0F2F3B4 /* Debug */,
+				F7A7F079FC21C233B5EB56F812066666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62E4DA04BC6580E092C28C08A30F4400 /* Build configuration list for PBXNativeTarget "Pods-ControlDinero" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF01F49234FFAE4217A3C50E7C47555C /* Debug */,
+				3AE94441606B136502ED409A53CEB67D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

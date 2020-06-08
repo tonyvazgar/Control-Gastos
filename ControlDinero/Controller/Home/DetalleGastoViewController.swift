@@ -24,8 +24,10 @@ class DetalleGastoViewController: UIViewController {
         super.viewDidLoad()
         nombreGastoLabel.text   = nombre
         fechaLabel.text         = detalles
-        detallesLabel.text      = fecha
+        detallesLabel.text      = fecha.capitalizingFirstLetter()
         montoLabel.text         = numberFormated(number: Double(monto)!)
+        detallesLabel.numberOfLines = 4
+        nombreGastoLabel.numberOfLines = 2
     }
     
 

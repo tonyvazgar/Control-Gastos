@@ -1,0 +1,6 @@
+framework module Pods_ControlDinero {
+  umbrella header "Pods-ControlDinero-umbrella.h"
+
+  export *
+  module * { export * }
+}

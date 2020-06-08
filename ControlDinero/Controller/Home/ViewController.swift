@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WhatsNewKit
 
 class ViewController: UIViewController {
 
@@ -94,6 +95,35 @@ class ViewController: UIViewController {
         labelGastos.text = numberFormated(number: Double(getGastos())!)
         labelGanancias.text = numberFormated(number: Double(getGanancias())!)
         labelTotal.text = numberFormated(number: Double(getTotal())!)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        var configuration = WhatsNewViewController.Configuration()
+
+        configuration.apply(theme: .red)
+        configuration.titleView.animation = .slideDown
+        configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
+        configuration.titleView.insets = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+        configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+        configuration.itemsView.contentMode = .fill
+        configuration.itemsView.imageSize = .fixed(height: 28)
+        configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+        configuration.itemsView.animation = .slideRight
+        configuration.completionButton.title = "OK"
+        
+        let items = WhatsNew(title: "Bienvenido a \n Control de \n Gastos", items:
+            [WhatsNew.Item(title: "Crea salud financiera", subtitle: "Identifica tus gastos en base a tus ingresos", image: UIImage(systemName: "heart")),
+             WhatsNew.Item(title: "Anota tus compras", subtitle: "Lleva el control con el total de tus compras", image: UIImage(systemName: "cart")),
+             WhatsNew.Item(title: "Ingresos y egresos", subtitle: "Anota cuando recibas dinero y cuando gastes en cualquier cosa", image: UIImage(systemName: "plusminus")),
+             WhatsNew.Item(title: "Detalles de tus gastos", subtitle: "Puedes ver la descripcón de tus gastos para recordar su finalidad.", image: UIImage(systemName: "questionmark.circle")),
+             WhatsNew.Item(title: "Control mensual", subtitle: "Lleva el control total de dinero en base a los ingresos y egresos en el  mes actual ", image: UIImage(systemName: "calendar"))])
+        
+        guard let vc = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: KeyValueWhatsNewVersionStore()) else {
+            return
+        }
+        vc.isModalInPresentation = true
+        present(vc, animated: true)
     }
 
     //MARK: Funciones DB
