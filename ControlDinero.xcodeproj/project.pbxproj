@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		EF259D662472427F006F094A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D642472427F006F094A /* Main.storyboard */; };
 		EF259D6824724280006F094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6724724280006F094A /* Assets.xcassets */; };
 		EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6924724280006F094A /* LaunchScreen.storyboard */; };
+		EF34E21F248F42F800D275AA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E21E248F42F800D275AA /* Animations.swift */; };
+		EF34E221248F432600D275AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E220248F432600D275AA /* Animator.swift */; };
 		EF438367247B2D5E0035AF11 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF438366247B2D5E0035AF11 /* Functions.swift */; };
 		EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF6247A3186004E293A /* Ingreso.swift */; };
 		EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF8247A3190004E293A /* Egreso.swift */; };
@@ -45,6 +47,8 @@
 		EF259D6724724280006F094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF259D6A24724280006F094A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF259D6C24724280006F094A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		EF34E21E248F42F800D275AA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		EF34E220248F432600D275AA /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		EF438366247B2D5E0035AF11 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EF5C6BF6247A3186004E293A /* Ingreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingreso.swift; sourceTree = "<group>"; };
 		EF5C6BF8247A3190004E293A /* Egreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egreso.swift; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				3CE9F6417491730115D721E3 /* Pods-ControlDinero.debug.xcconfig */,
 				41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -161,6 +164,8 @@
 				EF126CC124733DF600177691 /* UIButtonExtension.swift */,
 				EF438366247B2D5E0035AF11 /* Functions.swift */,
 				EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */,
+				EF34E21E248F42F800D275AA /* Animations.swift */,
+				EF34E220248F432600D275AA /* Animator.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -312,9 +317,11 @@
 			files = (
 				EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */,
 				EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */,
+				EF34E21F248F42F800D275AA /* Animations.swift in Sources */,
 				EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */,
 				EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */,
 				EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */,
+				EF34E221248F432600D275AA /* Animator.swift in Sources */,
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
