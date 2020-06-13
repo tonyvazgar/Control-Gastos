@@ -10,18 +10,19 @@ import UIKit
 
 class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    // MARK: Declaración de UI elements
     @IBOutlet weak var agregarButton: UIButton!
     @IBOutlet weak var picker: UIPickerView!
-    @IBOutlet weak var montoTextField: UITextField!
+    @IBOutlet weak var montoTextField: CurrencyField!
     @IBOutlet weak var detallesTextField: UITextField!
-    
     let pickerDataNumQuincenas = ["","1", "2", "3", "4"]
     var numero_quincena = ""
     
+    // MARK: Actions
     @IBAction func agregarAction(_ sender: UIButton) {
         if montoTextField.text != "" && detallesTextField.text != "" {
             if self.numero_quincena != "0" && self.numero_quincena != "" {
-                insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: montoTextField.text!)
+                insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: String(describing: montoTextField.decimal))
                 navigationController?.popViewController(animated: true)
                 dismiss(animated: true, completion: nil)
             } else {
@@ -36,10 +37,6 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
-    private func insetar(un_mes: String, una_num_quincena: String, una_fecha: String, unos_detalles: String, un_monto: String){
-        Model.insertIntoIngreso(mes: un_mes, num_quincena: una_num_quincena, fecha: una_fecha, detalles: unos_detalles, monto: un_monto)
-    }
-    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,12 +49,18 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         //Para notificar que tiene que empujar vista cuando aparece el teclado
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+
+        let currentLanguaje = Locale.preferredLanguages[0]
+        montoTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
+        montoTextField.locale = Locale(identifier: currentLanguaje) // or "en_US", "fr_FR", etc
     }
+    
     override func viewWillDisappear(_ animated: Bool) {
         Model.selectAllIngresos()
     }
     
-    // MARK: Implementaciones
+    // MARK: Implementaciones PickerView
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -80,8 +83,20 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+    @objc func currencyFieldChanged() {
+        print("currencyField:",montoTextField.text!)
+        print("decimal:", montoTextField.decimal)
+        print("doubleValue:",(montoTextField.decimal as NSDecimalNumber).doubleValue, terminator: "\n\n")
+    }
+    
     @objc func keyboardWillHide(notification: NSNotification){
         self.view.frame.origin.y = 0
+    }
+    
+    
+    // MARK: Funciones privadas
+    private func insetar(un_mes: String, una_num_quincena: String, una_fecha: String, unos_detalles: String, un_monto: String){
+        Model.insertIntoIngreso(mes: un_mes, num_quincena: una_num_quincena, fecha: una_fecha, detalles: unos_detalles, monto: un_monto)
     }
 }
 
