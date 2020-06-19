@@ -19,8 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var quincenasButton: UIButton!
     @IBOutlet weak var gastosButton: UIButton!
     
-
-    
     
     // MARK: Actions
     @IBAction func buttonQuincenas(_ sender: UIButton) {
@@ -33,8 +31,7 @@ class ViewController: UIViewController {
         sender.jump()
     }
     
-    // MARK: Funciones
-    
+    // MARK: Funciones privadas
     private func getGanancias() -> String {
         var ganancias = 0.0
         Model.selectAllIngresos()
@@ -60,9 +57,15 @@ class ViewController: UIViewController {
     }
     
     private func getTotal() -> String {
-        let ganacias = Double(getGanancias())!
-        let gastos = Double(getGastos())!
-        return String(describing:Double(round(1000*(ganacias-gastos))/1000))
+        let ganacias         = Double(getGanancias())!
+        let gastos           = Double(getGastos())!
+        let diferencia       = Double(round(1000*(ganacias-gastos))/1000)
+        if diferencia >= 0 {
+            labelTotal.textColor = .green
+        }else{
+            labelTotal.textColor = .red
+        }
+        return String(describing: diferencia)
     }
     
     // MARK: Life Cycle
@@ -133,7 +136,6 @@ class ViewController: UIViewController {
         Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos TEXT NOT NULL, egresos TEXT NOT NULL, num_de_quincenas TEXT NOT NULL, num_de_gastos TEXT NOT NULL, total TEXT NOT NULL)")
-        
     }
 
 }

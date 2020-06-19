@@ -72,7 +72,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.ingresosList[indexPath.row]
             
-        cell.textLabel?.text = item.mes
+        cell.textLabel?.text = item.mes.capitalizingFirstLetter()
         cell.detailTextLabel?.text = String(item.num_quincena)
         
         return cell
@@ -85,7 +85,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         //Envio de datos para las variables del ViewController
         let item = Model.ingresosList[indexPath.row]
             
-        viewController?.mes = item.mes
+        viewController?.mes = item.mes.capitalizingFirstLetter()
         viewController?.num_quincena = "Quincena #" + String(item.num_quincena)
         viewController?.amount = String(item.monto)
         viewController?.fecha = item.fecha
