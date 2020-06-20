@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     // MARK: Funciones privadas
     private func getGanancias() -> String {
         var ganancias = 0.0
-        Model.selectAllIngresos()
+        Model.selectFromIngresoWhere(mes: getCurrentDate())
         for ingreso in Model.ingresosList{
             let quincena = Double(ingreso.monto)
             print(ingreso.description)

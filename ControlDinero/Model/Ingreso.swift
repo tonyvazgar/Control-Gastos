@@ -43,6 +43,6 @@ class Ingreso {
     
     
     var description: String {
-        return "\(self.id_quincena)(Mes: \(self.mes), num_quincena: \(self.num_quincena), fecha: \(self.fecha), detalles: \(self.detalles), monto: \(self.monto))"
+        return "**** ID: \(self.id_quincena) --> (Mes: \(self.mes), num_quincena: \(self.num_quincena), fecha: \(self.fecha), detalles: \(self.detalles), monto: \(self.monto)) ****"
     }
 }

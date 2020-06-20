@@ -48,7 +48,6 @@ public class Model{
     
     //MARK: Funciones privadas
     private static func queryIsPrepared(query: String) -> Bool {
-        print("LA query es -->: " + query)
         var queryIsPrepared     : Bool
         var errorMessage        : String
         
@@ -91,8 +90,16 @@ public class Model{
         }
     }
     
+    public static func selectAllIngresosReverseWhere(mes: String){
+        let selectAllQuery = "SELECT * FROM Quincena WHERE mes = '" + mes + "'" + "ORDER BY id_quincena DESC"
+        if queryIsPrepared(query: selectAllQuery){
+            ingresosList = getResultSetIngresos()
+        }
+    }
+    
     public static func selectFromIngresoWhere(mes: String){
-        let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + mes + "'"
+        let query = "SELECT * FROM Quincena WHERE mes = '" + mes + "'"
+        print("*--*La query es-->" + query)
         if queryIsPrepared(query: query){
             ingresosList = getResultSetIngresos()
         }
@@ -100,6 +107,7 @@ public class Model{
     
     public static func selectFromIngresoWhere(fecha: String){
         let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + fecha + "'"
+        print("*--*La query es-->" + query)
         if queryIsPrepared(query: query){
             ingresosList = getResultSetIngresos()
         }

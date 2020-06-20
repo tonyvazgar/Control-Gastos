@@ -57,7 +57,7 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        Model.selectAllIngresos()
+        Model.selectAllIngresosReverseWhere(mes: getCurrentDate())
     }
     
     // MARK: Implementaciones PickerView

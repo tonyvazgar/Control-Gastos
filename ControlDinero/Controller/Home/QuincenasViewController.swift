@@ -39,7 +39,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        Model.selectAllIngresosReverse()
+        Model.selectAllIngresosReverseWhere(mes: getCurrentDate())
         tableView.delegate = self
         tableView.dataSource = self
         nuevaQuincenaButton.round()
@@ -53,7 +53,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        Model.selectAllIngresosReverse()
+        Model.selectAllIngresosReverseWhere(mes: getCurrentDate())
     }
     
     
