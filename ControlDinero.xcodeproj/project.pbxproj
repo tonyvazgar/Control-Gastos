@@ -30,6 +30,8 @@
 		EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */; };
 		EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */; };
 		EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */; };
+		EFFC6980249F04B700099E81 /* QuincenasGlobalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC697F249F04B700099E81 /* QuincenasGlobalViewController.swift */; };
+		EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFFC6981249F04CA00099E81 /* GastosGlobalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +62,8 @@
 		EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaQuincenaViewController.swift; sourceTree = "<group>"; };
 		EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleQuincenaViewController.swift; sourceTree = "<group>"; };
 		EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGastoViewController.swift; sourceTree = "<group>"; };
+		EFFC697F249F04B700099E81 /* QuincenasGlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuincenasGlobalViewController.swift; sourceTree = "<group>"; };
+		EFFC6981249F04CA00099E81 /* GastosGlobalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosGlobalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			isa = PBXGroup;
 			children = (
 				EF314567247338240043B00D /* Home */,
+				EFFC697D249F042700099E81 /* Ingresos */,
+				EFFC697E249F044200099E81 /* Egresos */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,14 +199,30 @@
 			isa = PBXGroup;
 			children = (
 				EF259D622472427F006F094A /* ViewController.swift */,
-				EF126CC32473700C00177691 /* QuincenasViewController.swift */,
-				EF126CC52473701B00177691 /* GastosViewController.swift */,
-				EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */,
-				EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */,
-				EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */,
-				EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EFFC697D249F042700099E81 /* Ingresos */ = {
+			isa = PBXGroup;
+			children = (
+				EF126CC32473700C00177691 /* QuincenasViewController.swift */,
+				EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */,
+				EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */,
+				EFFC697F249F04B700099E81 /* QuincenasGlobalViewController.swift */,
+			);
+			path = Ingresos;
+			sourceTree = "<group>";
+		};
+		EFFC697E249F044200099E81 /* Egresos */ = {
+			isa = PBXGroup;
+			children = (
+				EF126CC52473701B00177691 /* GastosViewController.swift */,
+				EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */,
+				EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */,
+				EFFC6981249F04CA00099E81 /* GastosGlobalViewController.swift */,
+			);
+			path = Egresos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,8 +351,10 @@
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
+				EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
 				EF438367247B2D5E0035AF11 /* Functions.swift in Sources */,
+				EFFC6980249F04B700099E81 /* QuincenasGlobalViewController.swift in Sources */,
 				EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */,
 				EF126CC62473701B00177691 /* GastosViewController.swift in Sources */,
 				EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */,
