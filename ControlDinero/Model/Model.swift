@@ -169,6 +169,20 @@ public class Model{
         }
     }
     
+    public static func deleteFomIngresoWhere(id: Int){
+        let query = "DELETE FROM Quincena WHERE id_quincena = \(id)"
+        print(query)
+        var errorMessage : String
+        if (queryIsPrepared(query: query)){
+            if sqlite3_step(statementPointer) == SQLITE_DONE{
+                print("Row deleted!")
+            }else{
+                errorMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure deleting record \(errorMessage)")
+            }
+        }
+    }
+    
     //MARK: CRUD Egresos Class
     public static func selectAllEgresos(){
         let selectAllQuery = "SELECT * FROM Gasto"
@@ -177,22 +191,24 @@ public class Model{
         }
     }
     
-    public static func insertIntoGasto(nombre: String, detalles: String, fecha: String, monto: String){
+    public static func insertIntoGasto(nombre: String, detalles: String, fecha: String, mes: String, monto: String){
         /*
         CREATE TABLE "GASTO" (
             "id_gasto"    INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
             "nombre"      TEXT NOT NULL,
             "detalles"    TEXT NOT NULL,
             "fecha"       TEXT NOT NULL,
+            "mes"         TEXT NOT NULL,
             "monto"       REAL NOT NULL
         );
         */
-        let query       = "INSERT INTO Gasto (nombre, detalles, fecha, monto) VALUES (?,?,?,?)"
+        let query       = "INSERT INTO Gasto (nombre, detalles, fecha, mes, monto) VALUES (?,?,?,?,?)"
         var errMessage  :  String
         
         let nombre      = nombre    as NSString
         let fecha       = fecha     as NSString
         let detalles    = detalles  as NSString
+        let mes         = mes       as NSString
         let monto       = monto     as NSString
         
         if queryIsPrepared(query: query){
@@ -217,7 +233,14 @@ public class Model{
             }else{
                 print("Binding detalles value.... OK...")
             }
-            if sqlite3_bind_text(statementPointer, 4, monto.utf8String, -1, nil) != SQLITE_OK{
+            if sqlite3_bind_text(statementPointer, 4, mes.utf8String, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding mes: \(errMessage)")
+                return
+            }else{
+                print("Binding mes value.... OK...")
+            }
+            if sqlite3_bind_text(statementPointer, 5, monto.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding monto: \(errMessage)")
                 return
@@ -278,6 +301,7 @@ public class Model{
         var nombre          : String
         var detalles        : String
         var fecha           : String
+        var mes             : String
         var monto           : Double
         
         resultSet = []
@@ -287,10 +311,11 @@ public class Model{
             nombre      = String(cString: sqlite3_column_text(statementPointer, 1))
             detalles    = String(cString: sqlite3_column_text(statementPointer, 2))
             fecha       = String(cString: sqlite3_column_text(statementPointer, 3))
-            monto       = sqlite3_column_double(statementPointer, 4)
+            mes         = String(cString: sqlite3_column_text(statementPointer, 4))
+            monto       = sqlite3_column_double(statementPointer, 5)
             
             //(_ id_gasto: Int, _ nombre: String, _ detalles: String, _ fecha: String, _ monto: Double)
-            resultSet.append(Egreso(Int(id_gasto), String(describing: nombre), String(describing: detalles), String(describing: fecha), Double(monto)))
+            resultSet.append(Egreso(Int(id_gasto), String(describing: nombre), String(describing: detalles), String(describing: fecha), String(describing: mes), Double(monto)))
         }//end while
         return resultSet
     }

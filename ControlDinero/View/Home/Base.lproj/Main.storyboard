@@ -64,17 +64,32 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J78-hQ-KLu">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="J78-hQ-KLu">
                                         <rect key="frame" x="0.0" y="46" width="374" height="36"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-C1-m4I">
+                                                <rect key="frame" x="0.0" y="0.0" width="4.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFH-1h-8c6">
-                                                <rect key="frame" x="0.0" y="0.0" width="374" height="36"/>
+                                                <rect key="frame" x="58.5" y="0.0" width="257" height="36"/>
+                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Ver todo"/>
+                                                <state key="normal" title="Ver todo">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                                 <connections>
                                                     <segue destination="ZcH-wb-Goh" kind="show" id="ciZ-HG-u44"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5oc-kf-ffW">
+                                                <rect key="frame" x="369.5" y="0.0" width="4.5" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                     </stackView>
                                 </subviews>
@@ -184,6 +199,7 @@
                         <outlet property="labelMes" destination="xsA-zb-esf" id="imP-8r-Qdd"/>
                         <outlet property="labelTotal" destination="kK4-eh-a9l" id="kdL-O0-rWH"/>
                         <outlet property="quincenasButton" destination="1u8-hA-YVe" id="j58-VM-bR8"/>
+                        <outlet property="todoButton" destination="oFH-1h-8c6" id="Pj9-ig-2c6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -944,6 +960,9 @@
                         <viewLayoutGuide key="safeArea" id="0MF-Nn-LWa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gastos" image="cart" catalog="system" id="ZrE-dd-krQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="efn-xL-nng" id="kkh-0G-Uwb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kD-bF-0rl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -23,9 +23,17 @@ class NuevoGastoViewController: UIViewController {
         sender.jump()
         
         if montoTextField.text != "" && detallesTextField.text != "" && nombreTextField.text != ""{
-            insetar(nombre: nombreTextField.text!.capitalizingFirstLetter(), detalles: detallesTextField.text!, fecha: dateToMyString(date: datePicker.date), monto: String(describing: montoTextField.decimal))
-                navigationController?.popViewController(animated: true)
-                dismiss(animated: true, completion: nil)
+            
+            let name    = nombreTextField.text!.capitalizingFirstLetter()
+            let details = detallesTextField.text!
+            let date    = dateToMyString(date: datePicker.date)
+            let month   = getCurrentDate().capitalizingFirstLetter()
+            let amount  = String(describing: montoTextField.decimal)
+            
+            insetar(nombre: name, detalles: details, fecha: date, mes: month, monto: amount)
+            
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
         } else {
             let alertController = UIAlertController(title: "Campos vacios", message: "Debes llenar campos de nombre, detalles y el monto.", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
@@ -71,8 +79,8 @@ class NuevoGastoViewController: UIViewController {
     }
     
     // MARK: Funciones privadas
-    private func insetar(nombre: String, detalles: String, fecha: String, monto: String){
-        Model.insertIntoGasto(nombre: nombre, detalles: detalles, fecha: fecha, monto: monto)
+    private func insetar(nombre: String, detalles: String, fecha: String, mes: String, monto: String){
+        Model.insertIntoGasto(nombre: nombre, detalles: detalles, fecha: fecha, mes: mes,  monto: monto)
     }
     
 }

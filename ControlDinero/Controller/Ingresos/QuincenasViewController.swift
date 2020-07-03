@@ -108,4 +108,42 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         let animator = Animator(animation: animation)
         animator.animate(cell: cell, at: indexPath, in: tableView)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        
+        let item            : Ingreso
+        var tittle          : String
+        var message         : String
+        var alertController : UIAlertController
+        var cancelAction    : UIAlertAction
+        var deleteAction    : UIAlertAction
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            item    = Model.ingresosList[indexPath.row]
+            tittle  = "¿Borrar ingreso de \(item.mes)?"
+            message = "¿Estás seguro que quieres eliminar el ingreso #\(item.num_quincena) de \(item.mes)?"
+            
+            alertController = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
+            cancelAction    = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil)
+            
+            alertController.addAction(cancelAction)
+            
+            deleteAction    = UIAlertAction(title: "Borrar", style: UIAlertAction.Style.destructive, handler: {
+                (action) -> Void
+                in
+                print(item.description)
+                print("El indexPath es: \(indexPath.row)")
+                Model.deleteFomIngresoWhere(id: item.id_quincena)
+                Model.ingresosList.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                //                Model.removeItem(item)
+//                //Also remove that row from the table view with animation
+//                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            })
+            alertController.addAction(deleteAction)
+            
+            //Present the alert controller
+            present(alertController, animated: true, completion: nil)
+        }//end if
+    }// end tableView
 }

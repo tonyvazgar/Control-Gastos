@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var labelTotal: UILabel!
     @IBOutlet weak var quincenasButton: UIButton!
     @IBOutlet weak var gastosButton: UIButton!
+    @IBOutlet weak var todoButton: UIButton!
     
     
     // MARK: Actions
@@ -79,6 +80,9 @@ class ViewController: UIViewController {
         gastosButton.round()
         gastosButton.jump()
         gastosButton.bounce()
+        todoButton.round()
+        todoButton.jump()
+        todoButton.bounce()
         Model.selectAllIngresos()
         Model.selectAllEgresos()
         labelGanancias.reloadInputViews()
@@ -104,7 +108,7 @@ class ViewController: UIViewController {
         
         var configuration = WhatsNewViewController.Configuration()
 
-        configuration.apply(theme: .red)
+        configuration.apply(theme: .orange)
         configuration.titleView.animation = .slideDown
         configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
         configuration.titleView.insets = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
@@ -134,7 +138,7 @@ class ViewController: UIViewController {
         Model.createDB("develop")
         Model.openDB()
         Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
-        Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, monto TEXT NOT NULL)")
+        Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, mes TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos TEXT NOT NULL, egresos TEXT NOT NULL, num_de_quincenas TEXT NOT NULL, num_de_gastos TEXT NOT NULL, total TEXT NOT NULL)")
     }
 
