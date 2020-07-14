@@ -36,7 +36,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        Model.selectAllEgresos()
+        Model.selectAllEgresosReverseWhere(mes: getCurrentDate())
         tableView.delegate = self
         tableView.dataSource = self
         nuevoGastoButton.round()
@@ -45,7 +45,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        Model.selectAllEgresos()
+        Model.selectAllEgresosReverseWhere(mes: getCurrentDate())
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

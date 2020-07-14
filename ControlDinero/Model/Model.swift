@@ -11,7 +11,7 @@ import UIKit
 
 public class Model{
     
-    // MARK: Atributos estaticos
+    // MARK: ***Atributos estaticos***
     static var dbPointer : OpaquePointer?       = nil
     static var statementPointer: OpaquePointer? = nil
     static var ingresosList                     = Array<Ingreso>()
@@ -19,7 +19,10 @@ public class Model{
     static var totalList                        = Array<Total>()
     static var dbURL: URL?                      = nil
     
-    // MARK: Funciones públicas
+    
+    
+    //---------------------------------------------------------------------------
+    // MARK: ***Funciones públicas***
     public static func createDB(_ nombre: String){
         //Define the db directory
         Model.dbURL = try!
@@ -46,13 +49,15 @@ public class Model{
         }
     }
     
-    //MARK: Funciones privadas
+    
+    
+    //---------------------------------------------------------------------------
+    //MARK: ***Funciones privadas***
     private static func queryIsPrepared(query: String) -> Bool {
         var queryIsPrepared     : Bool
         var errorMessage        : String
         
         queryIsPrepared         = false
-        
         
         if sqlite3_prepare(dbPointer, query, -1, &statementPointer, nil) != SQLITE_OK{
             errorMessage = String(cString: sqlite3_errmsg(dbPointer)!)
@@ -64,7 +69,10 @@ public class Model{
         return queryIsPrepared
     }
     
-    //MARK: CRUD Ingresos Class
+    
+    
+    //---------------------------------------------------------------------------
+    //MARK: ***CRUD Quincenas***
     
     /*
     CREATE TABLE "QUINCENA" (
@@ -76,6 +84,8 @@ public class Model{
         "monto"    REAL NOT NULL
     );
     */
+    
+    //MARK: selectAllIngresos()
     public static func selectAllIngresos(){
         let selectAllQuery = "SELECT * FROM Quincena"
         if queryIsPrepared(query: selectAllQuery){
@@ -83,6 +93,7 @@ public class Model{
         }
     }
     
+    //MARK: selectAllIngresosReverse()
     public static func selectAllIngresosReverse(){
         let selectAllQuery = "SELECT * FROM Quincena ORDER BY id_quincena DESC"
         if queryIsPrepared(query: selectAllQuery){
@@ -90,6 +101,7 @@ public class Model{
         }
     }
     
+    //MARK: selectAllIngresosReverseWhere(mes: String)
     public static func selectAllIngresosReverseWhere(mes: String){
         let selectAllQuery = "SELECT * FROM Quincena WHERE mes = '" + mes + "'" + "ORDER BY id_quincena DESC"
         if queryIsPrepared(query: selectAllQuery){
@@ -97,6 +109,7 @@ public class Model{
         }
     }
     
+    //MARK: selectFromIngresoWhere(mes: String)
     public static func selectFromIngresoWhere(mes: String){
         let query = "SELECT * FROM Quincena WHERE mes = '" + mes + "'"
         print("*--*La query es-->" + query)
@@ -105,6 +118,7 @@ public class Model{
         }
     }
     
+    //MARK: selectFromIngresoWhere(fecha: String)
     public static func selectFromIngresoWhere(fecha: String){
         let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + fecha + "'"
         print("*--*La query es-->" + query)
@@ -113,6 +127,7 @@ public class Model{
         }
     }
     
+    //MARK: insertIntoIngreso
     public static func insertIntoIngreso(mes: String, num_quincena: String, fecha: String, detalles: String, monto: String){
         let query       = "INSERT INTO Quincena (mes, num_quincena, fecha, detalles, monto) VALUES (?,?,?,?,?)"
         var errMessage  :  String
@@ -169,6 +184,7 @@ public class Model{
         }
     }
     
+    //MARK: deleteFomIngresoWhere
     public static func deleteFomIngresoWhere(id: Int){
         let query = "DELETE FROM Quincena WHERE id_quincena = \(id)"
         print(query)
@@ -183,7 +199,9 @@ public class Model{
         }
     }
     
-    //MARK: CRUD Egresos Class
+    
+    //---------------------------------------------------------------------------
+    //MARK: ***CRUD Gasto***
     public static func selectAllEgresos(){
         let selectAllQuery = "SELECT * FROM Gasto"
         if queryIsPrepared(query: selectAllQuery){
@@ -191,6 +209,32 @@ public class Model{
         }
     }
     
+    //MARK: selectAllEgresoReverse()
+    public static func selectAllEgresoReverse(){
+        let selectAllQuery = "SELECT * FROM Gasto ORDER BY id_gasto DESC"
+        if queryIsPrepared(query: selectAllQuery){
+            egresosList = getResultSetEgresos()
+        }
+    }
+    
+    //MARK: selectFromEgresoWhere(mes: String)
+    public static func selectFromEgresoWhere(mes: String){
+        let query = "SELECT * FROM Gasto WHERE mes = '" + mes + "'"
+        print("*--*La query es-->" + query + "________*****____")
+        if queryIsPrepared(query: query){
+            egresosList = getResultSetEgresos()
+        }
+    }
+    
+    //MARK:selectAllEgresosReverseWhere(mes: String)
+    public static func selectAllEgresosReverseWhere(mes: String){
+        let selectAllQuery = "SELECT * FROM Gasto WHERE mes = '" + mes + "'" + "ORDER BY id_gasto DESC"
+        if queryIsPrepared(query: selectAllQuery){
+            egresosList = getResultSetEgresos()
+        }
+    }
+    
+    //MARK: insertIntoGasto
     public static func insertIntoGasto(nombre: String, detalles: String, fecha: String, mes: String, monto: String){
         /*
         CREATE TABLE "GASTO" (
@@ -257,6 +301,9 @@ public class Model{
         }
     }
     
+    
+    //---------------------------------------------------------------------------
+    
     //MARK: CRUD Total Class
     public static func selectAllTotal(){
         let selectAllQuery = "SELECT * FROM Total"
@@ -265,7 +312,10 @@ public class Model{
         }
     }
     
-    //MARK: Results Set Clases
+    
+    //---------------------------------------------------------------------------
+    
+    //MARK: Results Set
     static func getResultSetIngresos() -> Array<Ingreso>{
         
         var resultSet       : Array<Ingreso>

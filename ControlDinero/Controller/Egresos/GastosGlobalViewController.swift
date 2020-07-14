@@ -28,7 +28,7 @@ class GastosGlobalViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Model.selectAllEgresos()
+        Model.selectAllEgresoReverse()
         tableView.delegate     = self
         tableView.dataSource   = self
     }
@@ -36,6 +36,6 @@ class GastosGlobalViewController: UIViewController, UITableViewDelegate, UITable
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         tableView.reloadData()
-        Model.selectAllEgresos()
+        Model.selectAllEgresoReverse()
     }
 }

@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     private func getGastos() -> String {
         var gastos = 0.0
-        Model.selectAllEgresos()
+        Model.selectFromEgresoWhere(mes: getCurrentDate())
         for egreso in Model.egresosList{
             let gasto = Double(egreso.monto)
             //print(egreso.description)
