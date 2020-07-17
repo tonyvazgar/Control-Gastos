@@ -136,9 +136,9 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
                 Model.deleteFomIngresoWhere(id: item.id_quincena)
                 Model.ingresosList.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                //                Model.removeItem(item)
-//                //Also remove that row from the table view with animation
-//                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                //Model.removeItem(item)
+                //Also remove that row from the table view with animation
+                //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             })
             alertController.addAction(deleteAction)
             

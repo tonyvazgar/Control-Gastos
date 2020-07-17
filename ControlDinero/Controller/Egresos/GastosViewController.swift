@@ -103,5 +103,32 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         let animator = Animator(animation: animation)
         animator.animate(cell: cell, at: indexPath, in: tableView)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            let item    = Model.egresosList[indexPath.row]
+            
+            let tittle  = "¿Borrar \(item.nombre.lowercased())?"
+            let message = "¿Estás seguro que quieres eliminar \(item.nombre.lowercased()) creado el \(item.fecha) con un total de \(numberFormated(number: item.monto))?"
+            
+            let alertController = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Borrar", style: .destructive, handler: {
+                (action) -> Void in
+                print(item.detalles)
+                print("el indexpath es: \(indexPath.row)")
+                print(item.id_gasto)
+                Model.deleteFomEgresoWhere(id: item.id_gasto)
+                Model.egresosList.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            })
+            
+            alertController.addAction(deleteAction)
+            alertController.addAction(cancelAction)
+            
+            present(alertController, animated: true, completion: nil)
+        }
+    }
 
 }

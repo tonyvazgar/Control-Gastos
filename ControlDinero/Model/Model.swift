@@ -301,6 +301,21 @@ public class Model{
         }
     }
     
+    //MARK: deleteFomEgresoWhere
+    public static func deleteFomEgresoWhere(id: Int){
+        let query = "DELETE FROM Gasto WHERE id_gasto = \(id)"
+        print(query)
+        var errorMessage : String
+        if (queryIsPrepared(query: query)){
+            if sqlite3_step(statementPointer) == SQLITE_DONE{
+                print("Row deleted!")
+            }else{
+                errorMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure deleting record \(errorMessage)")
+            }
+        }
+    }
+    
     
     //---------------------------------------------------------------------------
     
