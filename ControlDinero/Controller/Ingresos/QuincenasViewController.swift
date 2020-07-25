@@ -8,6 +8,14 @@
 
 import UIKit
 
+class MyCellQuincenas: UITableViewCell {
+    @IBOutlet weak var nombreMes: UILabel!
+    @IBOutlet weak var fecha: UILabel!
+    @IBOutlet weak var numQuincena: UILabel!
+    @IBOutlet weak var monto: UILabel!
+    
+}
+
 class QuincenasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: Outlets
@@ -67,13 +75,15 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //Generar el link para el la celda creada con identificador "quincenas"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "quincenas", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "quincenas", for: indexPath) as! MyCellQuincenas
         
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.ingresosList[indexPath.row]
             
-        cell.textLabel?.text = item.mes.capitalizingFirstLetter()
-        cell.detailTextLabel?.text = String(item.num_quincena)
+        cell.nombreMes.text = item.mes.capitalizingFirstLetter()
+//        cell.numQuincena.text = String(item.num_quincena)
+//        cell.fecha.text = item.fecha
+//        cell.monto.text = "\(numberFormated(number: item.monto))"
         
         return cell
     }
@@ -146,4 +156,8 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
             present(alertController, animated: true, completion: nil)
         }//end if
     }// end tableView
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(55)
+    }
 }

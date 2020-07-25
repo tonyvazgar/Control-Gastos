@@ -8,6 +8,13 @@
 
 import UIKit
 
+class MyCellGastoViewController: UITableViewCell {
+    
+    @IBOutlet weak var titulo: UILabel!
+    @IBOutlet weak var monto: UILabel!
+    @IBOutlet weak var descrip: UILabel!
+}
+
 class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     // MARK: Outlets
@@ -48,6 +55,10 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         Model.selectAllEgresosReverseWhere(mes: getCurrentDate())
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(55)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
         backItem.title = "Mis gastos"
@@ -64,13 +75,14 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //Generar el link para el la celda creada con identificador "quincenas"
-        let cell = tableView.dequeueReusableCell(withIdentifier: "gastos", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gastos", for: indexPath) as! MyCellGastoViewController
         
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.egresosList[indexPath.row]
         
-        cell.textLabel?.text = item.nombre.capitalizingFirstLetter()
-        cell.detailTextLabel?.text = "\(item.detalles)          \(numberFormated(number: item.monto))"
+        cell.titulo.text = item.nombre.capitalizingFirstLetter()
+        cell.descrip.text = item.detalles
+        cell.monto.text = "\(numberFormated(number: item.monto))"
         
         return cell
     }
