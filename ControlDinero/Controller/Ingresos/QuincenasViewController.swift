@@ -9,10 +9,10 @@
 import UIKit
 
 class MyCellQuincenas: UITableViewCell {
-    @IBOutlet weak var nombreMes: UILabel!
-    @IBOutlet weak var fecha: UILabel!
+    @IBOutlet weak var mes: UILabel!
+    @IBOutlet weak var total: UILabel!
     @IBOutlet weak var numQuincena: UILabel!
-    @IBOutlet weak var monto: UILabel!
+    @IBOutlet weak var fecha: UILabel!
     
 }
 
@@ -80,13 +80,18 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         //Asignación de labels de la celda con datos recuperados de la BDD
         let item = Model.ingresosList[indexPath.row]
             
-        cell.nombreMes.text = item.mes.capitalizingFirstLetter()
-//        cell.numQuincena.text = String(item.num_quincena)
-//        cell.fecha.text = item.fecha
-//        cell.monto.text = "\(numberFormated(number: item.monto))"
+        cell.mes.text = item.mes.capitalizingFirstLetter()
+        cell.total.text = "\(numberFormated(number: item.monto))"
+        cell.numQuincena.text = "#" + String(item.num_quincena)
+        cell.fecha.text = item.fecha
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(55)
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         //Instancia del ViewController con idenficador DetalleQuincenaViewController ya elaborado en el StoryBoard
@@ -156,8 +161,4 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
             present(alertController, animated: true, completion: nil)
         }//end if
     }// end tableView
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(55)
-    }
 }
