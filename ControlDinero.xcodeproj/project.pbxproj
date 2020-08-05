@@ -26,6 +26,7 @@
 		EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF8247A3190004E293A /* Egreso.swift */; };
 		EF5C6BFB247A31A5004E293A /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFA247A31A5004E293A /* Total.swift */; };
 		EF5C6BFD247A34D0004E293A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFC247A34D0004E293A /* Model.swift */; };
+		EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */; };
 		EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */; };
 		EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */; };
 		EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */; };
@@ -58,6 +59,7 @@
 		EF5C6BF8247A3190004E293A /* Egreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egreso.swift; sourceTree = "<group>"; };
 		EF5C6BFA247A31A5004E293A /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		EF5C6BFC247A34D0004E293A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
 		EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaQuincenaViewController.swift; sourceTree = "<group>"; };
 		EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleQuincenaViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 		EF3145622473370E0043B00D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				EFC4F4BC24DA629600314497 /* Settings */,
 				EF314567247338240043B00D /* Home */,
 				EFFC697D249F042700099E81 /* Ingresos */,
 				EFFC697E249F044200099E81 /* Egresos */,
@@ -201,6 +204,14 @@
 				EF259D622472427F006F094A /* ViewController.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		EFC4F4BC24DA629600314497 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		EFFC697D249F042700099E81 /* Ingresos */ = {
@@ -353,6 +364,7 @@
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
 				EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
+				EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */,
 				EF438367247B2D5E0035AF11 /* Functions.swift in Sources */,
 				EFFC6980249F04B700099E81 /* QuincenasGlobalViewController.swift in Sources */,
 				EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */,

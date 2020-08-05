@@ -57,7 +57,7 @@ class NuevoGastoViewController: UIViewController {
         montoTextField.locale = Locale(identifier: currentLanguaje)
     }
     override func viewWillDisappear(_ animated: Bool) {
-        Model.selectAllEgresos()
+        Model.selectAllEgresosReverseWhere(mes: getCurrentDate())
     }
     
     
