@@ -12,20 +12,29 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    let titulosSecciones = ["Resumenes financieros", "Información de la app", "Visuales", "Traducción", "Comparte la app"]
-    let data = [["Gráficas (Próximamente)", "Resumen mensual (Próximamente)"],
-                ["Sugerencias", "Calificar app", "Desarrollador de la app"],
+    let titulosSecciones = ["Resumenes financieros (Próximamente)", "Información de la app", "Diseño Gráfico", "Traducción", "Comparte la app"]
+    let data = [["Gráficas", "Resumen mensual"],
+                ["Sugerencias/contacto", "Califica la App", "Desarrollador de la App"],
                 ["Aquí va un nombre"],
                 ["Aquí va otro nombre"],
-                ["Cuéntaselo a tus amigos"]]
+                ["Cuéntaselo a tus amigos", "Ver en el App Store"]]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.delegate = self
         tableView.dataSource = self
         
+        // Para poner el background del navigation bar al color del fondo :)
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = .systemGroupedBackground
+        navBarAppearance.shadowColor = .clear
+        self.navigationController?.navigationBar.standardAppearance = navBarAppearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
     }
+    
     
     // MARK: Implementaciones TableView
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
