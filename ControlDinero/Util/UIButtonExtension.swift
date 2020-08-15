@@ -9,6 +9,7 @@
 import UIKit
 
 private let orange = UIColor(red: 254/255, green: 148/255, blue: 0/255, alpha: 1 )
+private let blue = UIColor.blue
 
 extension UIButton {
     

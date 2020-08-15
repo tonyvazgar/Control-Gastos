@@ -40,9 +40,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1u8-hA-YVe">
                                                 <rect key="frame" x="0.0" y="0.0" width="182" height="36"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Ver mis quincenas">
+                                                <state key="normal" title="Mis quincenas">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -52,9 +52,9 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axZ-4M-Kze">
                                                 <rect key="frame" x="192" y="0.0" width="182" height="36"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                <state key="normal" title="Ver mis gastos">
+                                                <state key="normal" title="Mis gastos">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
@@ -75,7 +75,7 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oFH-1h-8c6">
                                                 <rect key="frame" x="58.5" y="0.0" width="257" height="36"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Ver todo">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -216,11 +216,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqp-3c-aAO">
                                 <rect key="frame" x="20" y="722" width="374" height="36"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Nuevo gasto">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Nuevo gasto"/>
                                 <connections>
                                     <action selector="buttonQuincenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rq5-6r-SBT"/>
                                     <action selector="nuevoGastoAction:" destination="ZEx-Wl-3N3" eventType="touchUpInside" id="Wbr-dc-fFz"/>
@@ -267,8 +264,11 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="T7j-JD-A2B" secondAttribute="trailing" constant="20" symbolic="YES" id="11M-l3-kF3"/>
                                                         <constraint firstItem="2WL-ca-cCg" firstAttribute="top" secondItem="054-WS-nMi" secondAttribute="top" constant="5" id="DkC-kV-gIp"/>
                                                         <constraint firstAttribute="bottom" secondItem="amA-ii-aKy" secondAttribute="bottom" constant="5" id="Ixh-rG-6b4"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="amA-ii-aKy" secondAttribute="trailing" constant="20" symbolic="YES" id="J61-Vw-djL"/>
+                                                        <constraint firstItem="2WL-ca-cCg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="T7j-JD-A2B" secondAttribute="trailing" constant="8" symbolic="YES" id="Kd7-lq-bjH"/>
                                                         <constraint firstItem="T7j-JD-A2B" firstAttribute="top" secondItem="054-WS-nMi" secondAttribute="top" constant="5" id="OdI-e0-uP8"/>
                                                         <constraint firstAttribute="trailing" secondItem="2WL-ca-cCg" secondAttribute="trailing" constant="10" id="XS0-r2-itY"/>
                                                         <constraint firstItem="amA-ii-aKy" firstAttribute="leading" secondItem="054-WS-nMi" secondAttribute="leading" constant="10" id="jNg-Xk-RE6"/>
@@ -403,11 +403,8 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1M-nf-kSJ">
                                 <rect key="frame" x="20" y="722" width="374" height="36"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Agregar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarAction:" destination="Nxb-1Z-MWe" eventType="touchUpInside" id="TiB-0a-KXQ"/>
                                 </connections>
@@ -539,11 +536,8 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTA-Zo-4xE">
                                 <rect key="frame" x="20" y="722" width="374" height="36"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Nueva quincena">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Nueva quincena"/>
                                 <connections>
                                     <action selector="buttonQuincenas:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kXm-0H-aeG"/>
                                     <action selector="nuevaQuincenaAction:" destination="iq4-MT-DzV" eventType="touchUpInside" id="T4I-yT-iUk"/>
@@ -599,10 +593,12 @@
                                                         <constraint firstItem="NWA-Ws-hmF" firstAttribute="leading" secondItem="yhP-Dy-IkC" secondAttribute="leading" constant="10" id="51b-oA-JNv"/>
                                                         <constraint firstAttribute="trailing" secondItem="Jb9-VJ-0vz" secondAttribute="trailing" constant="10" id="HO7-h1-T6v"/>
                                                         <constraint firstItem="v6q-WH-ZGL" firstAttribute="leading" secondItem="yhP-Dy-IkC" secondAttribute="leading" constant="10" id="IE7-tW-MdU"/>
+                                                        <constraint firstItem="Jb9-VJ-0vz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="v6q-WH-ZGL" secondAttribute="trailing" constant="8" symbolic="YES" id="KpJ-to-h0D"/>
                                                         <constraint firstItem="v6q-WH-ZGL" firstAttribute="top" secondItem="yhP-Dy-IkC" secondAttribute="top" constant="5" id="eoa-0k-K88"/>
                                                         <constraint firstAttribute="bottom" secondItem="dRg-OL-ROh" secondAttribute="bottom" constant="5" id="iZZ-d4-CMq"/>
                                                         <constraint firstItem="Jb9-VJ-0vz" firstAttribute="top" secondItem="yhP-Dy-IkC" secondAttribute="top" constant="5" id="wCy-Ik-ZNy"/>
                                                         <constraint firstAttribute="bottom" secondItem="NWA-Ws-hmF" secondAttribute="bottom" constant="5" id="xg2-3i-sgy"/>
+                                                        <constraint firstItem="dRg-OL-ROh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NWA-Ws-hmF" secondAttribute="trailing" constant="8" symbolic="YES" id="zAd-4M-50o"/>
                                                         <constraint firstAttribute="trailing" secondItem="dRg-OL-ROh" secondAttribute="trailing" constant="10" id="zy7-jQ-7PV"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -831,11 +827,8 @@
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAd-3g-D0t">
                                 <rect key="frame" x="20" y="722" width="374" height="36"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Agregar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="Agregar"/>
                                 <connections>
                                     <action selector="agregarAction:" destination="d2l-vm-8Sf" eventType="touchUpInside" id="dKO-LR-7dQ"/>
                                 </connections>
@@ -871,13 +864,13 @@
         <!--Configuraciones-->
         <scene sceneID="yra-vR-FZ0">
             <objects>
-                <viewController id="5cz-pR-6VH" customClass="SettingsViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5cz-pR-6VH" customClass="SettingsViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="249-8w-pF6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="rfc-91-6Lq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="752"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="configuracion" textLabel="mDQ-ZE-skd" style="IBUITableViewCellStyleDefault" id="RlH-xE-zlo">
                                         <rect key="frame" x="20" y="55.5" width="374" height="43.5"/>
@@ -991,8 +984,10 @@
                                                         <constraint firstItem="c9b-Lb-EsT" firstAttribute="top" secondItem="rzO-6x-zTq" secondAttribute="top" constant="5" id="8lu-HA-TMw"/>
                                                         <constraint firstItem="A0I-3B-pO7" firstAttribute="top" secondItem="rzO-6x-zTq" secondAttribute="top" constant="5" id="EKm-ar-sf7"/>
                                                         <constraint firstAttribute="trailing" secondItem="c9b-Lb-EsT" secondAttribute="trailing" constant="10" id="Mod-Qt-Udr"/>
+                                                        <constraint firstItem="c9b-Lb-EsT" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="A0I-3B-pO7" secondAttribute="trailing" constant="8" symbolic="YES" id="SxZ-KH-4j2"/>
                                                         <constraint firstAttribute="bottom" secondItem="Hd2-Fk-081" secondAttribute="bottom" constant="5" id="cA9-uG-NWD"/>
                                                         <constraint firstItem="Hd2-Fk-081" firstAttribute="leading" secondItem="rzO-6x-zTq" secondAttribute="leading" constant="10" id="cUL-HQ-YI7"/>
+                                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Hd2-Fk-081" secondAttribute="trailing" constant="20" symbolic="YES" id="fDB-6v-QgP"/>
                                                         <constraint firstItem="A0I-3B-pO7" firstAttribute="leading" secondItem="rzO-6x-zTq" secondAttribute="leading" constant="10" id="vSp-re-jD6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -1009,10 +1004,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Uph-um-qQM" firstAttribute="top" secondItem="0MF-Nn-LWa" secondAttribute="top" constant="20" id="U9X-17-m6R"/>
-                            <constraint firstItem="0MF-Nn-LWa" firstAttribute="trailing" secondItem="Uph-um-qQM" secondAttribute="trailing" constant="20" id="cXk-nX-hEF"/>
-                            <constraint firstItem="Uph-um-qQM" firstAttribute="leading" secondItem="653-Ba-cAS" secondAttribute="leading" constant="20" id="qYN-SZ-2qe"/>
-                            <constraint firstItem="0MF-Nn-LWa" firstAttribute="bottom" secondItem="Uph-um-qQM" secondAttribute="bottom" id="vTi-bs-5CS"/>
+                            <constraint firstItem="Uph-um-qQM" firstAttribute="top" secondItem="0MF-Nn-LWa" secondAttribute="top" constant="20" id="JOB-re-mMo"/>
+                            <constraint firstItem="Uph-um-qQM" firstAttribute="leading" secondItem="653-Ba-cAS" secondAttribute="leading" constant="20" id="OHJ-E1-Reg"/>
+                            <constraint firstItem="0MF-Nn-LWa" firstAttribute="trailing" secondItem="Uph-um-qQM" secondAttribute="trailing" constant="20" id="Z0a-Em-UHj"/>
+                            <constraint firstItem="0MF-Nn-LWa" firstAttribute="bottom" secondItem="Uph-um-qQM" secondAttribute="bottom" id="jSk-NP-ZI7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0MF-Nn-LWa"/>
                     </view>
@@ -1079,6 +1074,7 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="0K3-yb-htP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jpa-3a-pLV" secondAttribute="trailing" constant="8" symbolic="YES" id="0sm-u9-QnC"/>
                                                         <constraint firstAttribute="bottom" secondItem="yvw-FA-Ccb" secondAttribute="bottom" constant="5" id="0tM-kr-Jl5"/>
                                                         <constraint firstAttribute="trailing" secondItem="yvw-FA-Ccb" secondAttribute="trailing" constant="10" id="T52-GX-cas"/>
                                                         <constraint firstAttribute="trailing" secondItem="0K3-yb-htP" secondAttribute="trailing" constant="10" id="XMG-tN-Qvq"/>
@@ -1087,6 +1083,7 @@
                                                         <constraint firstItem="jpa-3a-pLV" firstAttribute="leading" secondItem="9eS-jc-NWi" secondAttribute="leading" constant="10" id="nWA-i8-VCd"/>
                                                         <constraint firstItem="0K3-yb-htP" firstAttribute="top" secondItem="9eS-jc-NWi" secondAttribute="top" constant="5" id="syL-vr-cx9"/>
                                                         <constraint firstItem="e5N-Eg-Efn" firstAttribute="leading" secondItem="9eS-jc-NWi" secondAttribute="leading" constant="10" id="tF5-LQ-33z"/>
+                                                        <constraint firstItem="yvw-FA-Ccb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e5N-Eg-Efn" secondAttribute="trailing" constant="8" symbolic="YES" id="zbA-le-cj4"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -1160,7 +1157,7 @@
         <!--Navigation Controller-->
         <scene sceneID="aur-oS-9bs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QXb-dT-m4e" sceneMemberID="viewController">
+                <navigationController id="QXb-dT-m4e" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="PJN-Jq-qrj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="AV6-dD-ENW">
