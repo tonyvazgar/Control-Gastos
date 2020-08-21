@@ -14,14 +14,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     let titulosSecciones = ["Resumenes financieros (Próximamente)", "Información de la app", "Diseño Gráfico", "Traducción", "Comparte la app"]
     
-    let data = [["Gráficas", "Resumen mensual"],
+    let data = [["Gráficas", "Resumen mensual", "Estadísticas"],
                 ["Sugerencias/contacto", "Califica la App", "Desarrollador de la App"],
                 ["Aquí va un nombre"],
                 ["Aquí va otro nombre"],
                 ["Cuéntaselo a tus amigos", "Ver en el App Store"]]
     
     let images = [
-        [UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar")],
+        [UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
         [UIImage(systemName: "message"), UIImage(systemName: "star"), UIImage(systemName: "person")],
         [UIImage(systemName: "paintbrush")],
         [UIImage(systemName: "globe")],
