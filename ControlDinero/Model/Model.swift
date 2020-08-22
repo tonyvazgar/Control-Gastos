@@ -250,8 +250,8 @@ public class Model{
         var errMessage  :  String
         
         let nombre      = nombre    as NSString
-        let fecha       = fecha     as NSString
         let detalles    = detalles  as NSString
+        let fecha       = fecha     as NSString
         let mes         = mes       as NSString
         let monto       = monto     as NSString
         
@@ -263,20 +263,21 @@ public class Model{
             }else{
                 print("Binding nombre value.... OK...")
             }
-            if sqlite3_bind_text(statementPointer, 2, fecha.utf8String, -1, nil) != SQLITE_OK {
-                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
-                print("Failure binding fecha: \(errMessage)")
-                return
-            }else{
-                print("Binding fecha OK")
-            }
-            if sqlite3_bind_text(statementPointer, 3, detalles.utf8String, -1, nil) != SQLITE_OK{
+            if sqlite3_bind_text(statementPointer, 2, detalles.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding detalles: \(errMessage)")
                 return
             }else{
                 print("Binding detalles value.... OK...")
             }
+            if sqlite3_bind_text(statementPointer, 3, fecha.utf8String, -1, nil) != SQLITE_OK {
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Failure binding fecha: \(errMessage)")
+                return
+            }else{
+                print("Binding fecha OK")
+            }
+            
             if sqlite3_bind_text(statementPointer, 4, mes.utf8String, -1, nil) != SQLITE_OK{
                 errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
                 print("Faiulure binding mes: \(errMessage)")
