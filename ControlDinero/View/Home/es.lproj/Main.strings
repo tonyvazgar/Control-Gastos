@@ -1,0 +1,228 @@
+
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "07y-g8-TiN"; */
+"07y-g8-TiN.text" = "Monto total:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0K3-yb-htP"; */
+"0K3-yb-htP.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Enter amount of the income"; ObjectID = "1TF-jJ-UaN"; */
+"1TF-jJ-UaN.placeholder" = "...";
+
+/* Class = "UIButton"; normalTitle = "My earnings"; ObjectID = "1u8-hA-YVe"; */
+"1u8-hA-YVe.normalTitle" = "Mis ganancias";
+
+/* Class = "UILabel"; text = "$$$"; ObjectID = "2WL-ca-cCg"; */
+"2WL-ca-cCg.text" = "$$$";
+
+/* Class = "UILabel"; text = " "; ObjectID = "2tR-C1-m4I"; */
+"2tR-C1-m4I.text" = " ";
+
+/* Class = "UILabel"; text = "My"; ObjectID = "3PD-gw-JvM"; */
+"3PD-gw-JvM.text" = "Mi";
+
+/* Class = "UILabel"; text = "My"; ObjectID = "4ey-bL-svW"; */
+"4ey-bL-svW.text" = "Mis";
+
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "4nZ-9R-stl"; */
+"4nZ-9R-stl.text" = "Monto total:";
+
+/* Class = "UILabel"; text = "Holaa"; ObjectID = "4zL-ja-Lo5"; */
+"4zL-ja-Lo5.text" = "Holaa";
+
+/* Class = "UILabel"; text = " "; ObjectID = "5oc-kf-ffW"; */
+"5oc-kf-ffW.text" = " ";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "8mm-p7-uSi"; */
+"8mm-p7-uSi.text" = "Descripción:";
+
+/* Class = "UILabel"; text = "expense"; ObjectID = "9ah-mZ-NcW"; */
+"9ah-mZ-NcW.text" = "gasto";
+
+/* Class = "UILabel"; text = "Titulo gasto"; ObjectID = "A0I-3B-pO7"; */
+"A0I-3B-pO7.text" = "Titulo gasto";
+
+/* Class = "UILabel"; text = "Created on:"; ObjectID = "AbA-pR-kkD"; */
+"AbA-pR-kkD.text" = "Fecha de creación:";
+
+/* Class = "UITextField"; placeholder = "$100.00"; ObjectID = "AlO-UM-Psr"; */
+"AlO-UM-Psr.placeholder" = "$100.00";
+
+/* Class = "UILabel"; text = "expenses"; ObjectID = "BC7-FQ-luX"; */
+"BC7-FQ-luX.text" = "gastos";
+
+/* Class = "UIButton"; normalTitle = "New earning"; ObjectID = "CTA-Zo-4xE"; */
+"CTA-Zo-4xE.normalTitle" = "Nuevo ingreso";
+
+/* Class = "UILabel"; text = "Description:"; ObjectID = "GUB-CJ-aOW"; */
+"GUB-CJ-aOW.text" = "Descripción:";
+
+/* Class = "UITextField"; placeholder = "Income details"; ObjectID = "GgN-qQ-1mI"; */
+"GgN-qQ-1mI.placeholder" = "Escribe los detalles del ingreso";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Hd2-Fk-081"; */
+"Hd2-Fk-081.text" = "Description";
+
+/* Class = "UIButton"; normalTitle = "New expense"; ObjectID = "Iqp-3c-aAO"; */
+"Iqp-3c-aAO.normalTitle" = "Nuevo gasto";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "JZ8-kA-dvo"; */
+"JZ8-kA-dvo.title" = "Configuraciones";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Jb9-VJ-0vz"; */
+"Jb9-VJ-0vz.text" = "Label";
+
+/* Class = "UILabel"; text = "earnings"; ObjectID = "KHY-gU-smn"; */
+"KHY-gU-smn.text" = "ganancias";
+
+/* Class = "UILabel"; text = "Details:"; ObjectID = "L6N-ow-5CY"; */
+"L6N-ow-5CY.text" = "Detalles:";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "NWA-Ws-hmF"; */
+"NWA-Ws-hmF.text" = "Label";
+
+/* Class = "UILabel"; text = "Nombre"; ObjectID = "NvM-hV-xzX"; */
+"NvM-hV-xzX.text" = "Nombre";
+
+/* Class = "UILabel"; text = "expenses"; ObjectID = "Phe-FJ-zan"; */
+"Phe-FJ-zan.text" = "gastos";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "RAd-3g-D0t"; */
+"RAd-3g-D0t.normalTitle" = "Agregar";
+
+/* Class = "UILabel"; text = "Quincena #"; ObjectID = "SaP-cU-EmO"; */
+"SaP-cU-EmO.text" = "Quincena #";
+
+/* Class = "UILabel"; text = "MES"; ObjectID = "Sab-om-Edc"; */
+"Sab-om-Edc.text" = "MES";
+
+/* Class = "UILabel"; text = "Titulo gasto"; ObjectID = "T7j-JD-A2B"; */
+"T7j-JD-A2B.text" = "Titulo gasto";
+
+/* Class = "UILabel"; text = "Details:"; ObjectID = "VM6-QI-uu0"; */
+"VM6-QI-uu0.text" = "Detalles:";
+
+/* Class = "UILabel"; text = "earning"; ObjectID = "VZg-Sx-rJV"; */
+"VZg-Sx-rJV.text" = "ingreso";
+
+/* Class = "UILabel"; text = "Monthly Balance"; ObjectID = "Vv0-yo-XyD"; */
+"Vv0-yo-XyD.text" = "Balance mensual";
+
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "WnR-o3-LQ7"; */
+"WnR-o3-LQ7.text" = "Monto total:";
+
+/* Class = "UITabBarItem"; title = "Expenses"; ObjectID = "ZrE-dd-krQ"; */
+"ZrE-dd-krQ.title" = "Gastos";
+
+/* Class = "UILabel"; text = "earnings"; ObjectID = "a4g-yh-JO9"; */
+"a4g-yh-JO9.text" = "ingresos";
+
+/* Class = "UILabel"; text = "money"; ObjectID = "ab6-0J-Zfq"; */
+"ab6-0J-Zfq.text" = "dinero";
+
+/* Class = "UILabel"; text = "Descrip"; ObjectID = "amA-ii-aKy"; */
+"amA-ii-aKy.text" = "Descrip";
+
+/* Class = "UILabel"; text = "$$$$"; ObjectID = "au2-aH-0Qr"; */
+"au2-aH-0Qr.text" = "$$$$";
+
+/* Class = "UIButton"; normalTitle = "My expenses"; ObjectID = "axZ-4M-Kze"; */
+"axZ-4M-Kze.normalTitle" = "Mis gastos";
+
+/* Class = "UILabel"; text = "All my"; ObjectID = "bW2-fn-k1w"; */
+"bW2-fn-k1w.text" = "Todos mis";
+
+/* Class = "UILabel"; text = "Fecha"; ObjectID = "bfd-mG-CrV"; */
+"bfd-mG-CrV.text" = "Fecha";
+
+/* Class = "UILabel"; text = "$$$"; ObjectID = "c9b-Lb-EsT"; */
+"c9b-Lb-EsT.text" = "$$$";
+
+/* Class = "UILabel"; text = "$00,000"; ObjectID = "cvL-J9-0m1"; */
+"cvL-J9-0m1.text" = "$00,000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dRg-OL-ROh"; */
+"dRg-OL-ROh.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "e5N-Eg-Efn"; */
+"e5N-Eg-Efn.text" = "Label";
+
+/* Class = "UILabel"; text = "Income number:"; ObjectID = "fIU-iv-kTT"; */
+"fIU-iv-kTT.text" = "Ingreso #:";
+
+/* Class = "UILabel"; text = "Expense name:"; ObjectID = "fou-Xo-6RT"; */
+"fou-Xo-6RT.text" = "Nombre del gasto:";
+
+/* Class = "UILabel"; text = "Expenses"; ObjectID = "irW-SJ-cV1"; */
+"irW-SJ-cV1.text" = "Gastos:";
+
+/* Class = "UITextField"; placeholder = "Expense details"; ObjectID = "jFt-Am-USd"; */
+"jFt-Am-USd.placeholder" = "Descripción del gasto";
+
+/* Class = "UILabel"; text = "$$$$"; ObjectID = "jgJ-Wu-g0M"; */
+"jgJ-Wu-g0M.text" = "$$$$";
+
+/* Class = "UILabel"; text = "Holaa"; ObjectID = "jnK-PO-4cr"; */
+"jnK-PO-4cr.text" = "Holaa";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jpa-3a-pLV"; */
+"jpa-3a-pLV.text" = "Label";
+
+/* Class = "UILabel"; text = "$$$$"; ObjectID = "kK4-eh-a9l"; */
+"kK4-eh-a9l.text" = "$$$$";
+
+/* Class = "UILabel"; text = "New"; ObjectID = "kfe-AE-Tae"; */
+"kfe-AE-Tae.text" = "Nuevo";
+
+/* Class = "UITextField"; placeholder = "Expense name to identify"; ObjectID = "lTJ-Yf-si7"; */
+"lTJ-Yf-si7.placeholder" = "Nombre para identificar el gasto";
+
+/* Class = "UILabel"; text = "My"; ObjectID = "m4d-ME-pWL"; */
+"m4d-ME-pWL.text" = "Mis";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "mDQ-ZE-skd"; */
+"mDQ-ZE-skd.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "o1M-nf-kSJ"; */
+"o1M-nf-kSJ.normalTitle" = "Agregar";
+
+/* Class = "UIButton"; normalTitle = "All transactions"; ObjectID = "oFH-1h-8c6"; */
+"oFH-1h-8c6.normalTitle" = "Ver todo";
+
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "oSi-Bf-RAt"; */
+"oSi-Bf-RAt.text" = "Monto total:";
+
+/* Class = "UILabel"; text = "Created on:"; ObjectID = "oTw-SC-m2N"; */
+"oTw-SC-m2N.text" = "Fecha de creación:";
+
+/* Class = "UILabel"; text = "New"; ObjectID = "oZ8-vc-zFw"; */
+"oZ8-vc-zFw.text" = "Nuevo";
+
+/* Class = "UILabel"; text = "Select the day:"; ObjectID = "oxo-hL-hoj"; */
+"oxo-hL-hoj.text" = "Selecciona el día:";
+
+/* Class = "UILabel"; text = "Earnings"; ObjectID = "rbc-G7-DBl"; */
+"rbc-G7-DBl.text" = "Ganancias:";
+
+/* Class = "UILabel"; text = "All my"; ObjectID = "shq-Ti-puF"; */
+"shq-Ti-puF.text" = "Todas mis";
+
+/* Class = "UILabel"; text = "Income number:"; ObjectID = "t5S-gE-cRY"; */
+"t5S-gE-cRY.text" = "Ingreso número:";
+
+/* Class = "UILabel"; text = "00-00-0000"; ObjectID = "tre-7A-GW2"; */
+"tre-7A-GW2.text" = "00-00-0000";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "v6q-WH-ZGL"; */
+"v6q-WH-ZGL.text" = "Label";
+
+/* Class = "UILabel"; text = "$00,000"; ObjectID = "wjq-7F-7at"; */
+"wjq-7F-7at.text" = "$00,000";
+
+/* Class = "UILabel"; text = "MAYO 2020"; ObjectID = "xsA-zb-esf"; */
+"xsA-zb-esf.text" = "MAYO 2020";
+
+/* Class = "UITabBarItem"; title = "Earnings"; ObjectID = "yp6-ih-Led"; */
+"yp6-ih-Led.title" = "Ganancias";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "yvw-FA-Ccb"; */
+"yvw-FA-Ccb.text" = "Label";

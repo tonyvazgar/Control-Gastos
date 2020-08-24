@@ -8,6 +8,10 @@
 
 import Foundation
 
+func getDeviceLanguage() -> String! {
+    return NSLocale.current.languageCode
+}
+
 func getCurrentDate() -> String {
     let currentLanguaje = Locale.preferredLanguages[0]
     let dateFormatter = DateFormatter()

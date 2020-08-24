@@ -35,7 +35,7 @@ class NuevoGastoViewController: UIViewController {
             navigationController?.popViewController(animated: true)
             dismiss(animated: true, completion: nil)
         } else {
-            let alertController = UIAlertController(title: "Campos vacios", message: "Debes llenar campos de nombre, detalles y el monto.", preferredStyle: .alert)
+            let alertController = UIAlertController(title: Text.misIngresosTitleAlertVacio, message: Text.misGastosMessageAlertVacio, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
@@ -55,6 +55,17 @@ class NuevoGastoViewController: UIViewController {
         let currentLanguaje = Locale.preferredLanguages[0]
         montoTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
         montoTextField.locale = Locale(identifier: currentLanguaje)
+        
+        datePicker.minimumDate = Calendar.current.dateComponents([.calendar, .year,.month], from: Date()).date!
+        
+        //Get the max day of the month
+        var components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        let range = Calendar.current.range(of: .day, in: .month, for: Date())!
+        components.day = range.upperBound - 1
+        
+        datePicker.maximumDate = Calendar.current.date(from: components)!
+
+
     }
     override func viewWillDisappear(_ animated: Bool) {
         Model.selectAllEgresosReverseWhere(mes: getCurrentDate())

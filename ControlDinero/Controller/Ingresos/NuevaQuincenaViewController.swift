@@ -26,12 +26,12 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
                 navigationController?.popViewController(animated: true)
                 dismiss(animated: true, completion: nil)
             } else {
-                let alertController = UIAlertController(title: "Falta el número de quincena", message: "Debes seleccionar el número de quincena para agregarla", preferredStyle: .alert)
+                let alertController = UIAlertController(title: Text.misIngresosTitleNumQuincena, message: Text.misIngresosMessageNumQuincena, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .default))
                 self.present(alertController, animated: true, completion: nil)
             }
         } else {
-            let alertController = UIAlertController(title: "Campos vacios", message: "Debes llenar campos de descripción y el monto", preferredStyle: .alert)
+            let alertController = UIAlertController(title: Text.misIngresosTitleAlertVacio, message: Text.misIngresosMessageAlertVacio, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }

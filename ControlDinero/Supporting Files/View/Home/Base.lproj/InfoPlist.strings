@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  ControlDinero
+
+  Created by Tony Vazgar on 23/08/20.
+  Copyright © 2020 Tony Vazgar. All rights reserved.
+*/
+
+"CFBundleDisplayName" =  "My Money";

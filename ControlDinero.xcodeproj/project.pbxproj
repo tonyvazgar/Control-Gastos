@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		62F612FD16150CDACE27C56A /* Pods_ControlDinero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9427642CFC7D8742D306AFC4 /* Pods_ControlDinero.framework */; };
 		EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */; };
+		EF10720924F3666B00B8CE65 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EF10720724F3666B00B8CE65 /* InfoPlist.strings */; };
+		EF10720C24F36A4200B8CE65 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF10720B24F36A4200B8CE65 /* Text.swift */; };
 		EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC124733DF600177691 /* UIButtonExtension.swift */; };
 		EF126CC42473700C00177691 /* QuincenasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC32473700C00177691 /* QuincenasViewController.swift */; };
 		EF126CC62473701B00177691 /* GastosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF126CC52473701B00177691 /* GastosViewController.swift */; };
@@ -40,6 +42,11 @@
 		41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ControlDinero.release.xcconfig"; path = "Target Support Files/Pods-ControlDinero/Pods-ControlDinero.release.xcconfig"; sourceTree = "<group>"; };
 		9427642CFC7D8742D306AFC4 /* Pods_ControlDinero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ControlDinero.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF08226D2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusLabelWhileKeyboard.swift; sourceTree = "<group>"; };
+		EF10720524F356FB00B8CE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		EF10720624F356FB00B8CE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		EF10720824F3666B00B8CE65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = View/Home/Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF10720A24F3668900B8CE65 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = View/Home/es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EF10720B24F36A4200B8CE65 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EF126CC124733DF600177691 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		EF126CC32473700C00177691 /* QuincenasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuincenasViewController.swift; sourceTree = "<group>"; };
 		EF126CC52473701B00177691 /* GastosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +140,7 @@
 		EF259D722472430B006F094A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF10720724F3666B00B8CE65 /* InfoPlist.strings */,
 				EF259D6C24724280006F094A /* Info.plist */,
 			);
 			path = "Supporting Files";
@@ -178,6 +186,7 @@
 				EF34E21E248F42F800D275AA /* Animations.swift */,
 				EF34E220248F432600D275AA /* Animator.swift */,
 				EF51B7E324947B620017C1F3 /* CurrencyField.swift */,
+				EF10720B24F36A4200B8CE65 /* Text.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -280,6 +289,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = EF259D522472427F006F094A;
 			productRefGroup = EF259D5C2472427F006F094A /* Products */;
@@ -297,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */,
+				EF10720924F3666B00B8CE65 /* InfoPlist.strings in Resources */,
 				EF259D6824724280006F094A /* Assets.xcassets in Resources */,
 				EF259D662472427F006F094A /* Main.storyboard in Resources */,
 			);
@@ -364,6 +375,7 @@
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
 				EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
+				EF10720C24F36A4200B8CE65 /* Text.swift in Sources */,
 				EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */,
 				EF438367247B2D5E0035AF11 /* Functions.swift in Sources */,
 				EFFC6980249F04B700099E81 /* QuincenasGlobalViewController.swift in Sources */,
@@ -379,10 +391,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EF10720724F3666B00B8CE65 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF10720824F3666B00B8CE65 /* Base */,
+				EF10720A24F3668900B8CE65 /* es */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EF259D642472427F006F094A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EF259D652472427F006F094A /* Base */,
+				EF10720624F356FB00B8CE65 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -391,6 +413,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				EF259D6A24724280006F094A /* Base */,
+				EF10720524F356FB00B8CE65 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -402,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -462,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

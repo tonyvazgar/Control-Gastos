@@ -54,7 +54,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "My earnings"
+        backItem.title = Text.backTitleGanancias
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
@@ -101,7 +101,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         let item = Model.ingresosList[indexPath.row]
             
         viewController?.mes = item.mes.capitalizingFirstLetter()
-        viewController?.num_quincena = "Quincena #" + String(item.num_quincena)
+        viewController?.num_quincena = "#" + String(item.num_quincena)
         viewController?.amount = String(item.monto)
         viewController?.fecha = item.fecha
         viewController?.detalles = item.detalles
@@ -135,27 +135,50 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if editingStyle == UITableViewCell.EditingStyle.delete {
             item    = Model.ingresosList[indexPath.row]
-            tittle  = "Delete income from \(item.mes)?"
-            message = "Are you sure you want to remove the entry #\(item.num_quincena) from \(item.mes)?"
-            
-            alertController = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
-            cancelAction    = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
-            
-            alertController.addAction(cancelAction)
-            
-            deleteAction    = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: {
-                (action) -> Void
-                in
-                print(item.description)
-                print("El indexPath es: \(indexPath.row)")
-                Model.deleteFomIngresoWhere(id: item.id_quincena)
-                Model.ingresosList.remove(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-                //Model.removeItem(item)
-                //Also remove that row from the table view with animation
-                //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            })
-            alertController.addAction(deleteAction)
+            tittle  = Text.titleBorrarIngreso + item.mes + "?" // "Delete income from \(item.mes)?"
+            if getDeviceLanguage() == "es"{
+                 message = "¿Estás seguro que quieres eliminar el ingreso #\(item.num_quincena) de \(item.mes)?"
+
+                alertController = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
+                cancelAction    = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil)
+                
+                alertController.addAction(cancelAction)
+                
+                deleteAction    = UIAlertAction(title: "Borrar", style: UIAlertAction.Style.destructive, handler: {
+                    (action) -> Void
+                    in
+                    print(item.description)
+                    print("El indexPath es: \(indexPath.row)")
+                    Model.deleteFomIngresoWhere(id: item.id_quincena)
+                    Model.ingresosList.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                    //Model.removeItem(item)
+                    //Also remove that row from the table view with animation
+                    //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                })
+                alertController.addAction(deleteAction)
+            }else{
+                message = "Are you sure you want to remove the entry #\(item.num_quincena) from \(item.mes)?"
+
+                alertController = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
+                cancelAction    = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+                
+                alertController.addAction(cancelAction)
+                
+                deleteAction    = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: {
+                    (action) -> Void
+                    in
+                    print(item.description)
+                    print("El indexPath es: \(indexPath.row)")
+                    Model.deleteFomIngresoWhere(id: item.id_quincena)
+                    Model.ingresosList.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                    //Model.removeItem(item)
+                    //Also remove that row from the table view with animation
+                    //tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+                })
+                alertController.addAction(deleteAction)
+            }
             
             //Present the alert controller
             present(alertController, animated: true, completion: nil)

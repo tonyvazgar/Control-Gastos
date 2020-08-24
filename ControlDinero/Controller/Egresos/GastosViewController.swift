@@ -61,7 +61,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "My expenses"
+        backItem.title = Text.backTitleGastos
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
@@ -121,26 +121,34 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if editingStyle == UITableViewCell.EditingStyle.delete {
             let item    = Model.egresosList[indexPath.row]
             
-            let tittle  = "Delete '\(item.nombre.lowercased())'?"
-//            let message = "¿Estás seguro que quieres eliminar \(item.nombre.lowercased()) creado el \(item.fecha) con un total de \(numberFormated(number: item.monto))?"
-            let message = "Are you sure you want to delete the '\(item.nombre.lowercased())' created the \(item.fecha) with a total of \(numberFormated(number: item.monto))?"
+            let tittleBorrar: String
+            let messageBorrar: String
+            let alertController: UIAlertController
+            let cancelText: String
+            let borrarText: String
             
+            if getDeviceLanguage() == "es"{
+                tittleBorrar  = "¿Borrar '\(item.nombre.lowercased())'?"
+                messageBorrar = "¿Estás seguro que quieres eliminar \(item.nombre.lowercased()) creado el \(item.fecha) con un total de \(numberFormated(number: item.monto))?"
+                cancelText = "Cancelar"
+                borrarText = "Borrar"
+            }else{
+                tittleBorrar  = "Delete '\(item.nombre.lowercased())'?"
+                messageBorrar = "Are you sure you want to delete the '\(item.nombre.lowercased())' created the \(item.fecha) with a total of \(numberFormated(number: item.monto))?"
+                cancelText = "Cancel"
+                borrarText = "Delete"
+            }
             
-            let alertController = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {
+            alertController = UIAlertController(title: tittleBorrar, message: messageBorrar, preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: cancelText, style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: borrarText, style: .destructive, handler: {
                 (action) -> Void in
-                print(item.detalles)
-                print("el indexpath es: \(indexPath.row)")
-                print(item.id_gasto)
                 Model.deleteFomEgresoWhere(id: item.id_gasto)
                 Model.egresosList.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
             })
-            
             alertController.addAction(deleteAction)
             alertController.addAction(cancelAction)
-            
             present(alertController, animated: true, completion: nil)
         }
     }
