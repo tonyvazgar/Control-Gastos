@@ -54,7 +54,7 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "Mis quincenas"
+        backItem.title = "My earnings"
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
@@ -135,15 +135,15 @@ class QuincenasViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if editingStyle == UITableViewCell.EditingStyle.delete {
             item    = Model.ingresosList[indexPath.row]
-            tittle  = "¿Borrar ingreso de \(item.mes)?"
-            message = "¿Estás seguro que quieres eliminar el ingreso #\(item.num_quincena) de \(item.mes)?"
+            tittle  = "Delete income from \(item.mes)?"
+            message = "Are you sure you want to remove the entry #\(item.num_quincena) from \(item.mes)?"
             
             alertController = UIAlertController(title: tittle, message: message, preferredStyle: UIAlertController.Style.alert)
-            cancelAction    = UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil)
+            cancelAction    = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
             
             alertController.addAction(cancelAction)
             
-            deleteAction    = UIAlertAction(title: "Borrar", style: UIAlertAction.Style.destructive, handler: {
+            deleteAction    = UIAlertAction(title: "Delete", style: UIAlertAction.Style.destructive, handler: {
                 (action) -> Void
                 in
                 print(item.description)

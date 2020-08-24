@@ -61,7 +61,7 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let backItem = UIBarButtonItem()
-        backItem.title = "Mis gastos"
+        backItem.title = "My expenses"
         navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
     }
     
@@ -121,12 +121,14 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if editingStyle == UITableViewCell.EditingStyle.delete {
             let item    = Model.egresosList[indexPath.row]
             
-            let tittle  = "¿Borrar \(item.nombre.lowercased())?"
-            let message = "¿Estás seguro que quieres eliminar \(item.nombre.lowercased()) creado el \(item.fecha) con un total de \(numberFormated(number: item.monto))?"
+            let tittle  = "Delete '\(item.nombre.lowercased())'?"
+//            let message = "¿Estás seguro que quieres eliminar \(item.nombre.lowercased()) creado el \(item.fecha) con un total de \(numberFormated(number: item.monto))?"
+            let message = "Are you sure you want to delete the '\(item.nombre.lowercased())' created the \(item.fecha) with a total of \(numberFormated(number: item.monto))?"
+            
             
             let alertController = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-            let deleteAction = UIAlertAction(title: "Borrar", style: .destructive, handler: {
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            let deleteAction = UIAlertAction(title: "Delete", style: .destructive, handler: {
                 (action) -> Void in
                 print(item.detalles)
                 print("el indexpath es: \(indexPath.row)")

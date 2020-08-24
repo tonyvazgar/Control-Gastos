@@ -43,7 +43,7 @@
 		EF126CC124733DF600177691 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		EF126CC32473700C00177691 /* QuincenasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuincenasViewController.swift; sourceTree = "<group>"; };
 		EF126CC52473701B00177691 /* GastosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosViewController.swift; sourceTree = "<group>"; };
-		EF259D5B2472427F006F094A /* ControlDinero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ControlDinero.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF259D5B2472427F006F094A /* My Money.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Money.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF259D5E2472427F006F094A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF259D602472427F006F094A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF259D622472427F006F094A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		EF259D5C2472427F006F094A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EF259D5B2472427F006F094A /* ControlDinero.app */,
+				EF259D5B2472427F006F094A /* My Money.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 			);
 			name = ControlDinero;
 			productName = ControlDinero;
-			productReference = EF259D5B2472427F006F094A /* ControlDinero.app */;
+			productReference = EF259D5B2472427F006F094A /* My Money.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -526,7 +526,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -546,7 +546,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

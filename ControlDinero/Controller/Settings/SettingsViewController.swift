@@ -12,13 +12,13 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    let titulosSecciones = ["Resumenes financieros (Próximamente)", "Información de la app", "Diseño Gráfico", "Traducción", "Comparte la app"]
+    let titulosSecciones = ["Financial Summaries (Coming Soon)", "App Information", "Graphic Design", "Translation", "Share the App"]
     
-    let data = [["Gráficas", "Resumen mensual", "Estadísticas"],
-                ["Sugerencias/contacto", "Califica la App", "Desarrollador de la App"],
-                ["Aquí va un nombre"],
-                ["Aquí va otro nombre"],
-                ["Cuéntaselo a tus amigos", "Ver en el App Store"]]
+    let data = [["Charts", "Monthly Summary", "Statistics"],
+                ["Suggestions/contact", "Rate the App", "App Developer"],
+                ["Here's a name"],
+                ["Here's another name"],
+                ["Tell your friends", "Watch on the App Store"]]
     
     let images = [
         [UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
