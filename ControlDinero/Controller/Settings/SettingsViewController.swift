@@ -82,13 +82,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let item = data[indexPath.section][indexPath.row]
-        print(item)
-        
-        if item == "Desarrollador de la App"{
+        if (indexPath.section == 1) && (indexPath.row == 2){
             let url = NSURL(string: "https://www.tonyvazgar.com")
             UIApplication.shared.open(url! as URL)
-        }else if item == "Sugerencias/contacto"{
+        }else if (indexPath.section == 1) && (indexPath.row == 0){
             
             let email = "tonyvazgar@icloud.com"
 //            let subject = "Sugerencias app Mi Dinero"
