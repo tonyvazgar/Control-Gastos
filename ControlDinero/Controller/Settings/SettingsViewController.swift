@@ -12,20 +12,12 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
     
-    let titulosSecciones = ["Financial Summaries (Coming Soon)", "App Information", "Graphic Design", "Translation", "Share the App"]
-    
-    let data = [["Charts", "Monthly Summary", "Statistics"],
-                ["Suggestions/contact", "Rate the App", "App Developer"],
-                ["Here's a name"],
-                ["Here's another name"],
-                ["Tell your friends", "Watch on the App Store"]]
-    
-    let images = [
-        [UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
-        [UIImage(systemName: "message"), UIImage(systemName: "star"), UIImage(systemName: "person")],
-        [UIImage(systemName: "paintbrush")],
-        [UIImage(systemName: "globe")],
-        [UIImage(systemName: "person.2.square.stack"), UIImage(systemName: "bag")]]
+    let titulosSecciones = Text.titulosSeccionInformacion
+    let data   = Text.datosSeccionesInformacion
+    let images = [[UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
+                  [UIImage(systemName: "message"), UIImage(systemName: "person")],
+                  [UIImage(systemName: "paintbrush"), UIImage(systemName: "globe")],
+                  [UIImage(systemName: "person.2.square.stack"), UIImage(systemName: "bag")]]
     
     
     
@@ -82,7 +74,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if (indexPath.section == 1) && (indexPath.row == 2){
+        if (indexPath.section == 1) && (indexPath.row == 1){
             let url = NSURL(string: "https://www.tonyvazgar.com")
             UIApplication.shared.open(url! as URL)
         }else if (indexPath.section == 1) && (indexPath.row == 0){

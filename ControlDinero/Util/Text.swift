@@ -78,5 +78,60 @@ enum Text {
         }
     }
     
+    static var titulosSeccionInformacion: [String] {
+        switch getDeviceLanguage() {
+        case "es":
+            return ["Resumenes financieros (próximamente)",
+                    "Información de contacto",
+                    "Colaboradores",
+                    "Comparte la app"]
+        default:
+            return ["Financial Summaries (Coming Soon)",
+                    "Contact Information",
+                    "Collaborators",
+                    "Share the App"]
+        }
+    }
+    
+    static var datosSeccionesInformacion: [[String]] {
+        switch getDeviceLanguage() {
+        case "es":
+            return [["Gráficas", "Resumen mensual", "Estadísticas"],
+                    ["Sugerencias o contacto", "Desarrollador de la app"],
+                    ["Hola (Logo)", "Mundo (traducción Frances)"],
+                    ["Compartela con tus amigos", "Ver en la App Store"]]
+        default:
+            return [["Charts", "Monthly Summary", "Statistics"],
+                    ["Suggestions/contact", "App Developer"],
+                    ["Hola (Logo)", "Mundo (traducción Frances)"],
+                    ["Tell your friends", "Watch on the App Store"]]
+        }
+    }
+    
+    static var itemsWhatsNew: [[String]]{
+        switch getDeviceLanguage() {
+        case "es":
+            return [["Privacidad garantizada", "Todos los datos se guardan en el iPhone, nunca son compartidos."],
+                    ["Apunta tus compras", "Lleva el control del total de tus compras."],
+                    ["Ingresos y gastos", "Registra cuando ganas dinero y cuando gastas en algo."],
+                    ["Detalle de tus gastos", "Puedes ver la descripción de tus gastos para recordar su propósito."],
+                    ["Control mensual", "Lleva el control total de tu dinero basado en ingresos y gastos del mes actual."]]
+        default:
+            return [["Guaranteed privacy", "All data is stored on the iPhone, never shared."],
+                    ["Record your purchases", "Keep track of your total purchases."],
+                    ["Income & expenses", "Write down when you get money and when you spend on anything."],
+                    ["Details of your expenses", "You can see the description of your expenses to remember their purpose."],
+                    ["Monthly control", "Keeps total control of money based on income and expenses in the current month."]]
+        }
+    }
+    
+    static var titleWhatsNew: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Bienvenido a \n Mi dinero"
+        default:
+            return "Welcome to \n My Money"
+        }
+    }
     
 }

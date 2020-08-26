@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,7 +209,7 @@
         <!--Gastos View Controller-->
         <scene sceneID="B9D-MW-34W">
             <objects>
-                <viewController id="ZEx-Wl-3N3" customClass="GastosViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZEx-Wl-3N3" customClass="GastosViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AMg-Jr-JuM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,7 +243,7 @@
                                         <rect key="frame" x="0.0" y="120" width="374" height="512"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gastos" id="HbP-EC-6Ze" customClass="MyCellGastoViewController" customModule="ControlDinero" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gastos" id="HbP-EC-6Ze" customClass="MyCellGastoViewController" customModule="My_Money" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HbP-EC-6Ze" id="054-WS-nMi">
@@ -324,7 +324,7 @@
         <!--Nuevo Gasto View Controller-->
         <scene sceneID="tRQ-C8-Up5">
             <objects>
-                <viewController id="Nxb-1Z-MWe" customClass="NuevoGastoViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nxb-1Z-MWe" customClass="NuevoGastoViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6XB-aC-Uht">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -404,7 +404,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$100.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlO-UM-Psr" customClass="CurrencyField" customModule="ControlDinero" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$100.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AlO-UM-Psr" customClass="CurrencyField" customModule="My_Money" customModuleProvider="target">
                                                 <rect key="frame" x="155" y="0.0" width="219" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -453,7 +453,7 @@
         <!--Detalle Gasto View Controller-->
         <scene sceneID="jln-h2-lFf">
             <objects>
-                <viewController storyboardIdentifier="DetalleGastoViewController" id="Idf-nU-LY0" customClass="DetalleGastoViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalleGastoViewController" id="Idf-nU-LY0" customClass="DetalleGastoViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="szC-zz-jbG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -552,7 +552,7 @@
         <!--Quincenas View Controller-->
         <scene sceneID="RPu-wu-FW0">
             <objects>
-                <viewController id="iq4-MT-DzV" customClass="QuincenasViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="iq4-MT-DzV" customClass="QuincenasViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kF-Ad-aXH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -586,7 +586,7 @@
                                         <rect key="frame" x="0.0" y="120" width="374" height="512"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quincenas" id="8Eq-7S-MkB" customClass="MyCellQuincenas" customModule="ControlDinero" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quincenas" id="8Eq-7S-MkB" customClass="MyCellQuincenas" customModule="My_Money" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Eq-7S-MkB" id="yhP-Dy-IkC">
@@ -675,7 +675,7 @@
         <!--Detalle Quincena View Controller-->
         <scene sceneID="BXP-90-TpS">
             <objects>
-                <viewController storyboardIdentifier="DetalleQuincenaViewController" id="VR8-OT-UFz" customClass="DetalleQuincenaViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetalleQuincenaViewController" id="VR8-OT-UFz" customClass="DetalleQuincenaViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VC9-8Z-6Ll">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -793,7 +793,7 @@
         <!--Nueva Quincena View Controller-->
         <scene sceneID="vuh-gQ-4CR">
             <objects>
-                <viewController id="d2l-vm-8Sf" customClass="NuevaQuincenaViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d2l-vm-8Sf" customClass="NuevaQuincenaViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4Tx-Vj-Z97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -860,7 +860,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount of the income" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TF-jJ-UaN" customClass="CurrencyField" customModule="ControlDinero" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter amount of the income" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1TF-jJ-UaN" customClass="CurrencyField" customModule="My_Money" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="24" width="374" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
@@ -907,10 +907,10 @@
             </objects>
             <point key="canvasLocation" x="4423.188405797102" y="-360.26785714285711"/>
         </scene>
-        <!--Settings-->
+        <!--Information-->
         <scene sceneID="yra-vR-FZ0">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5cz-pR-6VH" customClass="SettingsViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="5cz-pR-6VH" customClass="SettingsViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="249-8w-pF6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -948,7 +948,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xHC-OF-xKs"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="JZ8-kA-dvo"/>
+                    <navigationItem key="navigationItem" title="Information" id="JZ8-kA-dvo"/>
                     <connections>
                         <outlet property="tableView" destination="rfc-91-6Lq" id="9kn-Ey-bgi"/>
                     </connections>
@@ -982,7 +982,7 @@
         <!--Expenses-->
         <scene sceneID="I96-Di-zQN">
             <objects>
-                <viewController id="pKB-fQ-jXC" customClass="GastosGlobalViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pKB-fQ-jXC" customClass="GastosGlobalViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="653-Ba-cAS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1007,7 +1007,7 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="efn-xL-nng">
                                         <rect key="frame" x="0.0" y="120" width="374" height="619"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gastosGlobal" id="hYo-wE-9Wm" customClass="MyCell" customModule="ControlDinero" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gastosGlobal" id="hYo-wE-9Wm" customClass="MyCell" customModule="My_Money" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hYo-wE-9Wm" id="rzO-6x-zTq">
@@ -1076,7 +1076,7 @@
         <!--Earnings-->
         <scene sceneID="u1H-jl-jQ8">
             <objects>
-                <viewController id="Gpo-1u-aD4" customClass="QuincenasGlobalViewController" customModule="ControlDinero" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gpo-1u-aD4" customClass="QuincenasGlobalViewController" customModule="My_Money" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q7k-BO-jLJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1100,7 +1100,7 @@
                                         <rect key="frame" x="0.0" y="120" width="374" height="619"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quincenasGlobal" id="8cN-il-uBa" customClass="MyCellQuincenasGlobal" customModule="ControlDinero" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="quincenasGlobal" id="8cN-il-uBa" customClass="MyCellQuincenasGlobal" customModule="My_Money" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cN-il-uBa" id="9eS-jc-NWi">

@@ -118,12 +118,14 @@ class ViewController: UIViewController {
         configuration.itemsView.animation = .slideRight
         configuration.completionButton.title = "OK"
         
-        let items = WhatsNew(title: "Welcome to \n My Money", items:
-            [WhatsNew.Item(title: "Guaranteed privacy", subtitle: "All data is stored on the iPhone, never shared.", image: UIImage(systemName: "lock")),
-             WhatsNew.Item(title: "Record your purchases", subtitle: "Keep track of your total purchases.", image: UIImage(systemName: "cart")),
-             WhatsNew.Item(title: "Income & expenses", subtitle: "Write down when you get money and when you spend on anything.", image: UIImage(systemName: "plusminus")),
-             WhatsNew.Item(title: "Details of your expenses", subtitle: "You can see the description of your expenses to remember their purpose.", image: UIImage(systemName: "questionmark.circle")),
-             WhatsNew.Item(title: "Monthly control", subtitle: "Keeps total control of money based on income and expenses in the current month.", image: UIImage(systemName: "calendar"))])
+        let itemsStrings = Text.itemsWhatsNew
+        
+        let items = WhatsNew(title: Text.titleWhatsNew, items:
+            [WhatsNew.Item(title: itemsStrings[0][0], subtitle: itemsStrings[0][1], image: UIImage(systemName: "lock")),
+             WhatsNew.Item(title: itemsStrings[1][0], subtitle: itemsStrings[1][1], image: UIImage(systemName: "cart")),
+             WhatsNew.Item(title: itemsStrings[2][0], subtitle: itemsStrings[2][1], image: UIImage(systemName: "plusminus")),
+             WhatsNew.Item(title: itemsStrings[3][0], subtitle: itemsStrings[3][1], image: UIImage(systemName: "questionmark.circle")),
+             WhatsNew.Item(title: itemsStrings[4][0], subtitle: itemsStrings[4][1], image: UIImage(systemName: "calendar"))])
         
         guard let vc = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: KeyValueWhatsNewVersionStore()) else {
             return
