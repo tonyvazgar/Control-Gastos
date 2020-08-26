@@ -83,13 +83,19 @@ enum Text {
         case "es":
             return ["Resumenes financieros (próximamente)",
                     "Información de contacto",
-                    "Colaboradores",
                     "Comparte la app"]
+//            ["Resumenes financieros (próximamente)",
+//            "Información de contacto",
+//            "Colaboradores",
+//            "Comparte la app"]
         default:
             return ["Financial Summaries (Coming Soon)",
                     "Contact Information",
-                    "Collaborators",
                     "Share the App"]
+//            ["Financial Summaries (Coming Soon)",
+//            "Contact Information",
+//            "Collaborators",
+//            "Share the App"]
         }
     }
     
@@ -98,13 +104,20 @@ enum Text {
         case "es":
             return [["Gráficas", "Resumen mensual", "Estadísticas"],
                     ["Sugerencias o contacto", "Desarrollador de la app"],
-                    ["Hola (Logo)", "Mundo (traducción Frances)"],
                     ["Compartela con tus amigos", "Ver en la App Store"]]
+//            [["Gráficas", "Resumen mensual", "Estadísticas"],
+//            ["Sugerencias o contacto", "Desarrollador de la app"],
+//            ["@SSfsd(Diseño)", "@dsasa  (traducción Frances)"],
+//            ["Compartela con tus amigos", "Ver en la App Store"]]
         default:
             return [["Charts", "Monthly Summary", "Statistics"],
                     ["Suggestions/contact", "App Developer"],
-                    ["Hola (Logo)", "Mundo (traducción Frances)"],
+//                    ["@SSfsd (Design)", "@dsasa (French translation)"],
                     ["Tell your friends", "Watch on the App Store"]]
+//            [["Charts", "Monthly Summary", "Statistics"],
+//            ["Suggestions/contact", "App Developer"],
+//            ["@SSfsd (Design)", "@dsasa (French translation)"],
+//            ["Tell your friends", "Watch on the App Store"]]
         }
     }
     
@@ -131,6 +144,14 @@ enum Text {
             return "Bienvenido a \n Mi dinero"
         default:
             return "Welcome to \n My Money"
+        }
+    }
+    static var compartir: String{
+        switch getDeviceLanguage() {
+        case "es":
+            return "¡Mira esta sencilla aplicación para organizar tu dinero! Más información en:"
+        default:
+            return "Take a look at this easy app to organize your money! Find it at: "
         }
     }
     

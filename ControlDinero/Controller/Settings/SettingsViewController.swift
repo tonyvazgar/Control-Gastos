@@ -89,6 +89,21 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 UIApplication.shared.openURL(url)
               }
             }
+        }else if (indexPath.section == 3) && (indexPath.row == 0){
+            // text to share
+            let text = Text.compartir
+
+            // set up activity view controller
+            let textToShare = [ text, "https://www.tonyvazgar.com/" ]
+            let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+            activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+
+            // exclude some activity types from the list (optional)
+            activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.message]
+            
+
+            // present the view controller
+            self.present(activityViewController, animated: true, completion: nil)
         }
     }
     
