@@ -226,3 +226,10 @@
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "yvw-FA-Ccb"; */
 "yvw-FA-Ccb.text" = "Label";
+
+/* Class = "UILabel"; text = "All my"; ObjectID = "dOi-a6-3Gl"; */
+"dOi-a6-3Gl.text" = "Todos mis";
+
+
+/* Class = "UILabel"; text = "All my"; ObjectID = "OkK-lM-Zkv"; */
+"OkK-lM-Zkv.text" = "gastos";

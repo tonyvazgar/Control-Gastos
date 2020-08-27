@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let data   = Text.datosSeccionesInformacion
     let images = [[UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
                   [UIImage(systemName: "message"), UIImage(systemName: "person")],
-                  [UIImage(systemName: "paintbrush"), UIImage(systemName: "globe")],
+//                  [UIImage(systemName: "paintbrush"), UIImage(systemName: "globe")],
                   [UIImage(systemName: "person.2.square.stack"), UIImage(systemName: "bag")]]
     
     
@@ -89,21 +89,25 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 UIApplication.shared.openURL(url)
               }
             }
-        }else if (indexPath.section == 3) && (indexPath.row == 0){
+        }else if (indexPath.section == 2) && (indexPath.row == 0){
             // text to share
             let text = Text.compartir
 
             // set up activity view controller
-            let textToShare = [ text, "https://www.tonyvazgar.com/" ]
+            let textToShare = [ text, "https://www.tonyvazgar.com/my_money/index.html" ]
             let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
             activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
 
             // exclude some activity types from the list (optional)
             activityViewController.excludedActivityTypes = [ UIActivity.ActivityType.airDrop, UIActivity.ActivityType.postToFacebook, UIActivity.ActivityType.message]
             
-
             // present the view controller
             self.present(activityViewController, animated: true, completion: nil)
+        }else if(((indexPath.section == 0) && (indexPath.row == 0)) || ((indexPath.section == 0) && (indexPath.row == 1)) || ((indexPath.section == 0) && (indexPath.row == 2)) ){
+            let alertController = UIAlertController(title: Text.tituloProximamente, message: Text.mensajeProximamente, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .default))
+            self.present(alertController, animated: true, completion: nil)
+
         }
     }
     

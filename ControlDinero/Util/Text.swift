@@ -155,4 +155,22 @@ enum Text {
         }
     }
     
+    static var tituloProximamente: String{
+        switch getDeviceLanguage() {
+        case "es":
+            return "¡Este contenido estará disponible próximamente!"
+        default:
+            return "This feature will be released coming soon!"
+        }
+    }
+    
+    static var mensajeProximamente: String{
+        switch getDeviceLanguage() {
+        case "es":
+            return "Estoy trabajando en ello para darte una mejor experiencia, mantente atento a las actualizaciones 😉"
+        default:
+            return "I'm working on it to give you a better experience, stay tuned for updates 😉"
+        }
+    }
+    
 }

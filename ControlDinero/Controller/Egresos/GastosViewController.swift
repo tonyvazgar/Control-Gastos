@@ -110,11 +110,11 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        let animation = AnimationFactory.makeSlideIn(duration: 0.5, delayFactor: 0.00)
-        let animator = Animator(animation: animation)
-        animator.animate(cell: cell, at: indexPath, in: tableView)
-    }
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        let animation = AnimationFactory.makeSlideIn(duration: 0.5, delayFactor: 0.00)
+//        let animator = Animator(animation: animation)
+//        animator.animate(cell: cell, at: indexPath, in: tableView)
+//    }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
