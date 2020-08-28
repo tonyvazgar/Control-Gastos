@@ -81,7 +81,7 @@ enum Text {
     static var titulosSeccionInformacion: [String] {
         switch getDeviceLanguage() {
         case "es":
-            return ["Resumenes financieros (próximamente)",
+            return ["Resumenes financieros",
                     "Información de contacto",
                     "Comparte la app"]
 //            ["Resumenes financieros (próximamente)",
@@ -89,7 +89,7 @@ enum Text {
 //            "Colaboradores",
 //            "Comparte la app"]
         default:
-            return ["Financial Summaries (Coming Soon)",
+            return ["Financial Summaries",
                     "Contact Information",
                     "Share the App"]
 //            ["Financial Summaries (Coming Soon)",
