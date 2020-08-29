@@ -550,7 +550,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.My-Money";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -570,7 +570,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.My-Money";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
