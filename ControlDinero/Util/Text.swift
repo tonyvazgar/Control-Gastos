@@ -158,9 +158,9 @@ enum Text {
     static var tituloProximamente: String{
         switch getDeviceLanguage() {
         case "es":
-            return "¡Este contenido estará disponible próximamente!"
+            return "¡Este contenido estará disponible muy pronto!"
         default:
-            return "This feature will be released coming soon!"
+            return "This feature will be released very soon!"
         }
     }
     
