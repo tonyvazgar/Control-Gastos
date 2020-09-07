@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-ControlDinero/Pods-ControlDinero-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Device/Device.framework
 ${BUILT_PRODUCTS_DIR}/WhatsNewKit/WhatsNewKit.framework

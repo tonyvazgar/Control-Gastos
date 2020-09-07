@@ -6,4 +6,6 @@ target 'ControlDinero' do
   use_frameworks!
 
   pod 'WhatsNewKit'
+  pod "Device", '~> 3.2.1'
+
 end
