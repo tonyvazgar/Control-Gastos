@@ -28,6 +28,8 @@
 		EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF8247A3190004E293A /* Egreso.swift */; };
 		EF5C6BFB247A31A5004E293A /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFA247A31A5004E293A /* Total.swift */; };
 		EF5C6BFD247A34D0004E293A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFC247A34D0004E293A /* Model.swift */; };
+		EFA25FBC25073EAD00A4D510 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBB25073EAD00A4D510 /* LocalNotificationManager.swift */; };
+		EFA25FBE250885DB00A4D510 /* HoraNotificacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */; };
 		EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */; };
 		EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */; };
 		EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */; };
@@ -66,6 +68,8 @@
 		EF5C6BF8247A3190004E293A /* Egreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egreso.swift; sourceTree = "<group>"; };
 		EF5C6BFA247A31A5004E293A /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		EF5C6BFC247A34D0004E293A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EFA25FBB25073EAD00A4D510 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
+		EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraNotificacionViewController.swift; sourceTree = "<group>"; };
 		EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
 		EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaQuincenaViewController.swift; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 				EF34E220248F432600D275AA /* Animator.swift */,
 				EF51B7E324947B620017C1F3 /* CurrencyField.swift */,
 				EF10720B24F36A4200B8CE65 /* Text.swift */,
+				EFA25FBB25073EAD00A4D510 /* LocalNotificationManager.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */,
+				EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */,
 				EF34E21F248F42F800D275AA /* Animations.swift in Sources */,
 				EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */,
+				EFA25FBE250885DB00A4D510 /* HoraNotificacionViewController.swift in Sources */,
 				EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */,
 				EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */,
+				EFA25FBC25073EAD00A4D510 /* LocalNotificationManager.swift in Sources */,
 				EF51B7E424947B620017C1F3 /* CurrencyField.swift in Sources */,
 				EF34E221248F432600D275AA /* Animator.swift in Sources */,
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
@@ -543,7 +551,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -564,7 +572,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

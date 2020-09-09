@@ -15,6 +15,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let titulosSecciones = Text.titulosSeccionInformacion
     let data   = Text.datosSeccionesInformacion
     let images = [[UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
+                  [UIImage(systemName: "bell.circle")],
                   [UIImage(systemName: "message"), UIImage(systemName: "person")],
 //                  [UIImage(systemName: "paintbrush"), UIImage(systemName: "globe")],
                   [UIImage(systemName: "person.2.square.stack"), UIImage(systemName: "bag")]]
@@ -74,10 +75,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        if (indexPath.section == 1) && (indexPath.row == 1){
+        if (indexPath.section == 2) && (indexPath.row == 1){
             let url = NSURL(string: "https://www.tonyvazgar.com")
             UIApplication.shared.open(url! as URL)
-        }else if (indexPath.section == 1) && (indexPath.row == 0){
+        }else if (indexPath.section == 2) && (indexPath.row == 0){
             
             let email = "tonyvazgar@icloud.com"
 //            let subject = "Sugerencias app Mi Dinero"
@@ -89,7 +90,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
                 UIApplication.shared.openURL(url)
               }
             }
-        }else if (indexPath.section == 2) && (indexPath.row == 0){
+        }else if (indexPath.section == 3) && (indexPath.row == 0){
             // text to share
             let text = Text.compartir
 
@@ -108,6 +109,19 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
             self.present(alertController, animated: true, completion: nil)
 
+        }else if (indexPath.section == 1) && (indexPath.row == 0){
+            let viewController = storyboard?.instantiateViewController(withIdentifier: "HoraNotificacionViewController") as? HoraNotificacionViewController
+                   
+            //Tipo de presentación (tarjeta)
+            viewController?.modalPresentationStyle = .pageSheet
+                   
+                   
+                   
+            //Presentarlo en el navigation controler actual
+            self.navigationController?.present(viewController!, animated: true, completion: nil)
+                   
+            //Animación para deseleccionar Row
+            tableView.deselectRow(at: indexPath, animated: true)
         }
     }
     

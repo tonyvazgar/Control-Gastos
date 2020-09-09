@@ -73,6 +73,42 @@ class ViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //------------------------------------------------------------------------------------------
+        
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
+            if granted {
+                print("Permisos!")
+            } else{
+                print("Error en permisos")
+            }
+        }
+        center.removeAllPendingNotificationRequests()
+        
+        let content = UNMutableNotificationContent()
+    
+        content.title = "Prueba de notificacion!"
+        content.body  = "Esto es una prueba para ver como funcionan las notificaciones para recordar tus registros!"
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["customData": "perris"]
+        content.sound = .default
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 20
+        dateComponents.minute = 54
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
+        
+        
+        
+        //------------------------------------------------------------------------------------------
+
+        
         createDB()
         // Do any additional setup after loading the view.
         quincenasButton.round()

@@ -82,6 +82,7 @@ enum Text {
         switch getDeviceLanguage() {
         case "es":
             return ["Resumenes financieros",
+                    "Configuraciones",
                     "Información de contacto",
                     "Comparte la app"]
 //            ["Resumenes financieros (próximamente)",
@@ -90,6 +91,7 @@ enum Text {
 //            "Comparte la app"]
         default:
             return ["Financial Summaries",
+                    "Settings",
                     "Contact Information",
                     "Share the App"]
 //            ["Financial Summaries (Coming Soon)",
@@ -103,6 +105,7 @@ enum Text {
         switch getDeviceLanguage() {
         case "es":
             return [["Gráficas", "Resumen mensual", "Estadísticas"],
+                    ["Recordatorio de notificación"],
                     ["Sugerencias o contacto", "Desarrollador de la app"],
                     ["Compartela con tus amigos", "Ver en la App Store"]]
 //            [["Gráficas", "Resumen mensual", "Estadísticas"],
@@ -111,6 +114,7 @@ enum Text {
 //            ["Compartela con tus amigos", "Ver en la App Store"]]
         default:
             return [["Charts", "Monthly Summary", "Statistics"],
+                    ["Notification reminder"],
                     ["Suggestions/contact", "App Developer"],
 //                    ["@SSfsd (Design)", "@dsasa (French translation)"],
                     ["Tell your friends", "Watch on the App Store"]]
