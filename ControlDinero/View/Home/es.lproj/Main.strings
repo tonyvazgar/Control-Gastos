@@ -233,3 +233,16 @@
 
 /* Class = "UILabel"; text = "All my"; ObjectID = "OkK-lM-Zkv"; */
 "OkK-lM-Zkv.text" = "gastos";
+
+
+/* Class = "UILabel"; text = "Notification time"; ObjectID = "qd0-Lh-QW5"; */
+"qd0-Lh-QW5.text" = "Hora de notificaciones";
+
+/* Class = "UILabel"; text = "Set the notification time to remind you to record your daily movements"; ObjectID = "cht-8b-X7P"; */
+"cht-8b-X7P.text" = "Establece el horario diario para mandar un recordatorio para registrar tus movimientos";
+
+/* Class = "UIButton"; normalTitle = "Default time"; ObjectID = "Pwc-gu-Coe"; */
+"Pwc-gu-Coe.normalTitle" = "Horario por default";
+
+/* Class = "UIButton"; normalTitle = "Set"; ObjectID = "Wy3-Re-vZN"; */
+"Wy3-Re-vZN.normalTitle" = "Establecer";
