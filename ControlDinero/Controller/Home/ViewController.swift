@@ -73,6 +73,7 @@ class ViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        createDB()
         
         //------------------------------------------------------------------------------------------
         
@@ -95,8 +96,11 @@ class ViewController: UIViewController {
         content.sound = .default
         
         var dateComponents = DateComponents()
-        dateComponents.hour = 20
-        dateComponents.minute = 54
+        
+        let hora_recordatorio = Model.selectLastRecordatorio()
+        print(hora_recordatorio)
+        dateComponents.hour   = Int(hora_recordatorio[0])
+        dateComponents.minute = Int(hora_recordatorio[1])
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
 //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
@@ -109,7 +113,6 @@ class ViewController: UIViewController {
         //------------------------------------------------------------------------------------------
 
         
-        createDB()
         // Do any additional setup after loading the view.
         quincenasButton.round()
         quincenasButton.bounce()
@@ -215,6 +218,9 @@ class ViewController: UIViewController {
         Model.openDB()
         Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, mes TEXT NOT NULL, monto TEXT NOT NULL)")
+        Model.execute("CREATE TABLE Recordatorio ( id_recordatorio INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, hora TEXT NOT NULL, UNIQUE(hora))")
+        Model.execute("INSERT INTO Recordatorio (hora) VALUES ('23:32')")
+        
 //        Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos TEXT NOT NULL, egresos TEXT NOT NULL, num_de_quincenas TEXT NOT NULL, num_de_gastos TEXT NOT NULL, total TEXT NOT NULL)")
 //        Model.execute("INSERT INTO Quincena (mes, num_quincena, fecha, detalles, monto) VALUES ('June 2019', '1', '15.06.2019', 'Quincena del mes', '2691.08'), ('July 2019', '1', '15.07.2019', 'Quincena del mes', '2912.33'), ('July 2019', '2', '30.07.2019', 'Quincena del mes', '3222.56'), ('August 2019', '1', '15.08.2019', 'Quincena del mes', '3141.4'), ('August 2019', '2', '30.08.2019', 'Quincena del mes', '3080.13'), ('September 2019', '1', '15.09.2019', 'Quincena del mes', '3141.41'), ('September 2019', '2', '30.09.2019', 'Quincena del mes', '2977.27'), ('October 2019', '1', '15.10.2019', 'Quincena del mes', '2935.29'), ('October 2019', '2', '30.10.2019', 'Quincena del mes', '3015.25'), ('November 2019', '1', '15.11.2019', 'Quincena del mes', '3345.49'), ('November 2019', '2', '30.11.2019', 'Quincena del mes', '3469.76'), ('December 2019', '1', '15.12.2019', 'Quincena del mes', '5268.86'), ('December2019', '2', '30.12.2019', 'Quincena del mes', '3372.5'), ('January 2020', '1', '15.01.2020', 'Quincena del mes', '2674.82'), ('January 2020', '2', '30.01.2020', 'Quincena del mes', '20157.92'), ('February 2020', '1', '15.02.2020', 'Quincena del mes', '6569.13'), ('February 2020', '2', '29.02.2020', 'Quincena del mes', '6581.35'), ('March 2020', '1', '15.03.2020', 'Quincena del mes', '6441.23'), ('March 2020', '2', '30.03.2020', 'Quincena del mes', '6441.23'), ('April 2020', '1', '15.04.2020', 'Quincena del mes', '6685.71'), ('April 2020', '2', '30.04.2020', 'Quincena del mes', '6440.48'), ('May 2020', '1', '15.05.2020', 'Quincena del mes', '6569.27'), ('May 2020', '2', '30.05.2020', 'Quincena del mes', '6555.57'), ('June 2020', '1', '15.06.2020', 'Quincena del mes', '6569.27'), ('June 2020', '2', '31.06.2020', 'Quincena del mes', '6569.27'), ('July 2020', '1', '15.07.2020', 'Quincena del mes', '6568.98'), ('July 2020', '2', '30.07.2020', 'Quincena del mes de July', '6568.98'), ('August 2020', '1', '15.08.2020', 'Quincena del mes de August 2020', '6568.98'), ('August 2020', '2', '31.08.2020', 'Quincena del mes de August 2020', '6568.98')")
 //

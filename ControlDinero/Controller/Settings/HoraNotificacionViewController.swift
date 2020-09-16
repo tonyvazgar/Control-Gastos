@@ -22,23 +22,28 @@ class HoraNotificacionViewController: UIViewController {
 
         dateFormatter.timeStyle = DateFormatter.Style.short
         
-        dateFormatter.dateFormat = "HH"
-        let hours = dateFormatter.string(from: timePiccker.date)
-        print(hours)
+        dateFormatter.amSymbol = ""
+        dateFormatter.pmSymbol = ""
+        dateFormatter.locale = Locale(identifier: "en_US")
         
-        dateFormatter.dateFormat = "mm"
-        let minutes = dateFormatter.string(from: timePiccker.date)
-        print(minutes)
+        dateFormatter.dateFormat = "HH:mm"
+        let hours = dateFormatter.string(from: timePiccker.date)
+        
+        let hora = "07:12"
+        
+        let date = dateFormatter.date(from: hora)
+        timePiccker.date = date!
+        print(date)
     }
     
     @IBAction func setButtonAction(_ sender: Any) {
-        
+        self.dismiss(animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .systemGroupedBackground
-        
+        self.isModalInPresentation = true
 
     
         defaultButton.bounce()

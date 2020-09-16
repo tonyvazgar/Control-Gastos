@@ -28,6 +28,7 @@
 		EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF8247A3190004E293A /* Egreso.swift */; };
 		EF5C6BFB247A31A5004E293A /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFA247A31A5004E293A /* Total.swift */; };
 		EF5C6BFD247A34D0004E293A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BFC247A34D0004E293A /* Model.swift */; };
+		EF950F61250F29ED00DB41FF /* Recordatorio.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF950F60250F29ED00DB41FF /* Recordatorio.swift */; };
 		EFA25FBC25073EAD00A4D510 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBB25073EAD00A4D510 /* LocalNotificationManager.swift */; };
 		EFA25FBE250885DB00A4D510 /* HoraNotificacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */; };
 		EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */; };
@@ -68,6 +69,7 @@
 		EF5C6BF8247A3190004E293A /* Egreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Egreso.swift; sourceTree = "<group>"; };
 		EF5C6BFA247A31A5004E293A /* Total.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
 		EF5C6BFC247A34D0004E293A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EF950F60250F29ED00DB41FF /* Recordatorio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recordatorio.swift; sourceTree = "<group>"; };
 		EFA25FBB25073EAD00A4D510 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraNotificacionViewController.swift; sourceTree = "<group>"; };
 		EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				EF5C6BF8247A3190004E293A /* Egreso.swift */,
 				EF5C6BFA247A31A5004E293A /* Total.swift */,
 				EF5C6BFC247A34D0004E293A /* Model.swift */,
+				EF950F60250F29ED00DB41FF /* Recordatorio.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				EF126CC224733DF600177691 /* UIButtonExtension.swift in Sources */,
 				EF259D5F2472427F006F094A /* AppDelegate.swift in Sources */,
 				EF259D612472427F006F094A /* SceneDelegate.swift in Sources */,
+				EF950F61250F29ED00DB41FF /* Recordatorio.swift in Sources */,
 				EF126CC42473700C00177691 /* QuincenasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

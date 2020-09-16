@@ -17,6 +17,7 @@ public class Model{
     static var ingresosList                     = Array<Ingreso>()
     static var egresosList                      = Array<Egreso>()
     static var totalList                        = Array<Total>()
+    static var recordatorioList                 = Array<Recordatorio>();
     static var dbURL: URL?                      = nil
     
     
@@ -197,6 +198,50 @@ public class Model{
                 print("Failure deleting record \(errorMessage)")
             }
         }
+    }
+    
+    //---------------------------------------------------------------------------
+    //MARK: ***CRUD Recordatorio***
+    
+    public static func insertIntoRecordatorio(hora: String){
+        execute("DELETE FROM Recordatorio")
+        let query       = "INSERT INTO Recordatorio (hora) VALUES (?)"
+        var errMessage  :  String
+        
+        let hora    = hora as NSString
+        
+        if queryIsPrepared(query: query){
+            if sqlite3_bind_text(statementPointer, 1, hora.utf8String, -1, nil) != SQLITE_OK{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure binding hora: \(errMessage)")
+                return
+            }else{
+                print("Binding hora value.... OK...")
+            }
+            
+            if sqlite3_step(statementPointer) != SQLITE_DONE{
+                errMessage = String(cString: sqlite3_errmsg(dbPointer)!)
+                print("Faiulure inserting record: \(errMessage)")
+                return
+            }else{
+                print("Record inserted :)")
+            }
+        }
+    }
+    
+    public static func selectLastRecordatorio() -> [String]{
+        var tiempo = Array<String>()
+        let selectAllQuery = "SELECT * FROM Recordatorio ORDER BY id_recordatorio DESC LIMIT 1"
+        if queryIsPrepared(query: selectAllQuery){
+            recordatorioList = getResultSetRecordatorios()
+        }
+        for horario in recordatorioList {
+            let hora = String(horario.hora.prefix(2))
+            let minutes = String(horario.hora.suffix(2))
+            tiempo.append(hora)
+            tiempo.append(minutes)
+        }
+        return tiempo
     }
     
     
@@ -412,4 +457,24 @@ public class Model{
         }//end while
         return resultSet
     }
+    
+    static func getResultSetRecordatorios() -> Array<Recordatorio>{
+            
+            var resultSet       : Array<Recordatorio>
+            
+            var id_recordatorio : Int32
+            var hora            : String
+            
+            resultSet = []
+            
+            while(sqlite3_step(statementPointer) == SQLITE_ROW){
+                id_recordatorio      = sqlite3_column_int(statementPointer, 0)
+                hora                 = String(cString: sqlite3_column_text(statementPointer, 1))
+                
+                //init(_ mes: String, _ ingresos: Double, _ egresos: Double, _ num_de_quincenas: Int, _ num_de_gastos: Int, _ total: Double)
+                resultSet.append(Recordatorio(Int(id_recordatorio), hora))
+    //            resultSet.append(Total(String(describing: mes), Double(ingresos), Double(egresos), Int(num_de_quincenas), Int(num_de_gastos), Double(total)))
+            }//end while
+            return resultSet
+        }
 }
