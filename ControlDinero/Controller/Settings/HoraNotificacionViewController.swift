@@ -18,24 +18,6 @@ class HoraNotificacionViewController: UIViewController {
     @IBAction func defaultButtonAction(_ sender: Any) {
         let defaultTimeReminder = "15:00"
         setHoraDatePicker(hora: defaultTimeReminder)
-//
-//        print("")
-//        let dateFormatter = DateFormatter()
-//
-//        dateFormatter.timeStyle = DateFormatter.Style.short
-//
-//        dateFormatter.amSymbol = ""
-//        dateFormatter.pmSymbol = ""
-//        dateFormatter.locale = Locale(identifier: "en_US")
-//
-//        dateFormatter.dateFormat = "HH:mm"
-////        let hours = dateFormatter.string(from: timePiccker.date)
-//
-//        let hora = "07:12"
-//
-//        let date = dateFormatter.date(from: hora)
-//        timePiccker.date = date!
-////        print(date)
     }
     
     @IBAction func setButtonAction(_ sender: Any) {
@@ -49,14 +31,17 @@ class HoraNotificacionViewController: UIViewController {
         
         dateFormatter.dateFormat = "HH:mm"
         let hours = dateFormatter.string(from: timePiccker.date)
-        print(timePiccker.date)
-        print(hours)
+        
         deleteHourReminder()
         saveHourReminder(hour: hours)
-//        Model.insertIntoRecordatorio(hora: hours)
-        
         scheduleNotification()
-        self.dismiss(animated: true)
+        
+        self.presentingViewController?.dismiss(animated: true, completion: {
+            let alert = UIAlertController(title: Text.tituloAlertNotificacion, message: Text.mensajeAlertNotificacion + hours, preferredStyle: .alert)
+            let alertButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(alertButton)
+            UIApplication.getTopMostViewController()?.present(alert, animated: true, completion: nil)
+        })
     }
     
     override func viewDidLoad() {
@@ -89,5 +74,19 @@ class HoraNotificacionViewController: UIViewController {
         
         let date = dateFormatter.date(from: hora)
         timePiccker.date = date!
+    }
+}
+extension UIApplication {
+
+    class func getTopMostViewController() -> UIViewController? {
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+            }
+            return topController
+        } else {
+            return nil
+        }
     }
 }

@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             print(getHourReminder())
             print("*********")
         } else {                // This is the first launch
-            let defaultHourNotification = "10:11"
+            let defaultHourNotification = "13:23"
             saveHourReminder(hour: defaultHourNotification)
         }
         createDB()

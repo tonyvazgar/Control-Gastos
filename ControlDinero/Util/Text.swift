@@ -177,4 +177,38 @@ enum Text {
         }
     }
     
+    static var tituloAlertNotificacion: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Horario de notificación actualizado"
+        default:
+            return "Notification reminder has been updated"
+        }
+    }
+    static var mensajeAlertNotificacion: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Se mandará un recordatorio todos los días a las "
+        default:
+            return "You will be notified every day at "
+        }
+    }
+    
+    static var tituloNotificacion: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Registra tus movimientos del día"
+        default:
+            return "Record your daily movements"
+        }
+    }
+    
+    static var bodyNotificacion: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Abre la app y lleva el control de lo que gastaste hoy :)"
+        default:
+            return "Open the app and keep track of what you spent today :)"
+        }
+    }
 }

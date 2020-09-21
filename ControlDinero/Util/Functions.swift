@@ -35,8 +35,8 @@ func scheduleNotification() {
 //    
     let content = UNMutableNotificationContent()
         
-    content.title = "Prueba de notificacion!"
-    content.body  = "Esto es una prueba para ver como funcionan las notificaciones para recordar tus registros!"
+    content.title = Text.tituloNotificacion
+    content.body  = Text.bodyNotificacion
     content.categoryIdentifier = "alarm"
     content.userInfo = ["customData": "perris"]
     content.sound = .default
@@ -44,14 +44,11 @@ func scheduleNotification() {
     var dateComponents = DateComponents()
             
     let hora_recordatorio = getHourReminder()
-    print("**LA HORA PARA MANDAR NOTIFICCACCIONES ES: \(hora_recordatorio)")
-    //        saveHourReminder(hour: "20:48")
-    //        print("La hora en la que se mandarán recordatorios es: \(hora_recordatorio)")
+    
     dateComponents.hour   = Int(hora_recordatorio.prefix(2))
     dateComponents.minute = Int(hora_recordatorio.suffix(2))
             
     let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-    //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
             
     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request)
