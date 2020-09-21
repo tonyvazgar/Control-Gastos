@@ -29,14 +29,14 @@ public class Model{
         Model.dbURL = try!
             FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false)
         Model.dbURL = Model.dbURL?.appendingPathComponent(nombre + ".sqlite")
-        print("Database created at: ", Model.dbURL!)
+//        print("Database created at: ", Model.dbURL!)
     }
     
     public static func openDB(){
         if (sqlite3_open(Model.dbURL!.path, &Model.dbPointer) != SQLITE_OK){
             print("Error opening database.")
         }else{
-            print("Database open.")
+//            print("Database open.")
         }
     }
     
@@ -44,9 +44,9 @@ public class Model{
         var errorMessage: String
         if(sqlite3_exec(Model.dbPointer, aStatement, nil, nil, nil) != SQLITE_OK){
             errorMessage = String(cString: sqlite3_errmsg(Model.dbPointer)!)
-            print("error excecuting SQL statement: \(errorMessage)")
+//            print("error excecuting SQL statement: \(errorMessage)")
         }else{
-            print("SQL statement excecuted: \(aStatement)")
+//            print("SQL statement excecuted: \(aStatement)")
         }
     }
     
@@ -113,7 +113,7 @@ public class Model{
     //MARK: selectFromIngresoWhere(mes: String)
     public static func selectFromIngresoWhere(mes: String){
         let query = "SELECT * FROM Quincena WHERE mes = '" + mes + "'"
-        print("*--*La query es-->" + query)
+//        print("*--*La query es-->" + query)
         if queryIsPrepared(query: query){
             ingresosList = getResultSetIngresos()
         }
@@ -122,7 +122,7 @@ public class Model{
     //MARK: selectFromIngresoWhere(fecha: String)
     public static func selectFromIngresoWhere(fecha: String){
         let query = "SELECT mes, num_quincena, fecha, detalles, monto FROM Quincena WHERE mes = '" + fecha + "'"
-        print("*--*La query es-->" + query)
+//        print("*--*La query es-->" + query)
         if queryIsPrepared(query: query){
             ingresosList = getResultSetIngresos()
         }
@@ -265,7 +265,7 @@ public class Model{
     //MARK: selectFromEgresoWhere(mes: String)
     public static func selectFromEgresoWhere(mes: String){
         let query = "SELECT * FROM Gasto WHERE mes = '" + mes + "'"
-        print("*--*La query es-->" + query + "________*****____")
+//        print("*--*La query es-->" + query + "________*****____")
         if queryIsPrepared(query: query){
             egresosList = getResultSetEgresos()
         }

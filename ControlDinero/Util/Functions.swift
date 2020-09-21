@@ -7,6 +7,55 @@
 //
 
 import Foundation
+import Device
+
+let myKey = "reminderHour"
+
+func saveHourReminder(hour: String) {
+    UserDefaults.standard.set(hour, forKey: myKey)
+    UserDefaults.standard.synchronize()
+}
+
+func deleteHourReminder() {
+    UserDefaults.standard.removeObject(forKey: myKey)
+    UserDefaults.standard.synchronize()
+}
+
+func getHourReminder() -> String {
+    if let hour = UserDefaults.standard.object(forKey: myKey) {
+        return hour as! String
+    } else {
+        return ""
+    }
+}
+
+func scheduleNotification() {
+    
+//    center.removeAllPendingNotificationRequests()
+//    
+    let content = UNMutableNotificationContent()
+        
+    content.title = "Prueba de notificacion!"
+    content.body  = "Esto es una prueba para ver como funcionan las notificaciones para recordar tus registros!"
+    content.categoryIdentifier = "alarm"
+    content.userInfo = ["customData": "perris"]
+    content.sound = .default
+            
+    var dateComponents = DateComponents()
+            
+    let hora_recordatorio = getHourReminder()
+    print("**LA HORA PARA MANDAR NOTIFICCACCIONES ES: \(hora_recordatorio)")
+    //        saveHourReminder(hour: "20:48")
+    //        print("La hora en la que se mandarán recordatorios es: \(hora_recordatorio)")
+    dateComponents.hour   = Int(hora_recordatorio.prefix(2))
+    dateComponents.minute = Int(hora_recordatorio.suffix(2))
+            
+    let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+    //        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+            
+    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+    UNUserNotificationCenter.current().add(request)
+}
 
 func getDeviceLanguage() -> String! {
     return NSLocale.current.languageCode
