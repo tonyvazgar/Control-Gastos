@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         center.requestAuthorization(options: [.alert, .badge, .sound]) { granted, error in
         if granted {
             print("Permisos!")
+            scheduleNotification()
         } else{
             print("Error en permisos")
             }

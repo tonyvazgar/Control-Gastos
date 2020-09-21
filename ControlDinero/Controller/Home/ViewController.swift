@@ -77,19 +77,11 @@ class ViewController: UIViewController {
             print("The app was first opened on \(firstOpen)")
             print(getHourReminder())
             print("*********")
-        } else {
-            // This is the first launch
-            let defaultHourNotification = "00:35"
+        } else {                // This is the first launch
+            let defaultHourNotification = "10:11"
             saveHourReminder(hour: defaultHourNotification)
-            print(getHourReminder())
         }
         createDB()
-        
-        //------------------------------------------------------------------------------------------
-        
-        
-        //------------------------------------------------------------------------------------------
-
         
         // Do any additional setup after loading the view.
         quincenasButton.round()
@@ -196,7 +188,6 @@ class ViewController: UIViewController {
         Model.openDB()
         Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, mes TEXT NOT NULL, monto TEXT NOT NULL)")
-        scheduleNotification()
 //        Model.execute("CREATE TABLE Recordatorio ( id_recordatorio INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, hora TEXT NOT NULL, UNIQUE(hora))")
 //        Model.execute("INSERT INTO Recordatorio (hora) VALUES ('23:32')")
 //
