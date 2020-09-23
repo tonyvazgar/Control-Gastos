@@ -78,7 +78,7 @@ class ViewController: UIViewController {
             print(getHourReminder())
             print("*********")
         } else {                // This is the first launch
-            let defaultHourNotification = "13:23"
+            let defaultHourNotification = "15:00"
             saveHourReminder(hour: defaultHourNotification)
         }
         createDB()
@@ -124,32 +124,32 @@ class ViewController: UIViewController {
                 configuration.titleView.titleFont = .systemFont(ofSize: 30, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 10)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 18, weight: .bold)
-                print("It's a 4 inch screen")
+//                print("It's a 4 inch screen")
             case .screen4_7Inch:   //iPhone 6, 6s, 7, 8, SE2
                 configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 15)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-                print("It's a 4.7 inch screen")
+//                print("It's a 4.7 inch screen")
             case .screen5_5Inch:   //iPhone 6s, 6s+, 7+, 8+
                 configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 15)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-                print("It's a 5.5 inch screen")
+//                print("It's a 5.5 inch screen")
             case .screen5_8Inch:   //iPhone 11 Pro/X/XS
                 configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 15)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-                print("It's a 5.8 inch screen")
+//                print("It's a 5.8 inch screen")
             case .screen6_1Inch:   //iPhone 11/XR
                 configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 15)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-                print("It's a 6.1 inch screen")
+//                print("It's a 6.1 inch screen")
             case .screen6_5Inch:   //iPhone 11 Pro/XS Max
                 configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 15)
                 configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-                print("It's a 6.5 inch screen")
+//                print("It's a 6.5 inch screen")
 //            case .screen7_9Inch:  print("It's a 7.9 inch screen")
 //            case .screen9_7Inch:  print("It's a 9.7 inch screen")
 //            case .screen10_5Inch: print("It's a 10.5 inch screen")

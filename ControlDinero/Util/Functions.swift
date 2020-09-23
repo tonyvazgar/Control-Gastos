@@ -91,6 +91,6 @@ func numberFormated(number: Double) -> String{
 
     // We'll force unwrap with the !, if you've got defined data you may need more error checking
     let priceString = currencyFormatter.string(from: NSNumber(value: number))!
-    print(priceString) // Displays $9,999.99 in the US locale
+//    print(priceString) // Displays $9,999.99 in the US locale
     return priceString
 }

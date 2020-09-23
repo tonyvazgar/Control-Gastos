@@ -104,6 +104,10 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
             
             // present the view controller
             self.present(activityViewController, animated: true, completion: nil)
+        }else if (indexPath.section == 3) && (indexPath.row == 1){
+            if let url = URL(string: "itms-apps://apple.com/app/id839686104") {
+                UIApplication.shared.open(url)
+            }
         }else if(((indexPath.section == 0) && (indexPath.row == 0)) || ((indexPath.section == 0) && (indexPath.row == 1)) || ((indexPath.section == 0) && (indexPath.row == 2)) ){
             let alertController = UIAlertController(title: Text.tituloProximamente, message: Text.mensajeProximamente, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .default))
