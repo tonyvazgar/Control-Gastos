@@ -31,7 +31,8 @@ func getHourReminder() -> String {
 
 func scheduleNotification() {
     
-//    center.removeAllPendingNotificationRequests()
+    UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
 //    
     let content = UNMutableNotificationContent()
         
@@ -52,6 +53,29 @@ func scheduleNotification() {
             
     let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
     UNUserNotificationCenter.current().add(request)
+}
+
+func checkAppUpgrade() -> String {
+    var status = ""
+    let currentVersion   = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String
+    let versionOfLastRun = UserDefaults.standard.object(forKey: "VersionOfLastRun") as? String
+    
+    if versionOfLastRun == nil {
+        // First start after installing the app
+        print("************ First start after installing the app ************")
+        status = "1st"
+    } else if versionOfLastRun != currentVersion {
+            // App was updated since last run
+        print("*** Ya fue actualizada")
+        status = "update"
+    } else {
+        // nothing changed
+        status = ""
+    }
+    UserDefaults.standard.set(currentVersion, forKey: "VersionOfLastRun")
+    UserDefaults.standard.synchronize()
+    
+    return status
 }
 
 func getDeviceLanguage() -> String! {

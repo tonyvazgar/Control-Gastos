@@ -115,71 +115,79 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        var configuration = WhatsNewViewController.Configuration()
+        let status = checkAppUpgrade()
+        if(status == "1st"){
+            var configuration = WhatsNewViewController.Configuration()
 
-        configuration.apply(theme: .default)
-        configuration.titleView.animation = .slideDown
-        switch Device.size() {
-            case .screen4Inch:     //iPhone 5/SE 1
-                configuration.titleView.titleFont = .systemFont(ofSize: 30, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 10)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 18, weight: .bold)
-//                print("It's a 4 inch screen")
-            case .screen4_7Inch:   //iPhone 6, 6s, 7, 8, SE2
-                configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-//                print("It's a 4.7 inch screen")
-            case .screen5_5Inch:   //iPhone 6s, 6s+, 7+, 8+
-                configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-//                print("It's a 5.5 inch screen")
-            case .screen5_8Inch:   //iPhone 11 Pro/X/XS
-                configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-//                print("It's a 5.8 inch screen")
-            case .screen6_1Inch:   //iPhone 11/XR
-                configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-//                print("It's a 6.1 inch screen")
-            case .screen6_5Inch:   //iPhone 11 Pro/XS Max
-                configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
-//                print("It's a 6.5 inch screen")
-//            case .screen7_9Inch:  print("It's a 7.9 inch screen")
-//            case .screen9_7Inch:  print("It's a 9.7 inch screen")
-//            case .screen10_5Inch: print("It's a 10.5 inch screen")
-//            case .screen12_9Inch: print("It's a 12.9 inch screen")
-            default:
-                configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 15)
-                configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+            configuration.apply(theme: .default)
+            configuration.titleView.animation = .slideDown
+            switch Device.size() {
+                case .screen4Inch:     //iPhone 5/SE 1
+                    configuration.titleView.titleFont = .systemFont(ofSize: 30, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 10)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 18, weight: .bold)
+    //                print("It's a 4 inch screen")
+                case .screen4_7Inch:   //iPhone 6, 6s, 7, 8, SE2
+                    configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+    //                print("It's a 4.7 inch screen")
+                case .screen5_5Inch:   //iPhone 6s, 6s+, 7+, 8+
+                    configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+    //                print("It's a 5.5 inch screen")
+                case .screen5_8Inch:   //iPhone 11 Pro/X/XS
+                    configuration.titleView.titleFont = .systemFont(ofSize: 40, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+    //                print("It's a 5.8 inch screen")
+                case .screen6_1Inch:   //iPhone 11/XR
+                    configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+    //                print("It's a 6.1 inch screen")
+                case .screen6_5Inch:   //iPhone 11 Pro/XS Max
+                    configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+    //                print("It's a 6.5 inch screen")
+    //            case .screen7_9Inch:  print("It's a 7.9 inch screen")
+    //            case .screen9_7Inch:  print("It's a 9.7 inch screen")
+    //            case .screen10_5Inch: print("It's a 10.5 inch screen")
+    //            case .screen12_9Inch: print("It's a 12.9 inch screen")
+                default:
+                    configuration.titleView.titleFont = .systemFont(ofSize: 50, weight: .bold)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 15)
+                    configuration.itemsView.titleFont = .systemFont(ofSize: 20, weight: .bold)
+            }
+            configuration.titleView.insets = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
+            configuration.itemsView.contentMode = .fill
+            configuration.itemsView.imageSize = .fixed(height: 28)
+            configuration.itemsView.animation = .slideRight
+            configuration.completionButton.title = "OK"
+            
+            let itemsStrings = Text.itemsWhatsNew
+            
+            let items = WhatsNew(title: Text.titleWhatsNew, items:
+                [WhatsNew.Item(title: itemsStrings[0][0], subtitle: itemsStrings[0][1], image: UIImage(systemName: "lock")),
+                 WhatsNew.Item(title: itemsStrings[1][0], subtitle: itemsStrings[1][1], image: UIImage(systemName: "cart")),
+                 WhatsNew.Item(title: itemsStrings[2][0], subtitle: itemsStrings[2][1], image: UIImage(systemName: "plusminus")),
+                 WhatsNew.Item(title: itemsStrings[3][0], subtitle: itemsStrings[3][1], image: UIImage(systemName: "questionmark.circle")),
+                 WhatsNew.Item(title: itemsStrings[4][0], subtitle: itemsStrings[4][1], image: UIImage(systemName: "calendar"))])
+            
+//            guard let vc = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: KeyValueWhatsNewVersionStore()) else {
+//                return
+//            }
+            let vc = WhatsNewViewController(whatsNew: items, configuration: configuration)
+            
+            
+            vc.isModalInPresentation = true
+            present(vc, animated: true)
+        }else{
+            
         }
-        configuration.titleView.insets = UIEdgeInsets(top: 20, left: 20, bottom: 0, right: 20)
-        configuration.itemsView.contentMode = .fill
-        configuration.itemsView.imageSize = .fixed(height: 28)
-        configuration.itemsView.animation = .slideRight
-        configuration.completionButton.title = "OK"
         
-        let itemsStrings = Text.itemsWhatsNew
-        
-        let items = WhatsNew(title: Text.titleWhatsNew, items:
-            [WhatsNew.Item(title: itemsStrings[0][0], subtitle: itemsStrings[0][1], image: UIImage(systemName: "lock")),
-             WhatsNew.Item(title: itemsStrings[1][0], subtitle: itemsStrings[1][1], image: UIImage(systemName: "cart")),
-             WhatsNew.Item(title: itemsStrings[2][0], subtitle: itemsStrings[2][1], image: UIImage(systemName: "plusminus")),
-             WhatsNew.Item(title: itemsStrings[3][0], subtitle: itemsStrings[3][1], image: UIImage(systemName: "questionmark.circle")),
-             WhatsNew.Item(title: itemsStrings[4][0], subtitle: itemsStrings[4][1], image: UIImage(systemName: "calendar"))])
-        
-        guard let vc = WhatsNewViewController(whatsNew: items, configuration: configuration, versionStore: KeyValueWhatsNewVersionStore()) else {
-            return
-        }
-//        let vc = WhatsNewViewController(whatsNew: items, configuration: configuration)
-        vc.isModalInPresentation = true
-        present(vc, animated: true)
     }
 
     //MARK: Funciones DB
@@ -188,9 +196,7 @@ class ViewController: UIViewController {
         Model.openDB()
         Model.execute("CREATE TABLE Quincena (id_quincena INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, mes TEXT NOT NULL, num_quincena TEXT NOT NULL, fecha TEXT NOT NULL, detalles TEXT NOT NULL, monto TEXT NOT NULL)")
         Model.execute("CREATE TABLE Gasto (id_gasto INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, nombre TEXT NOT NULL, detalles TEXT NOT NULL, fecha TEXT NOT NULL, mes TEXT NOT NULL, monto TEXT NOT NULL)")
-//        Model.execute("CREATE TABLE Recordatorio ( id_recordatorio INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, hora TEXT NOT NULL, UNIQUE(hora))")
-//        Model.execute("INSERT INTO Recordatorio (hora) VALUES ('23:32')")
-//
+        
 //        Model.execute("CREATE TABLE Total (mes TEXT NOT NULL, ingresos TEXT NOT NULL, egresos TEXT NOT NULL, num_de_quincenas TEXT NOT NULL, num_de_gastos TEXT NOT NULL, total TEXT NOT NULL)")
 //        Model.execute("INSERT INTO Quincena (mes, num_quincena, fecha, detalles, monto) VALUES ('June 2019', '1', '15.06.2019', 'Quincena del mes', '2691.08'), ('July 2019', '1', '15.07.2019', 'Quincena del mes', '2912.33'), ('July 2019', '2', '30.07.2019', 'Quincena del mes', '3222.56'), ('August 2019', '1', '15.08.2019', 'Quincena del mes', '3141.4'), ('August 2019', '2', '30.08.2019', 'Quincena del mes', '3080.13'), ('September 2019', '1', '15.09.2019', 'Quincena del mes', '3141.41'), ('September 2019', '2', '30.09.2019', 'Quincena del mes', '2977.27'), ('October 2019', '1', '15.10.2019', 'Quincena del mes', '2935.29'), ('October 2019', '2', '30.10.2019', 'Quincena del mes', '3015.25'), ('November 2019', '1', '15.11.2019', 'Quincena del mes', '3345.49'), ('November 2019', '2', '30.11.2019', 'Quincena del mes', '3469.76'), ('December 2019', '1', '15.12.2019', 'Quincena del mes', '5268.86'), ('December2019', '2', '30.12.2019', 'Quincena del mes', '3372.5'), ('January 2020', '1', '15.01.2020', 'Quincena del mes', '2674.82'), ('January 2020', '2', '30.01.2020', 'Quincena del mes', '20157.92'), ('February 2020', '1', '15.02.2020', 'Quincena del mes', '6569.13'), ('February 2020', '2', '29.02.2020', 'Quincena del mes', '6581.35'), ('March 2020', '1', '15.03.2020', 'Quincena del mes', '6441.23'), ('March 2020', '2', '30.03.2020', 'Quincena del mes', '6441.23'), ('April 2020', '1', '15.04.2020', 'Quincena del mes', '6685.71'), ('April 2020', '2', '30.04.2020', 'Quincena del mes', '6440.48'), ('May 2020', '1', '15.05.2020', 'Quincena del mes', '6569.27'), ('May 2020', '2', '30.05.2020', 'Quincena del mes', '6555.57'), ('June 2020', '1', '15.06.2020', 'Quincena del mes', '6569.27'), ('June 2020', '2', '31.06.2020', 'Quincena del mes', '6569.27'), ('July 2020', '1', '15.07.2020', 'Quincena del mes', '6568.98'), ('July 2020', '2', '30.07.2020', 'Quincena del mes de July', '6568.98'), ('August 2020', '1', '15.08.2020', 'Quincena del mes de August 2020', '6568.98'), ('August 2020', '2', '31.08.2020', 'Quincena del mes de August 2020', '6568.98')")
 //

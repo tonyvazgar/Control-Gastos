@@ -44,7 +44,7 @@ public class Model{
         var errorMessage: String
         if(sqlite3_exec(Model.dbPointer, aStatement, nil, nil, nil) != SQLITE_OK){
             errorMessage = String(cString: sqlite3_errmsg(Model.dbPointer)!)
-//            print("error excecuting SQL statement: \(errorMessage)")
+            print("error excecuting SQL statement: \(errorMessage)")
         }else{
 //            print("SQL statement excecuted: \(aStatement)")
         }

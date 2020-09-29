@@ -102,12 +102,15 @@ enum Text {
     }
     
     static var datosSeccionesInformacion: [[String]] {
+        let dictionary = Bundle.main.infoDictionary!
+        let version = dictionary["CFBundleShortVersionString"] as! String
+        let build = dictionary["CFBundleVersion"] as! String
         switch getDeviceLanguage() {
         case "es":
             return [["Gráficas", "Resumen mensual", "Estadísticas"],
                     ["Recordatorio de notificación"],
                     ["Sugerencias o contacto", "Desarrollador de la app"],
-                    ["Compartela con tus amigos", "Ver en la App Store"]]
+                    ["Compartela con tus amigos", "Ver en la App Store", "v: \(version) (\(build))"]]
 //            [["Gráficas", "Resumen mensual", "Estadísticas"],
 //            ["Sugerencias o contacto", "Desarrollador de la app"],
 //            ["@SSfsd(Diseño)", "@dsasa  (traducción Frances)"],
@@ -117,7 +120,7 @@ enum Text {
                     ["Notification reminder"],
                     ["Suggestions/contact", "App Developer"],
 //                    ["@SSfsd (Design)", "@dsasa (French translation)"],
-                    ["Tell your friends", "Watch on the App Store"]]
+                    ["Tell your friends", "Watch on the App Store", "v: \(version) (\(build))"]]
 //            [["Charts", "Monthly Summary", "Statistics"],
 //            ["Suggestions/contact", "App Developer"],
 //            ["@SSfsd (Design)", "@dsasa (French translation)"],
