@@ -20,6 +20,7 @@
 		EF259D662472427F006F094A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D642472427F006F094A /* Main.storyboard */; };
 		EF259D6824724280006F094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6724724280006F094A /* Assets.xcassets */; };
 		EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6924724280006F094A /* LaunchScreen.storyboard */; };
+		EF2ACA0625240422009EF7BE /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2ACA0525240422009EF7BE /* Temporal.swift */; };
 		EF34E21F248F42F800D275AA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E21E248F42F800D275AA /* Animations.swift */; };
 		EF34E221248F432600D275AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E220248F432600D275AA /* Animator.swift */; };
 		EF438367247B2D5E0035AF11 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF438366247B2D5E0035AF11 /* Functions.swift */; };
@@ -61,6 +62,7 @@
 		EF259D6724724280006F094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF259D6A24724280006F094A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF259D6C24724280006F094A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ControlDinero/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		EF2ACA0525240422009EF7BE /* Temporal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
 		EF34E21E248F42F800D275AA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		EF34E220248F432600D275AA /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		EF438366247B2D5E0035AF11 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */,
 				EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */,
 				EFFC6981249F04CA00099E81 /* GastosGlobalViewController.swift */,
+				EF2ACA0525240422009EF7BE /* Temporal.swift */,
 			);
 			path = Egresos;
 			sourceTree = "<group>";
@@ -384,6 +387,7 @@
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
+				EF2ACA0625240422009EF7BE /* Temporal.swift in Sources */,
 				EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
 				EF10720C24F36A4200B8CE65 /* Text.swift in Sources */,
@@ -565,7 +569,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
@@ -587,7 +591,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
 				SWIFT_VERSION = 5.0;
