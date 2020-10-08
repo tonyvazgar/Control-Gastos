@@ -20,7 +20,7 @@
 		EF259D662472427F006F094A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D642472427F006F094A /* Main.storyboard */; };
 		EF259D6824724280006F094A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6724724280006F094A /* Assets.xcassets */; };
 		EF259D6B24724280006F094A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF259D6924724280006F094A /* LaunchScreen.storyboard */; };
-		EF2ACA0625240422009EF7BE /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2ACA0525240422009EF7BE /* Temporal.swift */; };
+		EF2ACA0625240422009EF7BE /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2ACA0525240422009EF7BE /* NuevoGastoViewController.swift */; };
 		EF34E21F248F42F800D275AA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E21E248F42F800D275AA /* Animations.swift */; };
 		EF34E221248F432600D275AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E220248F432600D275AA /* Animator.swift */; };
 		EF438367247B2D5E0035AF11 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF438366247B2D5E0035AF11 /* Functions.swift */; };
@@ -33,7 +33,6 @@
 		EFA25FBC25073EAD00A4D510 /* NotificationReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBB25073EAD00A4D510 /* NotificationReminder.swift */; };
 		EFA25FBE250885DB00A4D510 /* HoraNotificacionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */; };
 		EFC4F4BE24DA62C300314497 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */; };
-		EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */; };
 		EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */; };
 		EFE4D7512474CBF30042C9DC /* DetalleQuincenaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */; };
 		EFE4D7532474D7E90042C9DC /* DetalleGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */; };
@@ -62,7 +61,7 @@
 		EF259D6724724280006F094A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF259D6A24724280006F094A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF259D6C24724280006F094A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ControlDinero/Supporting Files/Info.plist"; sourceTree = SOURCE_ROOT; };
-		EF2ACA0525240422009EF7BE /* Temporal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
+		EF2ACA0525240422009EF7BE /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
 		EF34E21E248F42F800D275AA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		EF34E220248F432600D275AA /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		EF438366247B2D5E0035AF11 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -75,7 +74,6 @@
 		EFA25FBB25073EAD00A4D510 /* NotificationReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationReminder.swift; sourceTree = "<group>"; };
 		EFA25FBD250885DB00A4D510 /* HoraNotificacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoraNotificacionViewController.swift; sourceTree = "<group>"; };
 		EFC4F4BD24DA62C300314497 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
 		EFE4D74E247495030042C9DC /* NuevaQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevaQuincenaViewController.swift; sourceTree = "<group>"; };
 		EFE4D7502474CBF30042C9DC /* DetalleQuincenaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleQuincenaViewController.swift; sourceTree = "<group>"; };
 		EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleGastoViewController.swift; sourceTree = "<group>"; };
@@ -249,10 +247,9 @@
 			isa = PBXGroup;
 			children = (
 				EF126CC52473701B00177691 /* GastosViewController.swift */,
-				EFE4D74C247494ED0042C9DC /* NuevoGastoViewController.swift */,
 				EFE4D7522474D7E90042C9DC /* DetalleGastoViewController.swift */,
 				EFFC6981249F04CA00099E81 /* GastosGlobalViewController.swift */,
-				EF2ACA0525240422009EF7BE /* Temporal.swift */,
+				EF2ACA0525240422009EF7BE /* NuevoGastoViewController.swift */,
 			);
 			path = Egresos;
 			sourceTree = "<group>";
@@ -375,7 +372,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */,
-				EFE4D74D247494ED0042C9DC /* NuevoGastoViewController.swift in Sources */,
 				EF34E21F248F42F800D275AA /* Animations.swift in Sources */,
 				EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */,
 				EFA25FBE250885DB00A4D510 /* HoraNotificacionViewController.swift in Sources */,
@@ -387,7 +383,7 @@
 				EF5C6BFB247A31A5004E293A /* Total.swift in Sources */,
 				EF259D632472427F006F094A /* ViewController.swift in Sources */,
 				EFE4D74F247495030042C9DC /* NuevaQuincenaViewController.swift in Sources */,
-				EF2ACA0625240422009EF7BE /* Temporal.swift in Sources */,
+				EF2ACA0625240422009EF7BE /* NuevoGastoViewController.swift in Sources */,
 				EFFC6982249F04CA00099E81 /* GastosGlobalViewController.swift in Sources */,
 				EF5C6BFD247A34D0004E293A /* Model.swift in Sources */,
 				EF10720C24F36A4200B8CE65 /* Text.swift in Sources */,
@@ -561,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -583,7 +579,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

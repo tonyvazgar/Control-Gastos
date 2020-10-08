@@ -1,6 +1,6 @@
 
-/* Class = "UILabel"; text = "Amount:"; ObjectID = "07y-g8-TiN"; */
-"07y-g8-TiN.text" = "Monto total:";
+/* Class = "UILabel"; text = "Amount:"; ObjectID = "FiB-wn-Yom"; */
+"FiB-wn-Yom.text" = "Monto total:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "0K3-yb-htP"; */
 "0K3-yb-htP.text" = "Label";
@@ -32,11 +32,11 @@
 /* Class = "UILabel"; text = " "; ObjectID = "5oc-kf-ffW"; */
 "5oc-kf-ffW.text" = " ";
 
-/* Class = "UILabel"; text = "Description:"; ObjectID = "8mm-p7-uSi"; */
-"8mm-p7-uSi.text" = "Descripción:";
+/* xXx Class = "UILabel"; text = "Description:"; ObjectID = "r0A-I3-oHu"; */
+"r0A-I3-oHu.text" = "Descripción:";
 
-/* Class = "UILabel"; text = "expense"; ObjectID = "9ah-mZ-NcW"; */
-"9ah-mZ-NcW.text" = "gasto";
+/* xXx Class = "UILabel"; text = "expense"; ObjectID = "Y5d-B7-i2i"; */
+"Y5d-B7-i2i.text" = "gasto";
 
 /* Class = "UILabel"; text = "Titulo gasto"; ObjectID = "A0I-3B-pO7"; */
 "A0I-3B-pO7.text" = "Titulo gasto";
@@ -44,8 +44,8 @@
 /* Class = "UILabel"; text = "Created on:"; ObjectID = "AbA-pR-kkD"; */
 "AbA-pR-kkD.text" = "Fecha de creación:";
 
-/* Class = "UITextField"; placeholder = "$100.00"; ObjectID = "AlO-UM-Psr"; */
-"AlO-UM-Psr.placeholder" = "$100.00";
+/* xXx Class = "UITextField"; placeholder = "$100.00"; ObjectID = "Ajs-oP-Jp4"; */
+"Ajs-oP-Jp4.placeholder" = "$100.00";
 
 /* Class = "UILabel"; text = "expenses"; ObjectID = "BC7-FQ-luX"; */
 "BC7-FQ-luX.text" = "gastos";
@@ -149,14 +149,14 @@
 /* Class = "UILabel"; text = "Income number:"; ObjectID = "fIU-iv-kTT"; */
 "fIU-iv-kTT.text" = "Ingreso #:";
 
-/* Class = "UILabel"; text = "Expense name:"; ObjectID = "fou-Xo-6RT"; */
-"fou-Xo-6RT.text" = "Nombre del gasto:";
+/* xXx Class = "UILabel"; text = "Expense name:"; ObjectID = "XHV-1R-HXx"; */
+"XHV-1R-HXx.text" = "Nombre del gasto:";
 
 /* Class = "UILabel"; text = "Expenses"; ObjectID = "irW-SJ-cV1"; */
 "irW-SJ-cV1.text" = "Gastos:";
 
-/* Class = "UITextField"; placeholder = "Expense details"; ObjectID = "jFt-Am-USd"; */
-"jFt-Am-USd.placeholder" = "Descripción del gasto";
+/* xXx Class = "UITextField"; placeholder = "Expense details"; ObjectID = "95W-a0-Al5"; */
+"95W-a0-Al5.placeholder" = "Descripción del gasto";
 
 /* Class = "UILabel"; text = "$$$$"; ObjectID = "jgJ-Wu-g0M"; */
 "jgJ-Wu-g0M.text" = "$$$$";
@@ -173,8 +173,8 @@
 /* Class = "UILabel"; text = "New"; ObjectID = "kfe-AE-Tae"; */
 "kfe-AE-Tae.text" = "Nuevo";
 
-/* Class = "UITextField"; placeholder = "Expense name to identify"; ObjectID = "lTJ-Yf-si7"; */
-"lTJ-Yf-si7.placeholder" = "Nombre para identificar el gasto";
+/* xXx Class = "UITextField"; placeholder = "Expense name to identify"; ObjectID = "tQd-ad-6Hh"; */
+"tQd-ad-6Hh.placeholder" = "Nombre para identificar el gasto";
 
 /* Class = "UILabel"; text = "My"; ObjectID = "m4d-ME-pWL"; */
 "m4d-ME-pWL.text" = "Mis";
@@ -182,8 +182,8 @@
 /* Class = "UILabel"; text = "Title"; ObjectID = "mDQ-ZE-skd"; */
 "mDQ-ZE-skd.text" = "Title";
 
-/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "o1M-nf-kSJ"; */
-"o1M-nf-kSJ.normalTitle" = "Agregar";
+/* xXx Class = "UIButton"; normalTitle = "Add"; ObjectID = "HZF-qZ-7Ic"; */
+"HZF-qZ-7Ic.normalTitle" = "Agregar";
 
 /* Class = "UIButton"; normalTitle = "All transactions"; ObjectID = "oFH-1h-8c6"; */
 "oFH-1h-8c6.normalTitle" = "Ver todo";
@@ -194,11 +194,11 @@
 /* Class = "UILabel"; text = "Created on:"; ObjectID = "oTw-SC-m2N"; */
 "oTw-SC-m2N.text" = "Fecha de creación:";
 
-/* Class = "UILabel"; text = "New"; ObjectID = "oZ8-vc-zFw"; */
-"oZ8-vc-zFw.text" = "Nuevo";
+/* xXx Class = "UILabel"; text = "New"; ObjectID = "5tT-9P-aw4"; */
+"5tT-9P-aw4.text" = "Nuevo";
 
-/* Class = "UILabel"; text = "Select the day:"; ObjectID = "oxo-hL-hoj"; */
-"oxo-hL-hoj.text" = "Selecciona el día:";
+/* xXx Class = "UILabel"; text = "Select the day:"; ObjectID = "CB3-hb-wrV"; */
+"CB3-hb-wrV.text" = "Selecciona el día:";
 
 /* Class = "UILabel"; text = "Earnings"; ObjectID = "rbc-G7-DBl"; */
 "rbc-G7-DBl.text" = "Ganancias:";
