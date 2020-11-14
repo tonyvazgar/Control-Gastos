@@ -3,4 +3,146 @@
    uuid = "80DD7B92-C6ED-491C-966F-67A11A194FF2"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "NuevaQuincenaViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - 2fab5ce6f2bdbf34"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.montoTextField.getter : Swift.Optional&lt;My_Money.CurrencyField&gt;"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - 1fe105c3938b2f80"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.montoTextField.setter : Swift.Optional&lt;My_Money.CurrencyField&gt;"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "155">
+               </Location>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - fc1394b5695a9139"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.montoTextField.modify : Swift.Optional&lt;My_Money.CurrencyField&gt;"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "59">
+               </Location>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - ae32e5b389b7f823"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.montoTextField.modify : Swift.Optional&lt;My_Money.CurrencyField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - 77b8b6ad67555571"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; My_Money.NuevaQuincenaViewController"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "531">
+               </Location>
+               <Location
+                  uuid = "E6173EA0-8D4D-4FBB-B093-BD5259C4B203 - 414117b61fe38539"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "My_Money.NuevaQuincenaViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;My_Money.NuevaQuincenaViewController&gt;"
+                  moduleName = "My Money"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tonyvazgar/Desktop/Control-Gastos/ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23D44FF6-AC62-4C03-B2E3-5380734F2BEC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F5DF4D0-89E6-4D74-BA29-8E367F37289F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ControlDinero/Controller/Ingresos/NuevaQuincenaViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

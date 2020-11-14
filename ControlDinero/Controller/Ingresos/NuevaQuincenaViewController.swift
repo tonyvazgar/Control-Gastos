@@ -20,7 +20,7 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     // MARK: Actions
     @IBAction func agregarAction(_ sender: UIButton) {
-        if montoTextField.text != "" && detallesTextField.text != "" {
+        if montoTextField.decimal != 0.0 && detallesTextField.text != "" {
             if self.numero_quincena != "0" && self.numero_quincena != "" {
                 insetar(un_mes: getCurrentDate(), una_num_quincena: self.numero_quincena, una_fecha: getTodayDate(), unos_detalles: detallesTextField.text!, un_monto: String(describing: montoTextField.decimal))
                 navigationController?.popViewController(animated: true)
@@ -52,7 +52,7 @@ class NuevaQuincenaViewController: UIViewController, UIPickerViewDelegate, UIPic
         
 
         let currentLanguaje = Locale.preferredLanguages[0]
-        montoTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
+//        montoTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
         montoTextField.locale = Locale(identifier: currentLanguaje) // or "en_US", "fr_FR", etc
     }
     

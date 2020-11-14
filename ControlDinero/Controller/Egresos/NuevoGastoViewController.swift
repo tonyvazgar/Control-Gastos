@@ -49,7 +49,7 @@ class NuevoGastoViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         let currentLanguaje = Locale.preferredLanguages[0]
-        totalTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
+//        totalTextField.addTarget(self, action: #selector(currencyFieldChanged), for: .editingChanged)
         totalTextField.locale = Locale(identifier: currentLanguaje)
         
         datePicker.minimumDate = Calendar.current.dateComponents([.calendar, .year,.month], from: Date()).date!
