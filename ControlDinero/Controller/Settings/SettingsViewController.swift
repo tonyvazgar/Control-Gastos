@@ -16,7 +16,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     let data   = Text.datosSeccionesInformacion
     let images = [[UIImage(systemName: "chart.bar"), UIImage(systemName: "calendar"), UIImage(systemName: "chart.pie")],
                   [UIImage(systemName: "bell.circle")],
-                  [UIImage(systemName: "message"), UIImage(systemName: "person")],
+                  [UIImage(systemName: "message"), UIImage(systemName: "person"), UIImage(systemName: "play.rectangle")],
 //                  [UIImage(systemName: "paintbrush"), UIImage(systemName: "globe")],
                   [UIImage(systemName: "person.2.square.stack"), UIImage(systemName: "bag"), UIImage(systemName: "info.circle")]]
     
@@ -78,6 +78,14 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         if (indexPath.section == 2) && (indexPath.row == 1){
             let url = NSURL(string: "https://www.tonyvazgar.com")
             UIApplication.shared.open(url! as URL)
+        }else if (indexPath.section == 2) && (indexPath.row == 2){
+            if let url = URL(string: "https://www.youtube.com/tonyvazgar") {
+              if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+              } else {
+                UIApplication.shared.openURL(url)
+              }
+            }
         }else if (indexPath.section == 2) && (indexPath.row == 0){
             
             let email = "tonyvazgar@icloud.com"

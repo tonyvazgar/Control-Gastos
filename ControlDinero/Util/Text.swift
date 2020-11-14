@@ -109,7 +109,7 @@ enum Text {
         case "es":
             return [["Gráficas", "Resumen mensual", "Estadísticas"],
                     ["Recordatorio de notificación"],
-                    ["Sugerencias o contacto", "Desarrollador de la app"],
+                    ["Sugerencias o contacto", "Desarrollador de la app", "Suscríbete a mi canal"],
                     ["Compartela con tus amigos", "Ver en la App Store", "v: \(version) (\(build))"]]
 //            [["Gráficas", "Resumen mensual", "Estadísticas"],
 //            ["Sugerencias o contacto", "Desarrollador de la app"],
@@ -118,8 +118,7 @@ enum Text {
         default:
             return [["Charts", "Monthly Summary", "Statistics"],
                     ["Notification reminder"],
-                    ["Suggestions/contact", "App Developer"],
-//                    ["@SSfsd (Design)", "@dsasa (French translation)"],
+                    ["Suggestions/contact", "App Developer", "Suscribe to my channel"],
                     ["Tell your friends", "Watch on the App Store", "v: \(version) (\(build))"]]
 //            [["Charts", "Monthly Summary", "Statistics"],
 //            ["Suggestions/contact", "App Developer"],
