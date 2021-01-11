@@ -52,5 +52,46 @@ class QuincenasGlobalViewController: UIViewController, UITableViewDelegate, UITa
         tablewView.reloadData()
         Model.selectAllIngresosReverse()
     }
-
+    
+    
+    @IBAction func exportAction(_ sender: UIButton) {
+        
+        //--------------------------------------------------------------------
+        let sFile = Text.fileNameGanaciasGlobal
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let documentURL = URL(fileURLWithPath: documentDirectory).appendingPathComponent(sFile)
+        //--------------------------------------------------------------------
+        
+        let output = OutputStream.toMemory()
+        let csvWriter = CHCSVWriter(outputStream: output, encoding: String.Encoding.utf8.rawValue, delimiter: ",".utf16.first!)
+        //--------------------------------------------------------------------
+        
+        let campos = Text.fileFieldsGanacias
+        for element in campos{
+            csvWriter?.writeField(element)
+        }
+        csvWriter?.finishLine()
+        //--------------------------------------------------------------------
+        for element in Model.ingresosList{
+            csvWriter?.writeField(element.num_quincena)
+            csvWriter?.writeField(element.fecha)
+            csvWriter?.writeField(String(format: "%.2f", element.monto))
+            csvWriter?.writeField(element.detalles)
+            csvWriter?.finishLine()
+        }
+        csvWriter?.closeStream()
+        //--------------------------------------------------------------------
+        let buffer = (output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data)!
+        do{
+            try buffer.write(to: documentURL)
+        }catch{
+            
+        }
+        //--------------------------------------------------------------------
+        let activityViewController = UIActivityViewController(activityItems: [documentURL], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        self.present(activityViewController, animated: true, completion: nil)
+        
+    }
+    
 }

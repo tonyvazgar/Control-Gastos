@@ -213,4 +213,52 @@ enum Text {
             return "Open the app and keep track of what you spent today :)"
         }
     }
+    static var fileNameGanacias: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Ingresos_\(getCurrentDate()).csv"
+        default:
+            return "Earnings_\(getCurrentDate()).csv"
+        }
+    }
+    static var fileNameGanaciasGlobal: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Ingresos_historial.csv"
+        default:
+            return "Earnings_history.csv"
+        }
+    }
+    static var fileFieldsGanacias: [String] {
+        switch getDeviceLanguage() {
+        case "es":
+            return ["#", "Fecha", "Total", "Detalles"]
+        default:
+            return ["#", "Date", "Total", "Details"]
+        }
+    }
+    static var fileNameGastos: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Gastos_\(getCurrentDate()).csv"
+        default:
+            return "Expenses_\(getCurrentDate()).csv"
+        }
+    }
+    static var fileNameGastosGlobal: String {
+        switch getDeviceLanguage() {
+        case "es":
+            return "Gastos_historial.csv"
+        default:
+            return "Expenses_history.csv"
+        }
+    }
+    static var fileFieldsGastos: [String] {
+        switch getDeviceLanguage() {
+        case "es":
+            return ["#", "Nombre", "Fecha", "Total", "Detalles", "Mes"]
+        default:
+            return ["#", "Name", "Date", "Total", "Details", "Month"]
+        }
+    }
 }

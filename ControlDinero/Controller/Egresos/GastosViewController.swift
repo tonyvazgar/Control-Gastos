@@ -33,6 +33,46 @@ class GastosViewController: UIViewController, UITableViewDelegate, UITableViewDa
         sender.jump()
     }
     
+    
+    @IBAction func exportAction(_ sender: Any) {
+        //------------------------------------------------
+        let fileName = Text.fileNameGastos
+        let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
+        let documentURL = URL(fileURLWithPath: documentDirectory).appendingPathComponent(fileName)
+        //------------------------------------------------
+        let output = OutputStream.toMemory()
+        let csvWriter = CHCSVWriter(outputStream: output, encoding: String.Encoding.utf8.rawValue, delimiter: ",".utf16.first!)
+        //------------------------------------------------
+        let campos = Text.fileFieldsGastos
+        for element in campos{
+            csvWriter?.writeField(element)
+        }
+        csvWriter?.finishLine()
+        //------------------------------------------------
+        for element in Model.egresosList{
+            //["#", "Nombre", "Fecha", "Total", "Detalles", "c", "d"]
+            csvWriter?.writeField(element.id_gasto)
+            csvWriter?.writeField(element.nombre)
+            csvWriter?.writeField(element.fecha)
+            csvWriter?.writeField(element.monto)
+            csvWriter?.writeField(element.detalles)
+            csvWriter?.writeField(element.mes)
+            csvWriter?.finishLine()
+        }
+        csvWriter?.closeStream()
+        //------------------------------------------------
+        let buffer = (output.property(forKey: .dataWrittenToMemoryStreamKey) as? Data)!
+        do{
+            try buffer.write(to: documentURL)
+        }catch{
+            
+        }
+        //------------------------------------------------
+        let activityViewController = UIActivityViewController(activityItems: [documentURL], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        self.present(activityViewController, animated: true, completion: nil)
+    }
+    
     // Boton para regresar a ViewController pincipal
     @IBAction func backButtonAction(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)

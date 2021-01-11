@@ -23,6 +23,7 @@
 		EF2ACA0625240422009EF7BE /* NuevoGastoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2ACA0525240422009EF7BE /* NuevoGastoViewController.swift */; };
 		EF34E21F248F42F800D275AA /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E21E248F42F800D275AA /* Animations.swift */; };
 		EF34E221248F432600D275AA /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF34E220248F432600D275AA /* Animator.swift */; };
+		EF36B974259966CE00EA3EC7 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = EF36B973259966CE00EA3EC7 /* CHCSVParser.m */; };
 		EF438367247B2D5E0035AF11 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF438366247B2D5E0035AF11 /* Functions.swift */; };
 		EF51B7E424947B620017C1F3 /* CurrencyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF51B7E324947B620017C1F3 /* CurrencyField.swift */; };
 		EF5C6BF7247A3186004E293A /* Ingreso.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5C6BF6247A3186004E293A /* Ingreso.swift */; };
@@ -64,6 +65,9 @@
 		EF2ACA0525240422009EF7BE /* NuevoGastoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoGastoViewController.swift; sourceTree = "<group>"; };
 		EF34E21E248F42F800D275AA /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
 		EF34E220248F432600D275AA /* Animator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		EF36B971259966CD00EA3EC7 /* ControlDinero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ControlDinero-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF36B972259966CD00EA3EC7 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
+		EF36B973259966CE00EA3EC7 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		EF438366247B2D5E0035AF11 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		EF51B7E324947B620017C1F3 /* CurrencyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyField.swift; sourceTree = "<group>"; };
 		EF5C6BF6247A3186004E293A /* Ingreso.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingreso.swift; sourceTree = "<group>"; };
@@ -146,8 +150,11 @@
 		EF259D722472430B006F094A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF36B972259966CD00EA3EC7 /* CHCSVParser.h */,
+				EF36B973259966CE00EA3EC7 /* CHCSVParser.m */,
 				EF10720724F3666B00B8CE65 /* InfoPlist.strings */,
 				EF259D6C24724280006F094A /* Info.plist */,
+				EF36B971259966CD00EA3EC7 /* ControlDinero-Bridging-Header.h */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,6 +295,7 @@
 				TargetAttributes = {
 					EF259D5A2472427F006F094A = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -371,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF36B974259966CE00EA3EC7 /* CHCSVParser.m in Sources */,
 				EF5C6BF9247A3190004E293A /* Egreso.swift in Sources */,
 				EF34E21F248F42F800D275AA /* Animations.swift in Sources */,
 				EF08226E2484976F003BA2B3 /* FocusLabelWhileKeyboard.swift in Sources */,
@@ -556,8 +565,9 @@
 			baseConfigurationReference = 3CE9F6417491730115D721E3 /* Pods-ControlDinero.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -565,9 +575,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
+				SWIFT_OBJC_BRIDGING_HEADER = "ControlDinero/Supporting Files/ControlDinero-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -578,8 +590,9 @@
 			baseConfigurationReference = 41F933EE25986CA2DFFD6531 /* Pods-ControlDinero.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = UC654Y56KK;
 				INFOPLIST_FILE = "ControlDinero/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -587,9 +600,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.ControlDinero;
 				PRODUCT_NAME = "My Money";
+				SWIFT_OBJC_BRIDGING_HEADER = "ControlDinero/Supporting Files/ControlDinero-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
